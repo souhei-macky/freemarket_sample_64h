@@ -71,3 +71,8 @@ gem "factory_bot_rails"
 gem "rails-controller-testing"
 gem "ransack"
 gem "payjp"
+gem 'jquery-rails'
+gem 'pry-rails'
+gem 'omniauth-facebook'
+gem 'omniauth-twitter'
+gem 'omniauth-google-oauth2'
