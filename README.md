@@ -70,6 +70,7 @@
 |item|string|null: false|
 |description|text|null: false|
 |price|integer|null: false|
+|shopping_status|integer|null: false|
 |user_id|integer|null: false, foreign_key: true|
 |category_id|integer|null: false, foreign_key: true|
 |brands_category_id|integer|null: false, foreign_key: true|
@@ -125,8 +126,8 @@
 ## likesテーブル
 |Column|Type|Options|
 |------|----|-------|
-|user_id|references|null: false|
-|item_id|references|null: false|
+|user_id|references|null: false, foreign_key: true|
+|item_id|references|null: false, foreign_key: true|
 ### Association
 - belongs_to :user
 - belongs_to :item
