@@ -62,7 +62,6 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "carrierwave"
 gem "fog-aws"
-gem "devise"
 gem "haml-rails"
 gem "font-awesome-rails"
 gem "mini_magick"
@@ -76,3 +75,4 @@ gem 'pry-rails'
 gem 'omniauth-facebook'
 gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
+gem 'devise'
