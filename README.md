@@ -18,8 +18,8 @@
 ### Association
 - has_many :items, dependent: :destroy
 - has_many :comments, dependent: :destroy
-- belongs_to :credit_card, dependent: :destroy
-- belongs_to :address, dependent: :destroy
+- has_one :credit_card, dependent: :destroy
+- has_one :address, dependent: :destroy
 
 ## addressテーブル
 |Column|Type|Options|
