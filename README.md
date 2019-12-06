@@ -15,6 +15,8 @@
 |year|string|null: false|
 |month|string|null: false|
 |day|string|null: false|
+|uid|string|null: false|
+|provider|string|null: false|
 ### Association
 - has_many :items, dependent: :destroy
 - has_many :comments, dependent: :destroy
@@ -45,14 +47,6 @@
 ### Association
 - belongs_to :user
 
-## sns_registrationsテーブル
-|Column|Type|Options|
-|------|----|-------|
-|uid|string|null: false|
-|provider|string|null: false|
-|user_id|integer|null: false, foreign_key: true|
-### Association
-- belongs_to :user
 
 ## commentsテーブル
 |Column|Type|Options|
