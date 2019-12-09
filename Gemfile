@@ -82,7 +82,8 @@ gem "ransack"
 gem "payjp"
 gem 'jquery-rails'
 gem 'pry-rails'
+gem "omniauth-rails_csrf_protection"
 gem 'omniauth-facebook'
-gem 'omniauth-twitter'
 gem 'omniauth-google-oauth2'
 gem 'devise'
+gem 'dotenv-rails'

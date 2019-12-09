@@ -108,6 +108,10 @@ GEM
     diff-lcs (1.3)
     domain_name (0.5.20190701)
       unf (>= 0.0.5, < 1.0.0)
+    dotenv (2.7.5)
+    dotenv-rails (2.7.5)
+      dotenv (= 2.7.5)
+      railties (>= 3.2, < 6.1)
     erubi (1.9.0)
     erubis (2.7.0)
     excon (0.70.0)
@@ -204,9 +208,8 @@ GEM
     net-ssh (5.2.0)
     netrc (0.11.0)
     nio4r (2.5.2)
-    nokogiri (1.10.6)
+    nokogiri (1.10.7)
       mini_portile2 (~> 2.4.0)
-    oauth (0.5.4)
     oauth2 (1.4.2)
       faraday (>= 0.8, < 2.0)
       jwt (>= 1.0, < 3.0)
@@ -222,15 +225,12 @@ GEM
       jwt (>= 2.0)
       omniauth (>= 1.1.1)
       omniauth-oauth2 (>= 1.6)
-    omniauth-oauth (1.1.0)
-      oauth
-      omniauth (~> 1.0)
     omniauth-oauth2 (1.6.0)
       oauth2 (~> 1.1)
       omniauth (~> 1.9)
-    omniauth-twitter (1.4.0)
-      omniauth-oauth (~> 1.1)
-      rack
+    omniauth-rails_csrf_protection (0.1.2)
+      actionpack (>= 4.2)
+      omniauth (>= 1.3.1)
     orm_adapter (0.5.0)
     payjp (0.0.7)
       rest-client (~> 2.0)
@@ -242,7 +242,7 @@ GEM
     pry-rails (0.3.9)
       pry (>= 0.10.4)
     public_suffix (4.0.1)
-    puma (3.12.1)
+    puma (3.12.2)
     rack (2.0.7)
     rack-test (1.1.0)
       rack (>= 1.0, < 3)
@@ -392,6 +392,7 @@ DEPENDENCIES
   chromedriver-helper
   coffee-rails (~> 4.2)
   devise
+  dotenv-rails
   factory_bot_rails
   fog-aws
   font-awesome-rails
@@ -403,7 +404,7 @@ DEPENDENCIES
   mysql2 (>= 0.4.4, < 0.6.0)
   omniauth-facebook
   omniauth-google-oauth2
-  omniauth-twitter
+  omniauth-rails_csrf_protection
   payjp
   pry-rails
   puma (~> 3.11)
