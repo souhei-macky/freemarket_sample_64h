@@ -26,7 +26,6 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
     else
       #SNSより受け取った情報をsession["devise.#{provider}_data"]で受け取り、nicknameとemailカラムのsessionに値を代入
       session["devise.#{provider}_data"] = request.env['omniauth.auth'].except(:extra)
-      binding.pry
       session[:nickname] = session["devise.#{provider}_data"][:info][:name]
       session[:email]    = session["devise.#{provider}_data"][:info][:email]
       #sign_upのstep1ページにリダイレクト(現在は仮URLを記載)
