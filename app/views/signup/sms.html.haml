@@ -13,7 +13,7 @@
       %h2 電話番号の確認
     .main-form
       .form-group
-        = form_for @address, url: step3_signup_index_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
+        = form_for @address, url: residence_signup_index_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
           = f.label :携帯電話の番号
           = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
           %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。

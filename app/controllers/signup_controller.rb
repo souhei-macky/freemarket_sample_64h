@@ -1,10 +1,10 @@
 class SignupController < ApplicationController
 
-  def step1
+  def personal
     @user = User.new 
   end
 
-  def step2
+  def sms
     #user.newのformデータをsessionに格納
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
@@ -20,7 +20,7 @@ class SignupController < ApplicationController
     @address = Address.new 
   end
 
-  def step3
+  def residence
     session[:phone_number] = address_params[:phone_number]
     @address = Address.new 
   end
@@ -41,7 +41,7 @@ class SignupController < ApplicationController
     )
     if @user.save
       #trueの場合下記ifの実行
-      #falseの場合step1にredirect
+      #falseの場合personalにredirect
       session[:zip_code] = address_params[:zip_code]
       session[:prefectur] = address_params[:prefectur]
       session[:city] = address_params[:city]
@@ -62,15 +62,15 @@ class SignupController < ApplicationController
 
       if @address.save
         #trueの場合@user_idをsessionに格納しdoneへredirect
-        #falseの場合step3にredirect
+        #falseの場合residenceにredirect
         session[:id] = @user.id
         redirect_to done_signup_index_path
       else
-        redirect_to step3_signup_index_path
+        redirect_to residence_signup_index_path
       end
 
     else
-      redirect_to step1_signup_index_path
+      redirect_to personal_signup_index_path
     end
   end
 

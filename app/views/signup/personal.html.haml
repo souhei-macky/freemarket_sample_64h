@@ -12,7 +12,7 @@
     .main-header
       %h2 会員情報入力
     .main-form
-      = form_for @user, url: step2_signup_index_path, method: :get, haml: {class: 'first-main__box'} do |f|
+      = form_for @user, url: sms_signup_index_path, method: :get, haml: {class: 'first-main__box'} do |f|
         .form-group
           = f.label :ニックネーム
           %span 必須

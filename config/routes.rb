@@ -3,9 +3,9 @@ Rails.application.routes.draw do
   # root to: "item#index"
   resources :signup do
     collection do
-      get 'step1'
-      get 'step2'
-      get 'step3'
+      get 'personal'
+      get 'sms'
+      get 'residence'
       post "create"
       get "done"
     end
