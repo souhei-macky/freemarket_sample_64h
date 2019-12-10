@@ -1,0 +1,75 @@
+.container
+  .header
+    %h1 mercari (icon挿入)
+    .nav
+      %ul.nav_contnet
+        %li 会員情報
+        %li 電話番号認証
+        %li お届け先住所入力
+        %li 支払い情報
+        %li 完了
+  .main
+    .main-header
+      %h2 会員情報入力
+    .main-form
+      = form_for @user, url: sms_signup_index_path, method: :get, haml: {class: 'first-main__box'} do |f|
+        .form-group
+          = f.label :ニックネーム
+          %span 必須
+          = f.text_field :nickname, placeholder: '例) メルカリ太郎'
+        .form-group
+          = f.label :メールアドレス
+          %span 必須
+          = f.email_field :email, placeholder: 'PC・携帯どちらでも可'
+        .form-group
+          = f.label :パスワード
+          %span 必須
+          = f.password_field :password, placeholder: '7文字以上の半角英数字'
+          %p ※ 英字と数字の両方を含めて設定してください
+        .form-group
+          .text_title
+            %h3 本人確認
+          .text_display
+            %p 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+        .form-group
+          = f.label :お名前（全角）
+          %span 必須
+          = f.text_field :family_name, placeholder: '例）山田'
+          = f.text_field :first_name, placeholder: '例）彩'
+        .form-group
+          = f.label :お名前カナ（全角）
+          %span 必須
+          = f.text_field :family_name_kana, placeholder: '例）ヤマダ'
+          = f.text_field :first_name_kana, placeholder: '例）アヤ'
+        .form-group
+          = f.label :生年月日
+          %span 必須
+          .birthday_select
+            = f.text_field :year
+            %span 年
+            = f.text_field :month
+            %span 月
+            = f.text_field :day
+            %span 日
+        .form-text
+          %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+        .form-group
+          私はロボットではありません
+          （任意で挿入）
+        .form-group
+          %p
+            次へ進む」のボタンを押すことにより、
+            %a{:href => ""} 利用規約
+            に同意したものとみなします
+        .form-group
+          = f.submit '次へすすむ', class: 'form__submit'
+
+  .footer
+    .nav
+      %ul.nav_contnet
+        %li プライバシーポリシー
+        %li メルカリ利用規約
+        %li 特定商取引に関する表記
+    .footer-logo
+      %img{src:""}
+      %p © Mercari, Inc.
