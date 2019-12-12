@@ -1,4 +1,12 @@
 class SignupController < ApplicationController
+  protect_from_forgery except: :personal
+
+
+  def session_clear
+    #　メールアドレスで登録するをクリックしたらsessionを全削除する(uidやprovider情報も消す為)
+    reset_session
+    redirect_to personal_signup_index_path
+  end
 
   def personal
     @user = User.new 
@@ -22,7 +30,7 @@ class SignupController < ApplicationController
 
   def residence
     session[:phone_number] = address_params[:phone_number]
-    @address = Address.new 
+    @address = Address.new
   end
 
   def create
@@ -37,8 +45,11 @@ class SignupController < ApplicationController
       first_name_kana: session[:first_name_kana],
       year: session[:year],
       month: session[:month],
-      day: session[:day]
+      day: session[:day],
+      provider: session[:provider],
+      uid: session[:uid]
     )
+
     if @user.save
       #trueの場合下記ifの実行
       #falseの場合personalにredirect
@@ -47,8 +58,8 @@ class SignupController < ApplicationController
       session[:city] = address_params[:city]
       session[:number] = address_params[:number]
       session[:building] = address_params[:building]
-      session[:phone_number] = address_params[:phone_number]
       session[:user_id] = @user.id
+
 
       @address = Address.new(
         zip_code: session[:zip_code],
@@ -59,7 +70,6 @@ class SignupController < ApplicationController
         phone_number: session[:phone_number],
         user_id: session[:user_id]
       )
-
       if @address.save
         #trueの場合@user_idをsessionに格納しdoneへredirect
         #falseの場合residenceにredirect
@@ -76,7 +86,9 @@ class SignupController < ApplicationController
 
   def done
     #登録したuserでログイン
-    sign_in User.find(session[:id]) unless user_signed_in?
+    @user = session[:id]
+    reset_session
+    sign_in User.find(@user) unless user_signed_in?
   end
 
 
@@ -94,7 +106,9 @@ class SignupController < ApplicationController
       :first_name_kana, 
       :year,
       :month,
-      :day
+      :day,
+      :provider,
+      :uid
     )
   end
 

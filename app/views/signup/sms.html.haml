@@ -15,7 +15,7 @@
       .form-group
         = form_for @address, url: residence_signup_index_path, method: :get, html: {class: 'second-wrapper__box'} do |f|
           = f.label :携帯電話の番号
-          = f.text_field :phone_number, placeholder: '携帯電話の番号を入力'
+          = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', value: session[:phone_number]
           %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
           = f.submit 'SMSを送信する', class: 'form__submit'
           %P ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。

@@ -16,11 +16,11 @@
         .form-group
           = f.label :ニックネーム
           %span 必須
-          = f.text_field :nickname, placeholder: '例) メルカリ太郎'
+          = f.text_field :nickname, placeholder: '例) メルカリ太郎', value: session[:nickname]
         .form-group
           = f.label :メールアドレス
           %span 必須
-          = f.email_field :email, placeholder: 'PC・携帯どちらでも可'
+          = f.email_field :email, placeholder: 'PC・携帯どちらでも可', value: session[:email]
         .form-group
           = f.label :パスワード
           %span 必須
@@ -34,22 +34,22 @@
         .form-group
           = f.label :お名前（全角）
           %span 必須
-          = f.text_field :family_name, placeholder: '例）山田'
-          = f.text_field :first_name, placeholder: '例）彩'
+          = f.text_field :family_name, placeholder: '例）山田', value: session[:family_name]
+          = f.text_field :first_name, placeholder: '例）彩', value: session[:first_name]
         .form-group
           = f.label :お名前カナ（全角）
           %span 必須
-          = f.text_field :family_name_kana, placeholder: '例）ヤマダ'
-          = f.text_field :first_name_kana, placeholder: '例）アヤ'
+          = f.text_field :family_name_kana, placeholder: '例）ヤマダ', value: session[:family_name_kana]
+          = f.text_field :first_name_kana, placeholder: '例）アヤ', value: session[:first_name_kana]
         .form-group
           = f.label :生年月日
           %span 必須
           .birthday_select
-            = f.text_field :year
+            = f.text_field :year, value: session[:year]
             %span 年
-            = f.text_field :month
+            = f.text_field :month, value: session[:month]
             %span 月
-            = f.text_field :day
+            = f.text_field :day, value: session[:day]
             %span 日
         .form-text
           %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。

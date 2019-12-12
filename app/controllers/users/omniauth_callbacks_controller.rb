@@ -24,12 +24,16 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       flash[:notice] = I18n.t('devise.omniauth_callbacks.success', kind: provider.capitalize)
       sign_in_and_redirect @user, event: :authentication
     else
+      #新規登録において一度全てのsessionの値を削除する
+      reset_session
       #SNSより受け取った情報をsession["devise.#{provider}_data"]で受け取り、nicknameとemailカラムのsessionに値を代入
       session["devise.#{provider}_data"] = request.env['omniauth.auth'].except(:extra)
+      session[:provider] = session["devise.#{provider}_data"][:provider]
+      session[:uid]      = session["devise.#{provider}_data"][:uid]
       session[:nickname] = session["devise.#{provider}_data"][:info][:name]
       session[:email]    = session["devise.#{provider}_data"][:info][:email]
-      #sign_upのstep1ページにリダイレクト(現在は仮URLを記載)
-      redirect_to new_user_registration_url
+      #新規登録の1ページ目にリダイレクト
+      redirect_to personal_signup_index_path
     end
   end
 end

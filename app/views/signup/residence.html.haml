@@ -16,27 +16,23 @@
         .form-group
           = f.label :郵便番号
           %span 必須
-          = f.text_field :zip_code, placeholder: '例) 123-4567'
+          = f.text_field :zip_code, placeholder: '例) 123-4567', value: session[:zip_code]
         .form-group
           = f.label :都道府県
           %span 必須
-          = f.text_field :prefectur, placeholder: '現状テキスト型'
+          = f.text_field :prefectur, placeholder: '現状テキスト型', value: session[:prefectur]
         .form-group
           = f.label :市区町村
           %span 必須
-          = f.text_field :city, placeholder: '例)横浜市緑区'
+          = f.text_field :city, placeholder: '例)横浜市緑区', value: session[:city]
         .form-group
           = f.label :番地
           %span 必須
-          = f.text_field :number, placeholder: '例)青山1-1-1'
+          = f.text_field :number, placeholder: '例)青山1-1-1', value: session[:number]
         .form-group
           = f.label :建物名
           %span 任意
-          = f.text_field :building, placeholder: '例)柳ビル102'
-        .form-group
-          = f.label :電話
-          %span 任意
-          = f.text_field :phone_number, placeholder: '例)09011111111'
+          = f.text_field :building, placeholder: '例)柳ビル102', value: session[:building]
         .form-group
           .form-group
           = f.submit '次へすすむ', class: 'form__submit'
