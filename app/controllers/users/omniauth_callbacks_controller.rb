@@ -32,6 +32,8 @@ class Users::OmniauthCallbacksController < Devise::OmniauthCallbacksController
       session[:uid]      = session["devise.#{provider}_data"][:uid]
       session[:nickname] = session["devise.#{provider}_data"][:info][:name]
       session[:email]    = session["devise.#{provider}_data"][:info][:email]
+      session[:password] = Devise.friendly_token.first(8)
+      session[:password_confirmation] = session[:password]
       #新規登録の1ページ目にリダイレクト
       redirect_to personal_signup_index_path
     end
