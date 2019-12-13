@@ -11,12 +11,16 @@ class ItemsController < ApplicationController
     @supreme_items = Item.where(brand_id: 1620).order("created_at DESC").limit(10)
     @nike_items    = Item.where(brand_id: 857).order("created_at DESC").limit(10)
 
-#例として、下記記述で各アイテムのタイトル、値段、画像(1枚目のみ)を取得することが可能(classは省略)
-# %h2 レディース新着アイテム
-# - @ladys_items.each do |lady|
-#   = lady.item
-#   = lady.price
-#   %img{src: "#{lady.images.first.image}", width:"300", height:"300"}
+  #例として、下記記述で各アイテムのタイトル、値段、画像(1枚目のみ)を取得することが可能(classは省略)
+  # %h2 レディース新着アイテム
+  # - @ladys_items.each do |lady|
+  #   = lady.item
+  #   = lady.price
+  #   %img{src: "#{lady.images.first.image}", width:"300", height:"300"}
   end
+   
+  def show
+  end
+
 end
 
