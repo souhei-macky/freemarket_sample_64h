@@ -64,7 +64,9 @@ class SignupController < ApplicationController
         #trueの場合@user_idをsessionに格納しdoneへredirect
         #falseの場合residenceにredirect
         session[:id] = @user.id
-        redirect_to done_signup_index_path
+        #登録したuserでログイン
+        sign_in User.find(session[:id]) unless user_signed_in?
+        redirect_to new_credit_card_path
       else
         redirect_to residence_signup_index_path
       end
@@ -75,8 +77,6 @@ class SignupController < ApplicationController
   end
 
   def done
-    #登録したuserでログイン
-    sign_in User.find(session[:id]) unless user_signed_in?
   end
 
 
