@@ -15,12 +15,13 @@
 |year|string|null: false|
 |month|string|null: false|
 |day|string|null: false|
+|image|text||
 |uid|string|null: false|
 |provider|string|null: false|
 ### Association
 - has_many :items, dependent: :destroy
 - has_many :comments, dependent: :destroy
-- has_one :credit_card, dependent: :destroy
+- has_many :credit_card, dependent: :destroy
 - has_one :address, dependent: :destroy
 
 ## addressテーブル
@@ -39,11 +40,9 @@
 ## credit_cardsテーブル
 |Column|Type|Options|
 |------|----|-------|
-|card_number|integer|null: false|
-|expiration_month|integer|null: false|
-|expiration_year|integer|null: false|
-|security_code|integer|null: false|
-|user_id|integer|null: false, foreign_key: true|
+|user|references|null: false, foreign_key: true|
+|customer_id|integer|null: false|
+|card_id|integer|null: false|
 ### Association
 - belongs_to :user
 
@@ -95,6 +94,8 @@
 |ancestry|string|null: false|
 ### Association
 - has_ancestry
+### memo
+- Gemのancestryを使用する。
 
 ## brands_categoriesテーブル
 |Column|Type|Options|
