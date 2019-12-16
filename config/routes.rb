@@ -17,4 +17,10 @@ Rails.application.routes.draw do
       get "done"
     end
   end
+  resources :credit_card, only: [:new, :show, :destroy] do
+    collection do
+      post 'pay', to: 'credit_card#pay'
+      post 'destroy', to: 'credit_card#destroy'
+    end
+  end
 end
