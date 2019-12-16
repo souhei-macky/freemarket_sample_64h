@@ -23,4 +23,15 @@ Rails.application.routes.draw do
       post 'destroy', to: 'credit_card#destroy'
     end
   end
+
+
+  resource :homes,only: [:index] do
+    resources :sells,only: [:index,:create]  do
+      collection do
+        resources :edit,only: [:update]  do
+        end
+      end
+    end
+  end
+
 end
