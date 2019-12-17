@@ -1,0 +1,14 @@
+//検索した用語に該当するアイテムがあるかないかで表示するアイテムの分岐
+.search-container
+  -if @items.count == 0 
+    .no-search-item
+    - @all_items.each do |item|
+      = item.item
+      = item.price
+  -else
+    .search-item 
+      - @items.each do |item| 
+        = item.item
+        = item.price
+
+  
