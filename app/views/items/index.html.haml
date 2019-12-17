@@ -1,5 +1,0 @@
-// headreの検索欄の仮置き
-.search-header
-  = form_tag(search_items_path,method: :get) do
-    = text_field_tag :keyword, "",placeholder:"何かお探しですか？"
-    = submit_tag '検索', :item => nil

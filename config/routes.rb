@@ -22,9 +22,4 @@ Rails.application.routes.draw do
       post 'destroy', to: 'credit_card#destroy'
     end
   end
-  resources :items,only:[:index, :show] do
-    collection do
-      get 'search'
-    end
-  end
 end
