@@ -33,7 +33,7 @@
             .form-group
               = f.label :都道府県
               %span.form-require 必須
-              = f.text_field :prefectur, placeholder: '現状テキスト型', value: session[:prefectur]
+              = f.text_field :prefectur, placeholder: '現状テキスト型', value: session[:prefectur], class:"input-default"
             .form-group
               = f.label :市区町村
               %span.form-require 必須
