@@ -1,0 +1,46 @@
+.single-container
+  %header.single-header
+    %h1
+      = link_to root_path do
+        %img{alt: "mercari", src: "image/logo.svg"}/
+  %main.single-main
+    .login-panel
+      .login-no-account
+        %p アカウントをお持ちでない方はこちら
+        = link_to "新規会員登録", signup_index_path
+      .login-form-inner
+        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
+          %i.icon-facebook
+          Facebookでログイン
+        %button#google-login.btn-default.btn-sns.btn-sns-google
+          Googleでログイン
+      %form{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+        .login-form-inner
+          .form-group
+            %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+          .form-group
+            %input.login-input-text.input-default{name: "password", placeholder: "パスワード", type: "password"}/
+          .form-group
+            .g-recaptcha.login-captcha{"data-sitekey": ""}
+          %button.login-submit.btn-default.btn-red{type: "submit"} ログイン
+          %input{name: "login_callback", type: "hidden", value: "/jp/"}/
+          %input{name: "__csrf_value", type: "hidden", value: ""}/
+          = link_to "パスワードをお忘れの方", root_path
+    %form#login_form_facebook{action: "/jp/login/", method: "POST", novalidate: "novalidate"}
+    %form#login_form_google{action: "/jp/login/", method: "POST", novalidate: "novalidate"}
+    %input#google_client_id{type: "hidden", value: ""}/
+    %input#facebook_app_id{type: "hidden", value: "466308336793848"}/
+
+  %footer.single-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to "プライバシーポリシー", root_path
+        %li
+          = link_to "メルカリ利用規約", root_path
+        %li
+          = link_to "特定商取引に関する表記", root_path
+    = link_to root_path ,class:"single-footer-logo" do
+      %img{alt: "mercari", height: "65", src: "image/logo-gray.svg", width: "80"}/
+    %p
+      %small © Mercari, Inc.
