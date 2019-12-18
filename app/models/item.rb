@@ -6,5 +6,5 @@ class Item < ApplicationRecord
   belongs_to :category
   belongs_to :brands_category
   belongs_to :size
-  belongs_to :content_condition
+  belongs_to :item_condition
 end
