@@ -54,7 +54,7 @@ class SignupController < ApplicationController
       #trueの場合下記ifの実行
       #falseの場合personalにredirect
       session[:zip_code] = address_params[:zip_code]
-      session[:prefectur] = address_params[:prefectur]
+      session[:prefecture] = address_params[:prefecture]
       session[:city] = address_params[:city]
       session[:number] = address_params[:number]
       session[:building] = address_params[:building]
@@ -63,7 +63,7 @@ class SignupController < ApplicationController
 
       @address = Address.new(
         zip_code: session[:zip_code],
-        prefectur: session[:prefectur],
+        prefecture: session[:prefecture],
         city: session[:city],
         number: session[:number],
         building: session[:building],
@@ -117,7 +117,7 @@ class SignupController < ApplicationController
   def address_params
     params.require(:address).permit(
       :zip_code,
-      :prefectur,
+      :prefecture,
       :city,
       :number,
       :building,
