@@ -2,7 +2,7 @@
   %header.single-header
     %h1
       = link_to root_path do
-        %img{alt: "mercari", src: "image/logo.svg"}/
+        = image_tag "", alt: "mercari"
   %main.single-main
     .login-panel
       .login-no-account
@@ -41,6 +41,6 @@
         %li
           = link_to "特定商取引に関する表記", root_path
     = link_to root_path ,class:"single-footer-logo" do
-      %img{alt: "mercari", height: "65", src: "image/logo-gray.svg", width: "80"}/
+      = image_tag "", alt: "mercari", height: "65", width: "80"
     %p
       %small © Mercari, Inc.
