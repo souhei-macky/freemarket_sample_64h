@@ -11,9 +11,8 @@
             %br>/
             登録されたお名前・生年月日を変更する場合、本人確認書類の提出が必要になります。
           %p.text-right
-            %a{href: "/jp/help_center/article/495/", target: "_blank"}
-              本人確認書類のアップロードについて
-              %i.icon-arrow-right
+            本人確認書類のアップロードについて
+            %i.icon-arrow-right
         .form-group
           %label お名前
           %p メルカリ　メルオ
@@ -32,6 +31,7 @@
           %span.form-arbitrary 任意
           .select-wrap
             %i.icon-arrow-bottom
+            -# %select.input-default{name: prefecture, Prefecture.prefecture_areas.keys,{} }
             %select.select-default{name: "prefecture"}
               %option --
               %option 北海道
@@ -96,107 +96,77 @@
         %button.btn-default.btn-red{type: "submit"} 登録する
         .form-group.text-right
           %p
-            %a{href: "/jp/help_center/article/423/", target: "_blank"}
-              本人情報の登録について
-              %i.icon-arrow-right
+            本人情報の登録について
+            %i.icon-arrow-right
         %input{name: "__csrf_value", type: "hidden", value: "9344d8c9ae026fc206874395e2c8a1c4d3410d9fe459b11361f64dc5d6f00e151ee1aeb691cda7372a6aaf013260276ada42f12babc8a9a45d162b54d545848b7"}/
   .l-side
     %nav.mypage-nav
       %ul.mypage-nav-list
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/"}
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
             マイページ
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/notification/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             お知らせ
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/todo/"}
-            やることリスト
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/like/history/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             いいね！一覧
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/sell/"}
-            出品する
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/listings/listing/"}
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
             出品した商品 - 出品中
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/listings/in_progress/"}
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
             出品した商品 - 取引中
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/listings/completed/"}
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
             出品した商品 - 売却済み
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/purchase/"}
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
             購入した商品 - 取引中
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/purchased/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             購入した商品 - 過去の取引
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/news/"}
-            ニュース一覧
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/review/history/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             評価一覧
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/help_center/"}
-            ガイド
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/support/"}
-            お問い合わせ
-            %i.icon-arrow-right
-      %h3.mypage-nav-head メルペイ
-      %ul.mypage-nav-list
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/sales/"}
-            売上・振込申請
-            %i.icon-arrow-right
-        %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/point/"}
-            ポイント
             %i.icon-arrow-right
       %h3.mypage-nav-head 設定
       %ul.mypage-nav-list
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/profile/"}
+          = link_to mypages_profile_path, class:"mypage-nav-list-item" do
             プロフィール
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/deliver_address/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             発送元・お届け先住所変更
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/card/"}
+          = link_to mypages_credit_path, class:"mypage-nav-list-item" do
             支払い方法
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/email_password/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             メール/パスワード
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/identification/"}
+          = link_to mypages_identification_path, class:"mypage-nav-list-item" do
             本人情報
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item{href: "/jp/mypage/sms_confirmation/"}
+          = link_to mypages_index_path,  class:"mypage-nav-list-item" do
             電話番号の確認
             %i.icon-arrow-right
         %li
-          %a.mypage-nav-list-item.active{href: "/jp/logout/"}
+          = link_to mypages_logout_path, class:"mypage-nav-list-item" do
             ログアウト
             %i.icon-arrow-right
+
 = render "footer"
