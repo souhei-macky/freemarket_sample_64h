@@ -1,0 +1,278 @@
+.default-container
+  %header.pc-header.visible-pc
+    .pc-header-inner
+      .pc-header-top
+        %h1
+          = link_to "" do
+            = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
+        %form.pc-header-form{:action => "https://www.mercari.com/jp/search/"}
+          %input.input-default{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search", :value => ""}/
+          %i.icon-search
+      .pc-header-nav-box.clearfix
+        %nav.l-left
+          %ul.pc-header-nav
+            %li
+              %h2
+                = link_to "" do
+                  .pc-header-nav-root.list-parent
+                    %i.icon-list.pc-header-cat-brand-icon
+                    %span カテゴリーから探す
+              %ul.pc-header-nav-parent-wrap{"data-mega" => "1"}
+                %li.pc-header-nav-parent
+            %li
+              %h2
+                = link_to "" do
+                  .pc-header-nav-root.list-parent
+                    %i.icon-tag.pc-header-cat-brand-icon
+                    %span ブランドから探す
+                %ul.pc-header-nav-parent-wrap
+                  %li.pc-header-nav-parent
+                    %h3  
+      
+  %main.l-container.clearfix
+    %section.item-box-container.l-single-container
+      .item-name 
+        = @item.name
+      .item-main-content.clearfix
+        .item-photo
+          = image_tag "#{@images.first.image}"
+        %table.item-detail-table
+          %tbody
+            %tr
+              %th 出品者
+              %td
+                = link_to "" do
+                  = @item.user.nickname
+                %div
+                  .item-user-ratings
+                    %i.icon-good
+                    %span 2
+                  .item-user-ratings
+                    %i.icon-normal
+                    %span 0
+                  .item-user-ratings
+                    %i.icon-bad
+                    %span 0
+            %tr
+              %th カテゴリー
+              %td
+                = link_to "" do
+                  = @item.category.name
+                  .item-detail-table-sub-category
+                    %i.icon-arrow-right
+                    トップス
+                = link_to "" do
+                  .item-detail-table-sub-sub-category
+                    %i.icon-arrow-right
+                    ポロシャツ
+            %tr
+              %th ブランド
+              %td
+                = link_to "" do
+                  = @item.brands_category.name
+            %tr
+              %th 商品のサイズ
+              %td 
+                = @item.size.name
+            %tr
+              %th 商品の状態
+              %td 
+                = @item.item_condition.name
+            %tr
+              %th 配送料の負担
+              %td 送料込み(出品者負担)
+            %tr
+              %th 配送の方法
+              %td らくらくメルカリ便
+            %tr
+              %th 配送元地域
+              %td
+                = link_to "" do
+                  = @address.prefecture
+            %tr
+              %th 発送日の目安
+              %td 2~3日で発送
+      .item-price-box.text-center
+        %span.item-price.bold ¥8,000
+        %span.item-tax (税込)
+        %span.item-shipping-fee 送料込み
+
+        //商品の出品者の画面
+      -if user_signed_in? && @item.user_id == current_user.id
+        .listing-item-change-box
+          = link_to edit_item_path(@item) do
+            .btn-default.btn-red 商品の編集
+          %p.text-center or
+          = link_to item_path(@item), method: :delete do
+            .btn-default.btn-gray この商品を削除する
+      -else 
+        //商品購入者の画面
+        //リンク先仮指定（後ほど変更）
+        = link_to items_path(@item) do
+          .item-buy-btn 購入画面に進む
+
+        %a.item-action-text{"data-action" => "item/openDetail", "data-adjust-url" => "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key" => "id=m82477556805", "data-play-id" => "com.kouzoh.mercari", "data-toggle" => "open-app", "data-url-scheme" => "mercari://"}
+          アプリで購入
+
+        //下記、全ての出品物によって記載が違うので割愛
+      -# .item-description.f14
+      -#   %p.item-description-inner
+      -#     【ブランド】
+      -#     = @item.brands_category.name
+      -#     -# 【  カラー 】カーキ
+      -#     -# 【 サイズ  】レディース S
+      -#     -# 【購入時期】2018年
+      -#     -# 【着用回数】2、3回 (着用時間も合わせて数時間程度)
+      -#     -# 【保管状況】自宅保管
+          
+      -#     -# ラインがきれいでスッキリ見えます。
+      -#     -# 同時時期に購入したロング丈しか着ないため出品します。
+          
+      -#     -# ※あくまでもユーズドであることをご理解ただける方のみのご購入でお願いいたします。
+      
+    .item-detail-message
+      .message-container
+        .message-content
+          %form.message-form{:action => "https://www.mercari.com/jp/comment/add/", :method => "POST"}
+            %input{:name => "__csrf_value", :type => "hidden", :value => "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
+            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            %input{:name => "item_id", :type => "hidden", :value => "m82477556805"}/
+            %input{:name => "redirect_url_key", :type => "hidden", :value => "item_detail"}/
+            %textarea.textarea-default{:name => "body", :type => "text", :value => ""}
+            %button.message-submit.btn-default.btn-gray{:type => "submit"}
+              %span コメントする
+        %aside.modal{"data-close" => "modal", "data-modal" => "delete-comment"}
+          .modal-inner.modal-banner
+            .modal-body
+              .modal-head.bold 確認
+              %div{"data-comment" => "body"}
+              %br/
+              本当にこのコメントを削除してよろしいですか？
+            %form{:action => "https://www.mercari.com/jp/comment/delete/", :method => "POST"}
+              .clearfix
+                .modal-btn.modal-btn-cancel{"data-close" => "modal"} キャンセル
+                %button.modal-btn.modal-btn-submit{:type => "submit"}
+                  削除する
+              %input{:name => "item_id", :type => "hidden", :value => "m82477556805"}/
+              %input{:name => "comment_id", :type => "hidden", :value => ""}/
+              %input{:name => "redirect_url_key", :type => "hidden", :value => "item_detail"}/
+              %input{:name => "__csrf_value", :type => "hidden", :value => "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
+  %aside.app-banner
+    .app-banner-pc
+      .app-banner-pc-inner
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード！
+        .app-banner-icon.clearfix
+          %figure
+            = image_tag "mercari_icon copy.png", alt: "", width: "68"
+            %ul.clearfix
+              %li
+                = link_to "", target: "_blank" do
+                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
+              %li
+                = link_to "", target: "_blank" do
+                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
+      %figure
+        = image_tag "download_content_pc.png", alt: ""
+  %footer.global-footer
+    %nav.clearfix
+      .footer-cell
+        %h2.footer-head メルカリについて
+        %ul
+          %li
+            = link_to "" do
+              会社概要（運営会社）
+          %li
+            = link_to "" do
+              採用情報
+          %li
+            = link_to "" do
+              プレスリリース
+          %li
+            = link_to "", target: "_blank" do
+              公式ブログ
+          %li
+            = link_to "", target: "_blank" do
+              メルカリロゴ利用ガイドライン
+          %li.footer-social-link
+            = link_to "", target: "_blank" do
+              %i.icon-twitter
+          %li.footer-social-link
+            = link_to "", target: "_blank" do
+              %i.icon-facebook
+      .footer-cell
+        %h2.footer-head ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "" do
+              メルカリガイド
+          %li
+            = link_to "" do
+              らくらくメルカリ便
+          %li
+            = link_to "" do
+              ゆうゆうメルカリ便
+          %li
+            = link_to "" do
+              大型メルカリ便
+          %li
+            = link_to "" do
+              車体取引ガイド
+          %li
+            = link_to "" do
+              メルカリあんしん・あんぜん宣言！
+          %li
+            = link_to "" do
+              偽ブランド品撲滅への取り組み
+          %li
+            = link_to "" do
+              メルカリボックス
+      .footer-cell.full-width
+        %h2.footer-head プライバシーと利用規約
+        .inner-footer-cell
+          %ul
+            %li
+              = link_to "" do
+                プライバシーポリシー
+            %li
+              = link_to "" do
+                メルカリ利用規約
+            %li
+              = link_to "" do
+                あんしんスマホサポート制度に関する利用特約
+            %li
+              = link_to "" do
+                コンプライアンスポリシー
+        .inner-footer-cell
+          %ul
+            %li
+              = link_to "" do
+                個人データの安全管理に係る基本方針
+            %li
+              = link_to "" do
+                特定商取引に関する表記
+            %li
+              = link_to "" do
+                資金決済法に基づく表示
+            %li
+              = link_to "" do
+                法令順守と犯罪抑止のために
+      .footer-cell.footer-nav-lang
+        %h2.footer-head 国
+        %ul
+          %li
+            = link_to "" do
+              日本
+          %li
+            = link_to "" do
+              United States
+    .footer-bottom
+      = link_to "" do
+        .footer-logo
+          = image_tag "logo-white.svg", height: "31", width: "124"
+        %span.footer-copyright
+          %small © Mercari, Inc.
+  = link_to "" do
+    .footer-sell-btn
+      %div 出品
+      %i.icon-camera

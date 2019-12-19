@@ -23,4 +23,9 @@ Rails.application.routes.draw do
       post 'destroy', to: 'credit_card#destroy'
     end
   end
+  resources :items, only: [:index, :create, :show, :destroy, :edit, :update] do
+    collection do
+      get 'search'
+    end
+  end
 end

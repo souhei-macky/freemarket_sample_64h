@@ -19,8 +19,23 @@ class ItemsController < ApplicationController
   #   = lady.price
   #   %img{src: "#{lady.images.first.image}", width:"300", height:"300"}
   end
-   
+
+  def create
+  end
+
   def show
+    @item = Item.find(params[:id])
+    @images = Image.where(item_id: params[:id])
+    @address = Address.find_by(user_id: User.find_by(id: @item.user_id).id)
+  end
+
+  def destroy
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   def search

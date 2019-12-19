@@ -1,0 +1,119 @@
+%aside.app-banner
+    .app-banner-pc
+      .app-banner-pc-inner
+        %h2 スマホでかんたんフリマアプリ
+        %p 今すぐ無料ダウンロード！
+        .app-banner-icon.clearfix
+          %figure
+            = image_tag "mercari_icon copy.png", alt: "", width: "68"
+            %ul.clearfix
+              %li
+                = link_to "", target: "_blank" do
+                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
+              %li
+                = link_to "", target: "_blank" do
+                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
+      %figure
+        = image_tag "download_content_pc.png", alt: ""
+  %footer.global-footer
+    %nav.clearfix
+      .footer-cell
+        %h2.footer-head メルカリについて
+        %ul
+          %li
+            = link_to "" do
+              会社概要（運営会社）
+          %li
+            = link_to "" do
+              採用情報
+          %li
+            = link_to "" do
+              プレスリリース
+          %li
+            = link_to "", target: "_blank" do
+              公式ブログ
+          %li
+            = link_to "", target: "_blank" do
+              メルカリロゴ利用ガイドライン
+          %li.footer-social-link
+            = link_to "", target: "_blank" do
+              %i.icon-twitter
+          %li.footer-social-link
+            = link_to "", target: "_blank" do
+              %i.icon-facebook
+      .footer-cell
+        %h2.footer-head ヘルプ＆ガイド
+        %ul
+          %li
+            = link_to "" do
+              メルカリガイド
+          %li
+            = link_to "" do
+              らくらくメルカリ便
+          %li
+            = link_to "" do
+              ゆうゆうメルカリ便
+          %li
+            = link_to "" do
+              大型メルカリ便
+          %li
+            = link_to "" do
+              車体取引ガイド
+          %li
+            = link_to "" do
+              メルカリあんしん・あんぜん宣言！
+          %li
+            = link_to "" do
+              偽ブランド品撲滅への取り組み
+          %li
+            = link_to "" do
+              メルカリボックス
+      .footer-cell.full-width
+        %h2.footer-head プライバシーと利用規約
+        .inner-footer-cell
+          %ul
+            %li
+              = link_to "" do
+                プライバシーポリシー
+            %li
+              = link_to "" do
+                メルカリ利用規約
+            %li
+              = link_to "" do
+                あんしんスマホサポート制度に関する利用特約
+            %li
+              = link_to "" do
+                コンプライアンスポリシー
+        .inner-footer-cell
+          %ul
+            %li
+              = link_to "" do
+                個人データの安全管理に係る基本方針
+            %li
+              = link_to "" do
+                特定商取引に関する表記
+            %li
+              = link_to "" do
+                資金決済法に基づく表示
+            %li
+              = link_to "" do
+                法令順守と犯罪抑止のために
+      .footer-cell.footer-nav-lang
+        %h2.footer-head 国
+        %ul
+          %li
+            = link_to "" do
+              日本
+          %li
+            = link_to "" do
+              United States
+    .footer-bottom
+      = link_to "" do
+        .footer-logo
+          = image_tag "logo-white.svg", height: "31", width: "124"
+        %span.footer-copyright
+          %small © Mercari, Inc.
+  = link_to "" do
+    .footer-sell-btn
+      %div 出品
+      %i.icon-camera
