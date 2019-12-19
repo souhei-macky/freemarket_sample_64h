@@ -1,0 +1,189 @@
+!!!
+%html{lang: "ja-JP"}
+  %head
+    %title トップ - メルカリ スマホでかんたん フリマアプリ
+  %body
+    .default-container
+      %header.pc-header.visible-pc
+        .pc-header-inner
+          .pc-header-top
+            %h1
+              = link_to root_path do
+                = image_tag "", alt: "mercari", height: "36", width: "134"
+            %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
+              %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
+              %i.icon-search
+          .pc-header-nav-box.clearfix
+            %nav.l-left
+              %ul.pc-header-nav
+                %li
+                  %h2
+                    = link_to root_path do
+                      %i.icon-list.pc-header-cat-brand-icon
+                      %span カテゴリーから探す
+                  %ul.pc-header-nav-parent-wrap{"data-mega" => "1"}
+                    %li.pc-header-nav-parent
+                %li
+                  %h2
+                    = link_to root_path do
+                      %i.icon-tag.pc-header-cat-brand-icon
+                      %span ブランドから探す
+                    %ul.pc-header-nav-parent-wrap
+                      %li.pc-header-nav-parent
+                        %h3  
+                      %li.pc-header-nav-parent
+      %nav.bread-crumbs
+        %ul
+          %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+            =link_to root_path do
+              %span{itemprop: "title"} メルカリ
+            %i.icon-arrow-right
+          =link_to root_path do
+            %span{itemprop: "title"} マイページ
+    .sc-ebFjAB.dxJnjc
+      .sc-clNaTc.iniLfl
+        = link_to "#", target: "_blank" do
+          .sc-hzNEM.iFJfgS
+        .slider.sc-fQejPQ.gjkspQ{style: "box-sizing: border-box; display: block; height: auto; position: relative; visibility: inherit; width: 100%;"}
+          .slider-frame{style: "box-sizing:border-box;display:block;height:100%;margin:0px;-moz-box-sizing:border-box;-ms-transform:translate(0, 0);overflow:hidden;padding:0;position:relative;touch-action:pinch-zoom pan-y;transform:translate3d(0, 0, 0);-webkit-transform:translate3d(0, 0, 0)"}
+            %ul.slider-list{style: "transform: translate3d(0px, 0px, 0px); position: relative; display: block; margin: 0px; padding: 0px; height: 390px; width: 2688px; cursor: pointer; box-sizing: border-box; touch-action: pan-y pinch-zoom;"}
+              %li.slider-slide.slide-visible{:style => "box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform 0.4s linear 0s; vertical-align: top; width: 1344px;"}
+                = link_to "#", target: "_blank" do
+                  .sc-hzNEM.iFJfgS{"aria-hidden" => "false", tabindex: "0"}
+              %li.slider-slide{style: "box-sizing: border-box; display: inline-block; height: auto; left: 1344px; list-style-type: none; margin: auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform 0.4s linear 0s; vertical-align: top; width: 1344px;"}
+                .sc-hzNEM.fSbCwc
+                  .sc-chbbiW.lpfITZ
+                    = image_tag "", alt: "mercari"
+                    .sc-kxynE.hkJJjj
+                      .sc-iSDuPN.hjMsAb
+                        スマホで
+                        かんたん
+                        %br>/
+                        フリマアプリ
+                      %p.sc-fZwumE.jmKeIu
+                        メルカリはスマホカメラからすぐに出品できる
+                        %br>/
+                        購入時も安心な独自システムのアプリです
+                      .sc-gmeYpB.bPWhgn
+                        = link_to "#", target: "_blank" do
+                          = image_tag "", alt: ""
+                        = link_to "#", target: "_blank" do
+                          = image_tag "", alt: ""
+          .slider-control-centerleft{style: "position:absolute;top:50%;left:0;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)"}
+            .sc-kaNhvL.sc-etwtAo.gBRyTf.sc-LKuAh.fDeTnn
+          .slider-control-centerright{style: "position:absolute;top:50%;right:0;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)"}
+            .sc-kaNhvL.sc-jXQZqI.jqouQU.sc-iBEsjs.eCkyqu
+          .slider-control-bottomcenter{style: "position:absolute;bottom:0;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)"}
+            .style_dotsIndicator__1fZnt.common_fontFamily__3-3Si.style_center__2IkR_.style_mono__3e12j.sc-iGPElx.zxiXZ
+              %span.style_active__2ihlK
+              %span
+          :css
+            .slider-slide > img { width: 100%; display: block; }
+                      .slider-slide > img:focus { margin: auto; }
+      .sc-gtfDJT.gJTxdm
+        %h2.style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv1__3ygH4.sc-fOICqy.ybTBp 人気のカテゴリー
+        .sc-hzDEsm.dpboAj
+          %ul.sc-jeCdPy.hqbLjQ
+            %li.sc-jtRlXQ.bftzQH
+              %a.sc-bGbJRg.sc-bEjcJn.jyApwd レディース
+            %li.sc-jtRlXQ.bftzQH
+              %a.sc-bGbJRg.sc-bEjcJn.jyApwd メンズ
+            %li.sc-jtRlXQ.bftzQH
+              %a.sc-bGbJRg.sc-bEjcJn.jyApwd 家電・スマホ・カメラ
+            %li.sc-jtRlXQ.bftzQH
+              %a.sc-bGbJRg.sc-bEjcJn.jyApwd おもちゃ・ホビー・グッズ
+      .sc-gVyKpa.dxUUSo
+    %aside.app-banner
+      .app-banner-pc
+        .app-banner-pc-inner
+          %h2 スマホでかんたんフリマアプリ
+          %p 今すぐ無料ダウンロード！
+          .app-banner-icon.clearfix
+            %figure
+              = image_tag "", alt: "", width: "68"
+            %ul.clearfix
+              %li
+                = link_to "#", target: "_blank" do
+                  = image_tag "", alt: "mercari", height: "40", width: "133"
+              %li
+                = link_to "#", target: "_blank" do
+                  = image_tag "", alt: "mercari", height: "40", width: "133"
+        %figure
+          = image_tag "", alt: ""
+    %footer.global-footer
+      %nav.clearfix
+        .footer-cell
+          %h2.footer-head メルカリについて
+          %ul
+            %li
+              = link_to "会社概要（運営会社）", root_path
+            %li
+              = link_to "採用情報", root_path
+            %li
+              = link_to "プレスリリース", root_path
+            %li
+              = link_to"公式ブログ", root_path
+            %li
+              = link_to "メルカリロゴ利用ガイドライン", root_path
+            %li.footer-social-link
+              = link_to root_path, target: "_blank" do
+                %i.icon-twitter
+            %li.footer-social-link
+              = link_to root_path, target: "_blank" do
+                %i.icon-facebook
+        .footer-cell
+          %h2.footer-head ヘルプ＆ガイド
+          %ul
+            %li
+              = link_to "メルカリガイド", root_path
+            %li
+              = link_to "らくらくメルカリ便", root_path
+            %li
+              = link_to "ゆうゆうメルカリ便", root_path
+            %li
+              = link_to "大型メルカリ便", root_path
+            %li
+              = link_to "車体取引ガイド", root_path
+            %li
+              = link_to "メルカリあんしん・あんぜん宣言！", root_path
+            %li
+              = link_to "偽ブランド品撲滅への取り組み", root_path
+            %li
+              = link_to "メルカリボックス", root_path
+        .footer-cell.full-width
+          %h2.footer-head プライバシーと利用規約
+          .inner-footer-cell
+            %ul
+              %li
+                = link_to "プライバシーポリシー", root_path
+              %li
+                = link_to "メルカリ利用規約", root_path
+              %li
+                = link_to "あんしんスマホサポート制度に関する利用特約", root_path
+              %li
+                = link_to "コンプライアンスポリシー", root_path
+          .inner-footer-cell
+            %ul
+              %li
+                = link_to "個人データの安全管理に係る基本方針", root_path
+              %li
+                = link_to "特定商取引に関する表記", root_path
+              %li
+                = link_to "資金決済法に基づく表示",root_path
+              %li
+                = link_to "法令順守と犯罪抑止のために", root_path
+        .footer-cell.footer-nav-lang
+          %h2.footer-head 国
+          %ul
+            %li
+              = link_to "日本", root_path
+            %li
+              = link_to "United States", root_path
+      .footer-bottom
+        = link_to root_path do
+          = image_tag "", alt: "mercari", height: "31", width: "124"
+        %span.footer-copyright
+          %small © Mercari, Inc.
+    = link_to "#" ,class: "footer-sell-btn" do
+      %div 出品
+      %i.icon-camera
