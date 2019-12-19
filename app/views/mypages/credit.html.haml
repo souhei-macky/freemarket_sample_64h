@@ -1,0 +1,92 @@
+= render "header"
+= render "bread-crumbs"
+%main.l-container.clearfix
+  .l-content
+    %section.l-chapter-container
+      %h2.l-chapter-head 支払い方法
+      .l-single-inner
+        %section
+          .l-single-content
+            %h3.l-chapter-sub-head クレジットカード一覧
+          %ul.settings-payment-list
+            %li
+              %form.l-single-content{action: "https://www.mercari.com/jp/mypage/card/delete/", method: "POST"}
+                %figure
+                  = image_tag "", alt: "visa", height: "15", width: "49"
+                %input{name: "__csrf_value", type: "hidden", value: ""}/
+                %input{name: "card_sequence_no", type: "hidden", value: "tcWVc5kinsmpqmF4E5QeSfcc"}/
+                .settings-payment-num ************0000
+                .settings-payment-num 00 / 00
+                %input{name: "method", type: "hidden", value: "card"}/
+                %button.settings-payment-remove{type: "submit"}
+                  削除する
+        .settings-not-regist
+          = link_to root_path, target: "_blank" do
+            %span 支払い方法について
+            %i.icon-arrow-right
+  .l-side
+    %nav.mypage-nav
+      %ul.mypage-nav-list
+        %li
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
+            マイページ
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            お知らせ
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 出品中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 取引中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 売却済み
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            購入した商品 - 取引中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            購入した商品 - 過去の取引
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            評価一覧
+            %i.icon-arrow-right
+      %h3.mypage-nav-head 設定
+      %ul.mypage-nav-list
+        %li
+          = link_to mypages_profile_path, class:"mypage-nav-list-item" do
+            プロフィール
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            発送元・お届け先住所変更
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_credit_path, class:"mypage-nav-list-item" do
+            支払い方法
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            メール/パスワード
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_identification_path, class:"mypage-nav-list-item" do
+            本人情報
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            電話番号の確認
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_logout_path, class:"mypage-nav-list-item" do
+            ログアウト
+            %i.icon-arrow-right
+= render "footer"

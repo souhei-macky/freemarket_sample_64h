@@ -1,0 +1,27 @@
+.default-container
+  %header.pc-header.visible-pc
+    .pc-header-inner
+      .pc-header-top
+        %h1
+          = link_to root_path do
+            = image_tag "", alt: "mercari", height: "36", width: "134"
+        %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
+          %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
+          %i.icon-search
+      .pc-header-nav-box.clearfix
+        %nav.l-left
+          %ul.pc-header-nav
+            %li
+              %h2.pc-header-nav-root.list-parent
+                %i.icon-list.pc-header-cat-brand-icon
+                %span カテゴリーから探す
+              %ul.pc-header-nav-parent-wrap{"data-mega": "1"}
+                %li.pc-header-nav-parent
+            %li
+              %h2.pc-header-nav-root.list-parent
+                %i.icon-tag.pc-header-cat-brand-icon
+                %span ブランドから探す
+                %ul.pc-header-nav-parent-wrap
+                  %li.pc-header-nav-parent
+                    %h3  
+                  %li.pc-header-nav-parent
