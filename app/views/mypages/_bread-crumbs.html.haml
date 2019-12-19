@@ -1,7 +1,7 @@
 %nav.bread-crumbs
   %ul
     %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
-      %a{href: "https://www.mercari.com/jp/", itemprop: "url"}
+      -# = link_to root_path, itemprop: "url" do
         %span{itemprop: "title"} メルカリ
       %i.icon-arrow-right
     %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
