@@ -29,7 +29,7 @@ Rails.application.routes.draw do
 
 
   #itemのshowアクションで商品詳細
-  resources :items, only: [:index, :new, :create, :show, :destroy, :edit, :update] do
+  resources :items do
     resources :chats, only: [:show]
     collection do
       get 'sell'#出品

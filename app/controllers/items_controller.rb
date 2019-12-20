@@ -26,7 +26,7 @@ class ItemsController < ApplicationController
   def show
     @item = Item.find(params[:id])
     @images = Image.where(item_id: params[:id])
-    @address = Address.find_by(user_id: User.find_by(id: @item.user_id).id)
+    @address = Address.find_by(user_id: @item.user_id)
   end
 
   def destroy
