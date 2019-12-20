@@ -5,8 +5,8 @@
         %h1
           = link_to "" do
             = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
-        %form.pc-header-form{:action => "https://www.mercari.com/jp/search/"}
-          %input.input-default{:name => "keyword", :placeholder => "何かお探しですか？", :type => "search", :value => ""}/
+        %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
+          %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
           %i.icon-search
       .pc-header-nav-box.clearfix
         %nav.l-left
@@ -17,7 +17,7 @@
                   .pc-header-nav-root.list-parent
                     %i.icon-list.pc-header-cat-brand-icon
                     %span カテゴリーから探す
-              %ul.pc-header-nav-parent-wrap{"data-mega" => "1"}
+              %ul.pc-header-nav-parent-wrap{"data-mega": "1"}
                 %li.pc-header-nav-parent
             %li
               %h2
@@ -111,10 +111,10 @@
         = link_to items_path(@item) do
           .item-buy-btn 購入画面に進む
 
-        %a.item-action-text{"data-action" => "item/openDetail", "data-adjust-url" => "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key" => "id=m82477556805", "data-play-id" => "com.kouzoh.mercari", "data-toggle" => "open-app", "data-url-scheme" => "mercari://"}
+        %a.item-action-text{"data-action": "item/openDetail", "data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key": "id=m82477556805", "data-play-id": "com.kouzoh.mercari", "data-toggle": "open-app", "data-url-scheme": "mercari://"}
           アプリで購入
 
-        //下記、全ての出品物によって記載が違うので割愛
+        //下記、全ての出品物によって記載が違うので割愛(参考に残しておく)
       -# .item-description.f14
       -#   %p.item-description-inner
       -#     【ブランド】
@@ -133,30 +133,30 @@
     .item-detail-message
       .message-container
         .message-content
-          %form.message-form{:action => "https://www.mercari.com/jp/comment/add/", :method => "POST"}
-            %input{:name => "__csrf_value", :type => "hidden", :value => "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
+          %form.message-form{action: "https://www.mercari.com/jp/comment/add/", method: "POST"}
+            %input{name: "__csrf_value", type: "hidden", value: "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
             %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
-            %input{:name => "item_id", :type => "hidden", :value => "m82477556805"}/
-            %input{:name => "redirect_url_key", :type => "hidden", :value => "item_detail"}/
-            %textarea.textarea-default{:name => "body", :type => "text", :value => ""}
-            %button.message-submit.btn-default.btn-gray{:type => "submit"}
+            %input{name: "item_id", type: "hidden", value: "m82477556805"}/
+            %input{name: "redirect_url_key", type: "hidden", value: "item_detail"}/
+            %textarea.textarea-default{name: "body", type: "text", value: ""}
+            %button.message-submit.btn-default.btn-gray{type: "submit"}
               %span コメントする
-        %aside.modal{"data-close" => "modal", "data-modal" => "delete-comment"}
+        %aside.modal{"data-close": "modal", "data-modal": "delete-comment"}
           .modal-inner.modal-banner
             .modal-body
               .modal-head.bold 確認
-              %div{"data-comment" => "body"}
+              %div{"data-comment": "body"}
               %br/
               本当にこのコメントを削除してよろしいですか？
-            %form{:action => "https://www.mercari.com/jp/comment/delete/", :method => "POST"}
+            %form{action: "https://www.mercari.com/jp/comment/delete/", method: "POST"}
               .clearfix
-                .modal-btn.modal-btn-cancel{"data-close" => "modal"} キャンセル
-                %button.modal-btn.modal-btn-submit{:type => "submit"}
+                .modal-btn.modal-btn-cancel{"data-close": "modal"} キャンセル
+                %button.modal-btn.modal-btn-submit{type: "submit"}
                   削除する
-              %input{:name => "item_id", :type => "hidden", :value => "m82477556805"}/
-              %input{:name => "comment_id", :type => "hidden", :value => ""}/
-              %input{:name => "redirect_url_key", :type => "hidden", :value => "item_detail"}/
-              %input{:name => "__csrf_value", :type => "hidden", :value => "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
+              %input{name: "item_id", type: "hidden", value: "m82477556805"}/
+              %input{name: "comment_id", type: "hidden", value: ""}/
+              %input{name: "redirect_url_key", type: "hidden", value: "item_detail"}/
+              %input{name: "__csrf_value", type: "hidden", value: "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
   %aside.app-banner
     .app-banner-pc
       .app-banner-pc-inner
