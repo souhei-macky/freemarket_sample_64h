@@ -1,5 +1,7 @@
 class ItemsController < ApplicationController
 
+  before_action :set_item, only: [:show, :destroy]
+
   def index
     #category_idの値は実際のメルカリ準拠。投稿時間を降順で最大10個表示させる。
     @ladys_items   = Item.where(category_id: 1).order("created_at DESC").limit(10)
@@ -24,12 +26,11 @@ class ItemsController < ApplicationController
   end
 
   def show
-    @item = Item.find(params[:id])
     @address = Address.find_by(user_id: @item.user_id)
   end
 
   def destroy
-    if @item = Item.find(params[:id]).destroy
+    if @item.destroy
       redirect_to mypage_index_path
     else
       redirect_to edit_item_path(params[:id])
@@ -52,6 +53,13 @@ class ItemsController < ApplicationController
       @all_items = Item.limit(5).order("id DESC")
     end
   end
+
+  private
+
+  def set_item
+    @item = Item.find(params[:id])
+  end
+
 
 end
 
