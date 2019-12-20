@@ -51,7 +51,6 @@ class SignupController < ApplicationController
       provider: session[:provider],
       uid: session[:uid]
     )
-    binding.pry
     if @user.save!
       #trueの場合下記ifの実行
       #falseの場合personalにredirect
