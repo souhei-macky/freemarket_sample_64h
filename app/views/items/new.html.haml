@@ -1,0 +1,117 @@
+.single-container
+  %header.single-header
+    %h1
+      = link_to root_path do
+        = image_tag "", alt: "mercari"
+  %main.single-main
+    %section.l-single-container.buy-item-container
+      #sell-container
+        %div{"data-reactroot": ""}
+          .sell-container-inner
+            %h2.l-single-head 商品の情報を入力
+            = form_with(model: @item , method: :post, local: true) do |f|
+              .sell-upload-box
+                %h3.sell-upload-head
+                  出品画像
+                  %span.form-require 必須
+                %p 最大10枚までアップロードできます
+                .sell-dropbox-container.clearfix.state-image-number-10
+                  .sell-upload-items-container
+                    .sell-upload-items.have-item-0
+                      %ul
+                  %label.sell-upload-drop-box.have-item-0
+                    %pre.visible-pc
+                      ドラッグアンドドロップ
+                      またはクリックしてファイルをアップロード
+                    = f.fields_for :images do |image|
+                      = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect", id:"fileup"
+              .sell-content
+                .form-group
+                  %label
+                    商品名
+                    %span.form-require 必須
+                  = f.text_field :name, placeholder: "商品名", class:"input-default"
+                .form-group
+                  %label
+                    商品の説明
+                    %span.form-require 必須
+                  = f.text_area :description, placeholder: "商品の説明（必須 1,000文字以内）（色、素材、重さ、定価、注意点など）例）2010年頃に1万円で購入したジャケットです。ライトグレーで傷はありません。あわせやすいのでおすすめです。", rows: "5", class:"textarea-default"
+              .sell-content.clearfix
+                %h3.sell-sub-head 商品の詳細
+                .sell-form-box
+                  .form-group
+                    %label
+                      カテゴリー
+                      %span.form-require 必須
+                      .select-wrap
+                        %i.icon-arrow-bottom
+                        = f.select :category_id,[["レディース","1"],["メンズ","2"],["ベビー・キッズ","3"],["インテリア・住まい・小物","4"],["本・音楽・ゲーム","5"],["おもちゃ・ホビー・グッズ","1328"],["コスメ・香水・美容","6"],["家電・スマホ・カメラ","7"],["スポーツ・レジャー","8"],["ハンドメイド","9"],["チケット","1027"],["自動車・オートバイ","1318"],["その他","10"]], {}, {class: 'select-default'}
+                  .form-group
+                    %label
+                      商品の状態
+                      %span.form-require 必須
+                      .select-wrap
+                        %i.icon-arrow-bottom
+                        = f.select :item_condition_id, [["新品、未使用","1"],["未使用に近い","2"],["目立った傷や汚れなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]],{}, {class:"select-default"}
+              -# .sell-content.clearfix
+              -#   %h3.sell-sub-head 配送について
+              -#   .sell-form-box
+              -#     .form-group
+              -#       %label
+              -#         配送料の負担
+              -#         %span.form-require 必須
+              -#       .select-wrap
+              -#         %i.icon-arrow-bottom
+              -#         = f.select :
+              -#         %select.select-default
+              -#           %option{value: ""} ---
+              -#           %option{value: "2"} 送料込み(出品者負担)
+              -#           %option{value: "1"} 着払い(購入者負担)
+              -#     .form-group
+              -#       %label
+              -#         発送までの日数
+              -#         %span.form-require 必須
+              -#       .select-wrap
+              -#         %i.icon-arrow-bottom
+              -#         %select.select-default
+              -#           %option{value: ""} ---
+              -#           %option{value: "1"} 1~2日で発送
+              -#           %option{value: "2"} 2~3日で発送
+              -#           %option{value: "3"} 4~7日で発送
+              .sell-content.clearfix
+                %h3.sell-sub-head 販売価格(300〜9,999,999)
+
+                .sell-form-box
+                  %ul.sell-price
+                    %li.form-group
+                      .clearfix
+                        %label.l-left
+                          価格
+                          %span.form-require 必須
+                        .l-right.sell-price-input
+                          = f.text_field :price, placeholder: "例) 300",class:"input-default"
+                    %li.clearfix
+                      .l-left
+                        販売手数料 (10%)
+                      .l-right -
+                    %li.clearfix.bold
+                      .l-left 販売利益
+                      .l-right -
+              .modal{role: "dialog", tabindex: "-1"}
+                .modal-inner
+              .sell-content.sell-btn-box
+                %button.btn-default.btn-red{type: "submit"}
+                  出品する
+                = link_to "もどる", root_path, class:"btn-default btn-gray"
+            .overlay
+  %footer.single-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to "プライバシーポリシー",root_path
+        %li
+          = link_to "メルカリ利用規約", root_path
+        %li
+          = link_to "特定商取引に関する表記", root_path
+    = link_to root_path class:"single-footer-logo" do
+      = image_tag "", alt: "mercari", height: "65", width: "80"
