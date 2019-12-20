@@ -29,6 +29,11 @@ class ItemsController < ApplicationController
   end
 
   def destroy
+    if @item = Item.find(params[:id]).destroy
+      redirect_to mypage_index_path
+    else
+      redirect_to edit_item_path(params[:id])
+    end
   end
 
   def edit
