@@ -18,10 +18,17 @@ class ItemsController < ApplicationController
   end
 
   def show
-
+    @item = Item.find(params[:id])
+    @address = Address.find_by(user_id: @item.user_id)
   end
 
-  def sell
+  def destroy
+  end
+
+  def edit
+  end
+
+  def update
   end
 
   def search
