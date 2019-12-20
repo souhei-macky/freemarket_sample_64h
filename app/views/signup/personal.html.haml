@@ -66,15 +66,15 @@
             .birthday-select-wrap
               .select-wrap
                 %i.icon-arrow-bottom
-                = f.date_select :year, use_year_numbers: true, discard_month: true, discard_day: true, start_year: Time.now.year, end_year: Time.now.year - 119, prompt: "--", class:"select-default"
+                = f.text_field :year, value: session[:year], class:"input-default half"
               %span 年
               .select-wrap.select-wrap__month
                 %i.icon-arrow-bottom
-                = f.date_select :month, use_month_numbers: true, discard_year: true, discard_day: true, prompt: "--", class:"select-default"
+                = f.text_field :month, value: session[:month], class:"input-default half"
               %span 月
               .select-wrap.select-wrap__day
                 %i.icon-arrow-bottom
-                = f.date_select :day, use_year_numbers: true, discard_day: true, discard_month: true, prompt: "--",start_year: 1,end_year: 31, class:"select-default"
+                = f.text_field :day, value: session[:day], class:"input-default half"
               %span 日
             %input{name: "birthday", type: "hidden", value: ""}/
             .clearfix
