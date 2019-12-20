@@ -27,8 +27,9 @@ Rails.application.routes.draw do
     end
   end
 
+
   #itemのshowアクションで商品詳細
-  resources :items, only: [:new, :create, :show, :destroy, :edit, :update] do
+  resources :items do
     resources :chats, only: [:show]
     collection do
       get 'sell'#出品
@@ -61,5 +62,4 @@ Rails.application.routes.draw do
       get :pay#支払う
     end
   end
-
 end
