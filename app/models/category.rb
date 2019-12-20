@@ -1,3 +1,5 @@
 class Category < ApplicationRecord
-  has_ancestry
+  # 現時点では使用していないためコメントアウト化
+  # has_ancestry
+  belongs_to :item
 end
