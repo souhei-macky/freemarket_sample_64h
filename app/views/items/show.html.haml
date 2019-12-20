@@ -103,7 +103,7 @@
           = link_to edit_item_path(@item) do
             .btn-default.btn-red 商品の編集
           %p.text-center or
-          = link_to item_path(@item), method: :delete do
+          = link_to item_path(@item), method: :delete, data: {confirm: "削除してもよろしいですか？"} do
             .btn-default.btn-gray この商品を削除する
       -else 
         //商品購入者の画面
