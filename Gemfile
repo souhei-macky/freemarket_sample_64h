@@ -89,3 +89,4 @@ gem 'omniauth-google-oauth2'
 gem 'devise'
 gem 'dotenv-rails'
 gem 'ancestry'
+gem "gretel"
