@@ -1,0 +1,119 @@
+= render "header"
+= render "bread-crumbs"
+%main.l-container.clearfix
+  .l-content
+    %section.mypage-user-icon
+      = link_to root_path do
+        %figure
+          = image_tag "", alt: "", height: "60", width: "60"
+        %h2.bold メルカリ メルオ
+        .mypage-number
+          %div
+            評価
+            %span.bold 0
+          %div
+            出品数
+            %span.bold 0
+    %section.mypage-tab-container-notification-todo
+      %ul.mypage-tabs
+        %li
+          %h3
+            = link_to "お知らせ", root_path
+        %li.active
+          %h3
+            = link_to "やることリスト", root_path
+      .tab-content
+        %ul#mypage-tab-notification.mypage-item-list.tab-pane
+          %li
+            %figure
+              = image_tag "" ,class:"lazyloaded",alt: "", "data-src": "", src: ""
+            .mypage-item-body
+              .mypage-item-text テスト
+              %time
+                %i.icon-time
+                %span 0分前
+            %i.icon-arrow-right
+        %ul#mypage-tab-todo.mypage-item-list.tab-pane.active
+          %li.mypage-item-not-found.bold 現在、やることリストはありません
+    %section.mypage-tab-container
+      %h2.mypage-tab-head 購入した商品
+      %ul.mypage-tabs
+        %li.active
+          %h3
+            = link_to root_path, "data-toggle": "tab" do
+              取引中
+        %li
+          %h3
+            = link_to root_path, "data-toggle": "tab" do
+              過去の取引
+      .tab-content
+        %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+          %li.mypage-item-not-found.bold 取引中の商品がありません
+        %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
+          %li.mypage-item-not-found.bold 過去に取引した商品がありません
+  .l-side
+    %nav.mypage-nav
+      %ul.mypage-nav-list
+        %li
+          = link_to mypages_index_path, class:"mypage-nav-list-item" do
+            マイページ
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            お知らせ
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 出品中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 取引中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path,class:"mypage-nav-list-item" do
+            出品した商品 - 売却済み
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            購入した商品 - 取引中
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            購入した商品 - 過去の取引
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            評価一覧
+            %i.icon-arrow-right
+      %h3.mypage-nav-head 設定
+      %ul.mypage-nav-list
+        %li
+          = link_to mypages_profile_path, class:"mypage-nav-list-item" do
+            プロフィール
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            発送元・お届け先住所変更
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_credit_path, class:"mypage-nav-list-item" do
+            支払い方法
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            メール/パスワード
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_identification_path, class:"mypage-nav-list-item" do
+            本人情報
+            %i.icon-arrow-right
+        %li
+          = link_to root_path, class:"mypage-nav-list-item" do
+            電話番号の確認
+            %i.icon-arrow-right
+        %li
+          = link_to mypages_logout_path, class:"mypage-nav-list-item" do
+            ログアウト
+            %i.icon-arrow-right
+= render "footer"
