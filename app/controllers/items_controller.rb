@@ -21,8 +21,22 @@ class ItemsController < ApplicationController
   #   = lady.price
   #   %img{src: "#{lady.images.first.image}", width:"300", height:"300"}
   end
+  
+  def new
+   @item = Item.new
+   @item.images.build
+  end
 
   def create
+    @item = Item.new(item_params)
+    if @item.save
+      params[:images][:image].each do |image|
+        @item.images.create(image: image)
+      end
+      redirect_to root_path
+    else
+      render "sells/sell"
+    end
   end
 
   def show
@@ -56,10 +70,23 @@ class ItemsController < ApplicationController
 
   private
 
+  def item_params
+    params.require(:item).permit(
+      :name,
+      :description,
+      :price,
+      :category_id,
+      :brands_category_id,
+      :shopping_status,
+      :size_id,
+      :item_condition_id,
+      image_attributes: [:image, :id]
+      ).merge(user_id: current_user.id)
+  end
+
   def set_item
     @item = Item.find(params[:id])
   end
-
 
 end
 
