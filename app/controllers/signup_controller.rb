@@ -16,8 +16,6 @@ class SignupController < ApplicationController
     #user.newのformデータをsessionに格納
     session[:nickname] = user_params[:nickname]
     session[:email] = user_params[:email]
-    session[:password] = user_params[:password]
-    session[:password_confirmation] = user_params[:password]
     session[:family_name] = user_params[:family_name]
     session[:first_name] = user_params[:first_name]
     session[:family_name_kana] = user_params[:family_name_kana]
@@ -25,6 +23,10 @@ class SignupController < ApplicationController
     session[:year] = user_params[:year]
     session[:month] = user_params[:month]
     session[:day] = user_params[:day]
+    if session[:uid] == nil
+      session[:password] = user_params[:password]
+      session[:password_confirmation] = user_params[:password]
+    end
     @address = Address.new 
   end
 
@@ -49,8 +51,8 @@ class SignupController < ApplicationController
       provider: session[:provider],
       uid: session[:uid]
     )
-
-    if @user.save
+    binding.pry
+    if @user.save!
       #trueの場合下記ifの実行
       #falseの場合personalにredirect
       session[:zip_code] = address_params[:zip_code]
@@ -70,6 +72,7 @@ class SignupController < ApplicationController
         phone_number: session[:phone_number],
         user_id: session[:user_id]
       )
+
       if @address.save
         #trueの場合@user_idをsessionに格納しdoneへredirect
         #falseの場合residenceにredirect
