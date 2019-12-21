@@ -1,0 +1,1468 @@
+@charset "UTF-8";
+/* CSS Document */
+
+body {
+    position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+}
+
+.single-container {
+    padding: 0 0 250px;
+}
+
+.single-header {
+    text-align: center;
+	height: 128px;
+}
+
+.single-header h1 {
+    display: inline-block;
+    margin: 40px 0 0;
+}
+
+.single-header a {
+/*    display: inline-block;*/
+    width: 120px;
+    height: 33px;
+    margin: 0 8px 0 0;
+    line-height: 33px;
+}
+
+a {
+    color: #0099e8;
+    text-decoration: none;
+}
+
+.single-header img {
+	width: 185px;
+    height: 49px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+
+
+
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+
+* {
+    font-size: inherit;
+    line-height: inherit;
+}
+
+main {
+    display: block;
+}
+
+
+
+.l-single-container {
+    background: #fff;
+}
+
+
+
+.l-single-head.registration, .l-chapter-head.registration {
+    font-size: 22px;
+    padding: 32px;
+}
+
+.l-single-head {
+    padding: 24px 8px;
+    font-size: 18px;
+    line-height: 1.5;
+    text-align: center;
+}
+
+.l-single-inner.registration-form {
+   padding: 40px 40px 64px;
+}
+
+.l-single-inner {
+    border-top: 1px solid #f5f5f5;
+    padding: 40px;
+}
+
+.l-single-inner.registration-form .l-single-content {
+    max-width: 343px;
+}
+
+.l-single-content {
+    max-width: 320px;
+    margin: 0 auto;
+}
+
+
+
+.l-single-inner {
+    border-top: 1px solid #f5f5f5;
+    padding: 40px;
+}
+
+.btn-mail {
+    color: #fff;
+    background-color: #ea352d;
+}
+
+.btn-default {
+    border-radius: 4px;
+}
+
+
+
+
+
+.btn-mail .icon-mail {
+    color: #fff;
+}
+
+.btn-mail .icon-mail {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    color: #ccc;
+    font-size: 16px;
+}
+
+i[class^='icon-'], i[class*='icon-'] {
+    display: inline-block;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.btn-default {
+    border-radius: 4px;
+}
+
+.btn-sns-facebook {
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+}
+
+.btn-sns {
+    position: relative;
+}
+
+.btn-sns-google {
+    margin: 16px 0 0;
+    background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+    border: #979797 solid 1px;
+    color: #333;
+}
+
+.l-single-inner.registration-form .l-single-content {
+    max-width: 343px;
+}
+
+/*
+.l-single-inner.registration-form {
+    padding: 24px 16px 40px;
+}
+*/
+
+.single-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 1;
+/*    height: 140px;*/
+    padding: 40px 0;
+    text-align: center;
+}
+
+.single-footer ul {
+/*    font-size: 0;*/
+	display: inline-flex;
+}
+
+.btn-mail {
+    position: relative;
+    /* background: #eee; */
+    color: #fff;
+}
+
+
+
+.single-footer a {
+    display: block;
+    color: #333;
+}
+
+.single-footer-logo {
+    width: 80px;
+    height: 65px;
+    margin: 40px auto 0;
+}
+
+.single-footer p {
+    margin: 8px 0 0;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+nav ol, nav ul {
+    list-style: none;
+}
+
+.single-footer li:first-child {
+    margin: 0;
+	display: inline-block;
+    margin: 0 0 0 16px;
+}
+
+.l-single-container {
+    width: 700px;
+    margin: 0 auto;
+}
+
+
+.single-footer li{
+	display: inline-block;
+    margin: 0 0 0 16px;
+}
+
+
+#signup_registration
+
+
+.signup-bar.progress-bar {
+    padding: 40px 0 0 44px;
+    border: 0;
+}
+
+.progress-bar {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.progress-bar {
+    font-size: 0;
+    text-align: center;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.progress-bar ol {
+    margin: 0;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.form-group:first-child {
+    margin: 0;
+}
+
+
+.form-group label {
+    font-weight: 600;
+}
+
+label {
+    display: inline-block;
+}
+
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+
+.form-require {
+    background: #ea352d;
+}
+
+.form-require, .form-arbitrary, .message-is-seller, .news-private {
+    margin: 0 0 0 8px;
+    padding: 2px 4px;
+    border-radius: 2px;
+    color: #fff;
+    font-size: 12px;
+    vertical-align: top;
+}
+
+.form-group .input-default {
+    width: 100%;
+    margin: 8px 0 0;
+}
+
+.input-default {
+/*    height: 48px;*/
+    padding: 10px 16px 8px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: #fff;
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+.form-group:first-child {
+    margin: 0;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin-top: 32px;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin: 24px 0 0;
+}
+
+.form-group .input-default {
+    width: 100%;
+    margin: 8px 0 0;
+}
+
+.l-single-content p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+}
+
+.form-info-text {
+    margin: 8px 0 0;
+    color: #888;
+    line-height: 1.5;
+}
+
+.form-group .checkbox-default, .form-group .radio-default, .form-group .textarea-default {
+    margin: 16px 0 0;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin: 24px 0 0;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin: 24px 0 0;
+}
+
+.l-chapter-sub-head {
+    font-size: 16px;
+}
+
+.l-single-content p.l-single-text {
+    margin: 8px 0 0;
+    padding: 0;
+}
+
+.input-default.half:first-of-type {
+    margin-right: 8px;
+}
+
+.input-default.half {
+    width: calc(50% - 6px);
+}
+
+.birthday-select-wrap .select-wrap:first-of-type {
+    width: 76px;
+}
+
+.form-group .select-wrap {
+    margin: 8px 0 0;
+}
+
+.select-wrap {
+    position: relative;
+    background: #fff;
+}
+
+.birthday-select-wrap .select-wrap .icon-arrow-bottom {
+    right: 12px;
+}
+
+
+.select-wrap .icon-arrow-bottom {
+    position: absolute;
+    right: 16px;
+    top: 50%;
+    z-index: 2;
+    color: #888;
+    font-size: 8px;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+}
+
+i[class^='icon-'], i[class*='icon-'] {
+    display: inline-block;
+    font-family: 'icon-font';
+    speak: none;
+    font-style: normal;
+    font-weight: 400;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.select-default {
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.birthday-select-wrap .select-wrap .select-default {
+    padding: 0 10px;
+}
+
+.form-group select {
+    width: 100%;
+}
+
+
+.birthday-select-wrap .select-wrap:first-of-type {
+    width: 76px;
+}
+
+.birthday-select-wrap .select-wrap+span {
+    margin: 0 2px;
+}
+
+.birthday-select-wrap .select-wrap {
+    width: 76px;
+}
+
+.birthday-select-wrap .select-wrap {
+    display: inline-block;
+    width: calc(30% - 17px);
+}
+
+.birthday-select-wrap .select-wrap {
+    width: 76px;
+}
+
+.birthday-select-wrap .select-wrap .icon-arrow-bottom {
+    right: 12px;
+}
+
+.birthday-select-wrap .select-wrap .select-default {
+    padding: 0 10px;
+}
+
+.form-group {
+    margin: 40px 0 0;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin-top: 32px;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin: 24px 0 0;
+}
+
+
+.btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+	border: #979797 solid 1px;
+}
+
+button, [type="button"], [type="date"], [type="datetime"], [type="datetime-local"], [type="email"], [type="month"], [type="number"], [type="password"], [type="reset"], [type="search"], [type="submit"], [type="tel"], [type="text"], [type="time"], [type="url"], [type="week"], select, textarea {
+    min-height: 1.5em;
+}
+button {
+    border: 0;
+    outline: 0;
+    cursor: pointer;
+}
+a, area, button, input, label, select, textarea, [tabindex] {
+    -ms-touch-action: manipulation;
+    touch-action: manipulation;
+}
+button, input, select, textarea {
+    color: inherit;
+    font-family: inherit;
+    font-style: inherit;
+    font-weight: inherit;
+}
+button, input, select, textarea {
+    background-color: transparent;
+}
+button {
+    -webkit-appearance: button;
+    overflow: visible;
+}
+* {
+    background-repeat: no-repeat;
+    margin: 0;
+    padding: 0;
+}
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+* {
+    font-size: inherit;
+    line-height: inherit;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+user agent stylesheet
+button {
+    -webkit-appearance: button;
+    -webkit-writing-mode: horizontal-tb !important;
+    text-rendering: auto;
+    color: buttontext;
+    letter-spacing: normal;
+    word-spacing: normal;
+    text-transform: none;
+    text-indent: 0px;
+    text-shadow: none;
+    display: inline-block;
+    text-align: center;
+    align-items: flex-start;
+    cursor: default;
+    background-color: buttonface;
+    box-sizing: border-box;
+    margin: 0em;
+    font: 400 11px system-ui;
+    padding: 1px 7px 2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(216, 216, 216) rgb(209, 209, 209) rgb(186, 186, 186);
+    border-image: initial;
+}
+body {
+    position: relative;
+    min-height: 100%;
+    background: #f5f5f5;
+    font-family: 'Source Sans Pro', Helvetica , Arial, '游ゴシック体', 'YuGothic', 'メイリオ', 'Meiryo', sans-serif;
+    font-size: 14px;
+    color: #333;
+    line-height: 1;
+}
+:root {
+    cursor: auto;
+}
+:root {
+    background-color: #fff;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    color: #000;
+    cursor: default;
+    font: 66.66667% sans-serif;
+}
+html {
+    -ms-overflow-style: -ms-autohiding-scrollbar;
+    overflow-y: scroll;
+    -webkit-text-size-adjust: 100%;
+}
+user agent stylesheet
+html {
+    color: -internal-root-color;
+}
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+*, ::before, ::after {
+    border-style: solid;
+    border-width: 0;
+}
+::before, ::after {
+    text-decoration: inherit;
+    vertical-align: inherit;
+}
+*, ::before, ::after {
+    -webkit-box-sizing: inherit;
+    box-sizing: inherit;
+}
+::selection {
+    color: currentColor;
+}
+::selection {
+    background-color: #b3d4fc;
+    color: #fff;
+    text-shadow: none;
+}
+
+.btn-red {
+    background: #ea352d;
+    border: 1px solid #ea352d;
+    color: #fff;
+}
+
+.l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
+    margin-top: 32px;
+}
+
+.text-right {
+    text-align: right;
+}
+
+.single-footer {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    left: -1px;
+    z-index: 1;
+    /* height: 140px; */
+    padding: 40px 0;
+    text-align: center;
+}
+
+
+
+
+
+/* ログイン */
+
+.login-panel {
+    max-width: none;
+    width: 456px;
+}
+
+.login-panel {
+    max-width: 456px;
+    margin: 0 auto;
+    background: #fff;
+}
+
+.login-no-account {
+    padding: 40px 64px;
+}
+
+.login-no-account {
+    padding: 24px 32px;
+    text-align: center;
+}
+
+.login-no-account p {
+    font-size: 14px;
+}
+
+.login-no-account a {
+    display: block;
+    margin: 8px 0 0;
+    border: 1px solid #0099e8;
+    background: #0099e8;
+    color: #fff;
+    line-height: 40px;
+}
+
+.login-no-account {
+    padding: 40px 64px;
+}
+
+.login-no-account {
+    padding: 24px 32px;
+    text-align: center;
+}
+
+.login-form-inner {
+    padding: 32px 64px;
+}
+
+.btn-sns-facebook:first-child {
+    margin: 0;
+}
+
+.login-form-inner {
+    padding: 24px 32px;
+    border-top: 1px solid #eee;
+}
+
+.btn-sns-facebook {
+    margin: 16px 0 0;
+    background: #385185;
+    color: #fff;
+}
+
+.btn-sns {
+    position: relative;
+}
+
+.btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+.btn-sns-google {
+    margin: 16px 0 0;
+    background: #fff url(/jp/assets/img/common/common/google.svg) no-repeat 3px top;
+    border: #979797 solid 1px;
+    color: #333;
+}
+
+.login-form-inner {
+    padding: 32px 64px;
+}
+
+.login-form-inner:first-child {
+    padding: 24px 64px 32px;
+}
+
+.login-form-inner:first-child {
+    padding: 24px 32px;
+    border: 0;
+}
+
+.login-form-inner .form-group:first-child {
+    margin: 0;
+}
+
+.login-form-inner .input-default {
+    margin: 0;
+}
+
+.form-group .input-default {
+    width: 100%;
+    margin: 8px 0 0;
+}
+
+.login-form-inner .form-group {
+    margin: 24px 0 0;
+}
+
+.login-submit {
+    margin: 24px 0 0;
+}
+
+.login-panel a {
+    display: block;
+    margin: 40px 0 0;
+}
+
+.login-no-account a {
+    display: block;
+    margin: 8px 0 0;
+    border: 1px solid #0099e8;
+    background: #0099e8;
+    color: #fff;
+    line-height: 40px;
+}
+
+.login-no-account {
+    padding: 40px 64px;
+}
+
+.login-form-inner:first-child {
+    padding: 24px 64px 32px;
+}
+
+.single-footer {
+    width: 456px;
+    height: 250px;
+    margin: 0 auto;
+}
+
+
+/*電話番号の確認*/
+
+.l-chapter-head.registration {
+    font-size: 22px;
+    padding: 32px;
+	text-align: center;
+}
+
+/**住所*/
+
+.l-chapter-head{
+    font-size: 22px;
+    padding: 32px;
+	text-align: center;
+}
+
+
+/*クレジット*/
+.signup-card-list {
+    margin: 8px 0 0;
+    font-size: 0;
+}
+
+.signup-card-list li:first-child {
+    margin: 0;
+}
+
+.signup-card-list li {
+    display: inline-block;
+    margin: 0 0 0 8px;
+    vertical-align: middle;
+}
+
+.signup-form-expire .select-wrap.half {
+    display: inline-block;
+    width: calc(50% - 2px);
+}
+
+.form-group .select-wrap {
+    margin: 8px 0 0;
+}
+
+.signup-form-expire .select-wrap select {
+    width: calc(100% - 38px);
+}
+
+.select-default {
+    position: relative;
+    z-index: 2;
+    height: 48px;
+    padding: 0 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    background: 0;
+    font-size: 16px;
+    line-height: 1.5;
+    cursor: pointer;
+}
+
+.signup-seqcode-text {
+    text-align: right;
+    color: #0099e8;
+}
+
+.signup-seqcode {
+    position: relative;
+    margin: 8px 0 0;
+}
+
+
+/*商品詳細ページ*/
+
+.l-single-head {
+    padding: 32px 16px;
+    font-size: 22px;
+}
+
+.l-single-head {
+    padding: 32px 16px;
+    font-size: 22px;
+}
+
+.sell-form {
+    border-top: 1px solid #eee;
+}
+
+.sell-upload-box {
+    width: 620px;
+    padding: 40px;
+}
+
+.sell-upload-box {
+/*    padding: 40px 2.5%;*/
+}
+
+.sell-upload-head {
+    font-size: 16px;
+}
+
+.sell-upload-head+p {
+    margin: 8px 0 0;
+    line-height: 1.5;
+}
+
+.sell-dropbox-container {
+    display: block;
+    width: 620px;
+}
+
+.sell-dropbox-container {
+/*    display: inline;*/
+    margin: 16px auto 0;
+}
+
+.sell-dropbox-container .sell-upload-items-container {
+    display: inline;
+}
+
+.sell-upload-items {
+    float: left;
+    display: block;
+}
+
+.sell-upload-items ul {
+    display: block;
+}
+
+.sell-upload-drop-box.have-item-0 {
+    width: 100%;
+    margin-left: 0;
+}
+
+.sell-upload-drop-box {
+    float: right;
+    width: 620px;
+    padding: 40px;
+}
+
+.sell-upload-drop-box {
+    position: relative;
+    min-height: 162px;
+    background: #f5f5f5;
+    border: 1px dashed #ccc;
+    font-size: 0;
+    text-align: center;
+    -webkit-transition: -webkit-box-shadow ease-out .3s;
+    transition: -webkit-box-shadow ease-out .3s;
+    transition: box-shadow ease-out .3s;
+    transition: box-shadow ease-out .3s, -webkit-box-shadow ease-out .3s;
+    cursor: pointer;
+    float: right;
+    margin-left: 2%;
+}
+
+.sell-upload-drop-box pre {
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    right: 16px;
+    text-align: center;
+    font-size: 14px;
+    line-height: 1.5;
+    -webkit-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    pointer-events: none;
+    white-space: pre-wrap;
+    word-wrap: break-word;
+}
+
+.sell-upload-drop-box {
+    float: right;
+    width: 620px;
+    padding: 40px;
+}
+
+.clearfix:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+
+.sell-content {
+    padding: 40px;
+    border-top: 1px solid #eee;
+}
+
+
+.form-group {
+    margin: 40px 0 0;
+}
+
+.form-group label+.textarea-default {
+    margin: 8px 0 0;
+}
+
+.textarea-default {
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    min-height: 104px;
+    padding: 10px;
+    border: 1px solid #ccc;
+    background: #fff;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+textarea {
+    border-radius: 0;
+    border: 0;
+    outline: 0;
+    -webkit-appearance: none;
+}
+
+.sell-sub-head {
+    float: left;
+}
+
+.sell-sub-head {
+    color: #888;
+    font-size: 14px;
+}
+
+
+
+.sell-form-box {
+    float: right;
+    width: 400px;
+    margin: 0;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.sell-price .form-group .l-left {
+    width: 50%;
+    line-height: 48px;
+}
+
+.l-left {
+    float: left;
+}
+
+.sell-price .form-group .l-right {
+    width: 50%;
+}
+
+.sell-price-input {
+    text-align: right;
+}
+
+.l-right {
+    float: right;
+}
+
+.sell-price>li {
+    padding: 24px 0;
+    border-top: 1px solid #ccc;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.sell-price .bold .l-left {
+    font-size: 16px;
+}
+
+.sell-price .bold .l-right {
+    font-size: 34px;
+}
+
+.sell-price-input>div {
+    display: inline-block;
+    width: 80%;
+    margin: 0 0 0 5%;
+}
+
+.sell-btn-box p {
+    line-height: 1.5;
+}
+
+.sell-btn-box .btn-red {
+    margin: 40px 0 0;
+}
+
+.sell-btn-box .btn-gray {
+    width: 45%;
+    margin: 24px auto 0;
+}
+.btn-gray {
+    background: #aaa;
+    border: 1px solid #aaa;
+    color: #fff;
+}
+
+.btn-default {
+    display: block;
+    width: 100%;
+    line-height: 48px;
+    font-size: 14px;
+    border: 1px solid transparent;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    cursor: pointer;
+    text-align: center;
+}
+
+
+/*購入内容の確認*/
+
+.buy-content:first-of-type {
+    margin: 0;
+}
+
+.buy-item {
+    text-align: center;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-content-inner {
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.buy-item-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.buy-item-image {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.buy-item .buy-item-image img {
+    width: 80px;
+}
+
+.lazyloaded {
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.buy-item-detail {
+    margin-left: 16px;
+}
+
+.buy-item-name {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 8px;
+    line-height: 1.5;
+    text-align: left;
+}
+
+.buy-price-ja {
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.buy-price-ja .item-shipping-fee {
+    font-size: 12px;
+}
+
+.buy-price-ja .item-shipping-fee {
+    font-size: 12px;
+}
+
+.item-shipping-fee {
+    display: inline-block;
+    font-size: 16px;
+}
+
+.buy-item:last-of-type {
+    padding-bottom: 48px;
+}
+
+.buy-content:last-of-type {
+    padding-bottom: 48px;
+}
+
+.buy-item {
+    text-align: center;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-price-table:first-child {
+    margin: 0;
+}
+
+.buy-price-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.buy-price-row:first-child {
+    border: 0;
+}
+
+.buy-you-pay {
+    font-size: 30px;
+}
+
+.buy-you-pay {
+    font-size: 24px;
+}
+
+.buy-price-row {
+    display: table-row;
+    border-top: 1px solid #ccc;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.buy-price-cell:first-child {
+    text-align: left;
+}
+
+.buy-price-table .buy-price-cell-label {
+    font-size: 18px;
+}
+
+.buy-price-cell {
+    display: table-cell;
+    padding: 0;
+    text-align: right;
+}
+
+.buy-price-cell {
+    display: table-cell;
+    padding: 0;
+    text-align: right;
+}
+
+.buy-not-have-point {
+    color: #888;
+}
+
+.buy-accordion {
+    margin: 24px 0 32px;
+}
+
+.buy-accordion {
+    margin: 24px 0;
+}
+
+.buy-use-point {
+    text-align: left;
+}
+
+.checkbox-default {
+    position: relative;
+    font-size: 0;
+}
+
+.buy-not-have-point .icon-check {
+    color: #ccc;
+    background: #ccc;
+}
+
+.checkbox-default .icon-check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    -webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+.buy-not-have-point label {
+    cursor: default;
+}
+
+.checkbox-default label {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 0 28px;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+}
+
+.buy-content:first-of-type {
+    margin: 0;
+}
+
+.buy-user-info {
+    padding: 32px 0;
+}
+
+.buy-user-info {
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    text-align: left;
+    padding: 24px 0;
+    margin: 0;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-content-inner {
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.buy-user-info h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.l-left {
+    float: left;
+}
+
+.buy-user-info-fix {
+    display: block;
+    text-align: right;
+}
+
+.l-right {
+    float: right;
+}
+
+.buy-user-info-fix span {
+    vertical-align: middle;
+}
+
+.buy-form p {
+    line-height: 1.5;
+}
+
+.buy-user-info-text {
+    text-align: left;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.buy-form p {
+    line-height: 1.5;
+}
+
+.buy-user-info-text {
+    text-align: left;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.buy-card-logo {
+    margin-top: 8px;
+}
+
+.buy-form p {
+    line-height: 1.5;
+}
+
+.buy-user-info {
+    padding: 32px 0;
+}
+
+.buy-user-info {
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    text-align: left;
+    padding: 24px 0;
+    margin: 0;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+address {
+    font-style: normal;
+}
