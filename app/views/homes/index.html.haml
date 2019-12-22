@@ -4,7 +4,7 @@
       .pc-header-top
         %h1
           = link_to root_path do
-            = image_tag "", alt: "mercari", height: "36", width: "134"
+            = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
         %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
           %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
           %i.icon-search
@@ -13,28 +13,37 @@
           %ul.pc-header-nav
             %li
               %h2
-                = link_to root_path do
-                  %i.icon-list.pc-header-cat-brand-icon
-                  %span カテゴリーから探す
-              %ul.pc-header-nav-parent-wrap{"data-mega" => "1"}
-                %li.pc-header-nav-parent
+                .pc-header-nav-root.list-parent 
+                  = link_to root_path do
+                    %i.icon-list.pc-header-cat-brand-icon
+                    %span カテゴリーから探す
+                %ul.pc-header-nav-parent-wrap{"data-mega" => "1"}
+                  %li.pc-header-nav-parent
             %li
               %h2
-                = link_to root_path do
-                  %i.icon-tag.pc-header-cat-brand-icon
-                  %span ブランドから探す
-                %ul.pc-header-nav-parent-wrap
-                  %li.pc-header-nav-parent
-                    %h3  
-                  %li.pc-header-nav-parent
-  %nav.bread-crumbs
-    %ul
-      %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
-        =link_to root_path do
-          %span{itemprop: "title"} メルカリ
-        %i.icon-arrow-right
-      =link_to root_path do
-        %span{itemprop: "title"} マイページ
+                .pc-header-nav-root.list-parent 
+                  = link_to root_path do
+                    %i.icon-tag.pc-header-cat-brand-icon
+                    %span ブランドから探す
+                  %ul.pc-header-nav-parent-wrap
+                    %li.pc-header-nav-parent
+                      %h3  
+                    %li.pc-header-nav-parent
+        .sc-cJSrbW.kSIIvy
+          .sc-ksYbfQ.VWTjH
+            .sc-hmzhuo.RnltX
+              = link_to "新規会員登録", new_user_registration_path, class: ""
+          .sc-frDJqD.dcGsvC
+            .sc-kvZOFW.bQksMT
+              = link_to "ログイン", new_user_session_path, class: ""
+  -# %nav.bread-crumbs
+  -#   %ul
+  -#     %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
+  -#       =link_to root_path do
+  -#         %span{itemprop: "title"} メルカリ
+  -#       %i.icon-arrow-right
+  -#     =link_to root_path do
+  -#       %span{itemprop: "title"} マイページ
 .sc-ebFjAB.dxJnjc
   .sc-clNaTc.iniLfl
     = link_to "#", target: "_blank" do
@@ -95,16 +104,16 @@
       %p 今すぐ無料ダウンロード！
       .app-banner-icon.clearfix
         %figure
-          = image_tag "", alt: "", width: "68"
+          = image_tag "mercari_icon copy.png", alt: "", width: "68"
         %ul.clearfix
           %li
-            = link_to "#", target: "_blank" do
-              = image_tag "", alt: "mercari", height: "40", width: "133"
+            = link_to "https://apps.apple.com/jp/app/id667861049?l=ja", target: "_blank" do
+              = image_tag "app-store.svg", alt: "mercari", height: "40", width: "133"
           %li
-            = link_to "#", target: "_blank" do
-              = image_tag "", alt: "mercari", height: "40", width: "133"
+            = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", target: "_blank" do
+              = image_tag "google-play.svg", alt: "mercari", height: "40", width: "133"
     %figure
-      = image_tag "", alt: ""
+      = image_tag "download_content_pc.png", alt: ""
 %footer.global-footer
   %nav.clearfix
     .footer-cell
@@ -176,7 +185,7 @@
           = link_to "United States", root_path
   .footer-bottom
     = link_to root_path do
-      = image_tag "", alt: "mercari", height: "31", width: "124"
+      = image_tag "logo-white.svg", alt: "mercari", height: "31", width: "124"
     %span.footer-copyright
       %small © Mercari, Inc.
 = link_to "#" ,class: "footer-sell-btn" do

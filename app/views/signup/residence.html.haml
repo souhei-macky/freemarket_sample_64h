@@ -2,7 +2,7 @@
   %header.single-header
     %h1
       = link_to root_path do
-        = image_tag "" , alt: "mercari"
+        = image_tag "logo-1.svg" , alt: "mercari"
     %nav.progress-bar.signup-bar
       %ol.clearfix
         %li.through
@@ -20,7 +20,7 @@
         %li
           完了
           .progress-status
-  .l-content
+  .single-main
     .l-single-container
       .l-chapter-container
         %h2.l-chapter-head 発送元・お届け先住所登録
@@ -33,7 +33,7 @@
             .form-group
               = f.label :都道府県
               %span.form-require 必須
-              = f.select :prefecture, Prefecture.prefecture_areas.keys,{} ,class:"input-default"
+              = f.select :prefectur, Prefecture.prefecture_areas.keys,{} ,class:"input-default"
             .form-group
               = f.label :市区町村
               %span.form-require 必須
@@ -50,4 +50,4 @@
               .form-group
               = f.submit '次へすすむ', class: 'btn-default btn-red'
 
-  = render "footer"
+= render "footer"
