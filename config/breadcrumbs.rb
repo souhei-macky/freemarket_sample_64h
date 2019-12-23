@@ -2,31 +2,36 @@ crumb :root do
   link "メルカリ", root_path
 end
 
+# Gemのgretelが何をしているかを記載しておきます。
+# ・ :mypages ← 設定ファイルを呼び出します。
+# ・ "マイページ" ← パンくずリストに表示される名称です。
+# ・ mypage_path ← 呼び出し元のパスを指定します。（rails routesでパスを確認しましょう）
 # マイページ
 crumb :mypages do
   link "マイページ", mypages_path
 end
 
-
+# config/breadcrumb.rbのcrumbとendの間に
+# parentを設定することで親を設定することができます。
 # プロフィール
 crumb :profile do
   link "プロフィール", profile_mypages_path
   parent :mypages
 end
 
-# プロフィール
+# 支払い方法（クレジットカード）
 crumb :credit do
   link "支払い方法", credit_mypages_path
   parent :mypages
 end
 
-# プロフィール
+# 本人情報
 crumb :identification do
   link "本人情報", identification_mypages_path
   parent :mypages
 end
 
-# プロフィール
+# ログアウト
 crumb :logout do
   link "ログアウト", logout_mypages_path
   parent :mypages
