@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   #新規登録関連のルーティング記述
   resources :signup do
     collection do
-      get "index"
       get "session_clear"
       get 'personal'
       get 'sms'
@@ -59,11 +58,12 @@ Rails.application.routes.draw do
   end  
 
   #購入
-  resources :transaction do
+  resources :transaction, only: [:index, :show] do
+    collection do 
+      get 'done', to: 'transaction#done'#購入完了
+    end
     member do
-      get :buy#買う
-      get :buy_complete#購入完了
-      get :pay#支払う
+      post 'pay', to: 'transaction#pay'#購入、支払い
     end
   end
 end

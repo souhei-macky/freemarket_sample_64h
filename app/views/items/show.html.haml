@@ -35,7 +35,7 @@
         = @item.name
       .item-main-content.clearfix
         .item-photo
-          = image_tag "#{@item.images.first.image}"
+          = image_tag "#{@item.images.first.image}", height: "300", width: "300"
         %table.item-detail-table
           %tbody
             %tr
@@ -57,6 +57,7 @@
               %th カテゴリー
               %td
                 = link_to "" do
+                  // ブランドの入力フォームがないので一度コメントアウト
                   = @item.category.name
                   .item-detail-table-sub-category
                     %i.icon-arrow-right
@@ -93,7 +94,7 @@
               %th 発送日の目安
               %td 2~3日で発送
       .item-price-box.text-center
-        %span.item-price.bold ¥8,000
+        %span.item-price.bold= "¥#{@item.price}"
         %span.item-tax (税込)
         %span.item-shipping-fee 送料込み
 
@@ -108,7 +109,7 @@
       -else 
         //商品購入者の画面
         //リンク先仮指定（後ほど変更）
-        = link_to items_path(@item) do
+        = link_to transaction_path(@item) do
           .item-buy-btn 購入画面に進む
 
         %a.item-action-text{"data-action": "item/openDetail", "data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key": "id=m82477556805", "data-play-id": "com.kouzoh.mercari", "data-toggle": "open-app", "data-url-scheme": "mercari://"}

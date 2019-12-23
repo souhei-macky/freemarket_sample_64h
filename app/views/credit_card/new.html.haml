@@ -25,12 +25,12 @@
     .l-single-container
       .l-chapter-container
         %h2.l-chapter-head  クレジットカード情報の入力
-        = form_tag(pay_credit_card_index_path, method: :post, id: 'charge-form',  name: "inputForm", class:"l-single-inner registration-form", id:"add-card-form") do
+        = form_tag(pay_credit_card_index_path, method: :post, id: 'charge-form',  name: "inputForm", class:"l-single-inner registration-form") do
           .l-single-content
             .form-group
               %label カード番号
               %span.form-require 必須
-              = text_field_tag "number", "", class: "input-default", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "payment_card_no"
+              = text_field_tag "number", "", class: "input-default", placeholder: "半角数字のみ" ,maxlength: "16", type: "text", id: "card_number"
               %br
               %ul.signup-card-list
                 %li
@@ -52,7 +52,7 @@
               %span.form-require 必須
               %br/
               .select-wrap.half
-                %select#payment_card_expire_mm.select-default{name: "exp_month", type: "text"}
+                %select#exp_month.select-default{name: "exp_month", type: "text"}
                   %option{value: ""} --
                   %option{value: "1"}01
                   %option{value: "2"}02
@@ -69,7 +69,7 @@
                 %i.icon-arrow-bottom
                 %span 月
               .select-wrap.half
-                %select#payment_card_expire_yy.select-default{name: "exp_year", type: "text"}
+                %select#exp_year.select-default{name: "exp_year", type: "text"}
                   %option{value: ""} --
                   %option{value: "2019"}19
                   %option{value: "2020"}20
@@ -89,9 +89,9 @@
             .form-group
               %label セキュリティコード
               %span.form-require 必須
-              = text_field_tag "cvc", "", class: "input-default", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "payment_card_security_code"
+              = text_field_tag "cvc", "", class: "input-default", placeholder: "カード背面3~4桁の番号", maxlength: "4", id: "cvc"
               #card_token
-              = submit_tag "追加する", id:"submit-button", class:"btn-default btn-red"
+              = submit_tag "追加する", id:"token_submit", class:"btn-default btn-red"
   
   %footer.single-footer
     %nav

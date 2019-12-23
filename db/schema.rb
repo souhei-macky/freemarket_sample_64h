@@ -72,7 +72,7 @@ ActiveRecord::Schema.define(version: 2019_12_21_102208) do
     t.integer "price", null: false
     t.integer "shopping_status", default: 1, null: false
     t.integer "user_id", null: false
-    t.integer "category_id"
+    t.integer "category_id", null: false
     t.integer "brands_category_id"
     t.integer "item_condition_id", null: false
     t.datetime "created_at", null: false
