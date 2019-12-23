@@ -624,7 +624,8 @@ l-container {
 
 
 .app-banner {
-    background: url(image/download_bg_pc.jpg);
+    background-image:  image-url('download_bg_pc.jpg');
+    // background: url(image/download_bg_pc.jpg);
     background-position: center;
     background-size: cover;
 }
@@ -2317,13 +2318,13 @@ a {
     z-index: 0;
 }
 
-figure {
-    display: block;
-    margin-block-start: 1em;
-    margin-block-end: 1em;
-    margin-inline-start: 40px;
-    margin-inline-end: 40px;
-}
+// figure {
+//     display: block;
+//     margin-block-start: 1em;
+//     margin-block-end: 1em;
+//     margin-inline-start: 40px;
+//     margin-inline-end: 40px;
+// }
 
 .style_card__1SiAF figcaption {
     -webkit-box-sizing: border-box;
@@ -2435,4 +2436,45 @@ width: 100%;
 .dxJnjc {
     max-width: 700px;
     padding: 0px;
+}
+
+.kSIIvy {
+    display: flex;
+	float: right;
+}
+
+.VWTjH {
+    text-align: center;
+}
+
+.RnltX {
+    background-color: rgb(234, 53, 45);
+    color: rgb(255, 255, 255);
+    display: block;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(234, 53, 45);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 8px 10px;
+}
+
+.dcGsvC {
+    text-align: center;
+    margin-left: 11px;
+}
+
+.bQksMT {
+    background-color: rgb(255, 255, 255);
+    color: rgb(0, 149, 238);
+    display: block;
+    font-size: 14px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: rgb(0, 149, 238);
+    border-image: initial;
+    border-radius: 4px;
+    padding: 8px 10px;
+    transition: all 0.3s ease-out 0s;
 }
