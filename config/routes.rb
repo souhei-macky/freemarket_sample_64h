@@ -17,7 +17,6 @@ Rails.application.routes.draw do
   #新規登録関連のルーティング記述
   resources :signup do
     collection do
-      get "index"
       get "session_clear"
       get 'personal'
       get 'sms'
