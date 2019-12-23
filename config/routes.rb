@@ -59,7 +59,7 @@ Rails.application.routes.draw do
   end  
 
   #購入
-  resources :transaction, only: [:show] do
+  resources :transaction, only: [:index, :show] do
     collection do 
       get 'done', to: 'transaction#done'#購入完了
     end

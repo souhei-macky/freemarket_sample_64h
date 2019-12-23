@@ -3,7 +3,6 @@ class TransactionController < ApplicationController
   before_action :set_item, only: [:show, :pay]
 
   def show
-    
     card = CreditCard.where(user_id: current_user.id).first
     #テーブルからpayjpの顧客IDを検索
     if card.blank?
@@ -20,13 +19,17 @@ class TransactionController < ApplicationController
 
   def pay
     card = CreditCard.where(user_id: current_user.id).first
-    Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
-    Payjp::Charge.create(
-      amount: @item.price, #itemテーブルの価格情報を取得
-      customer: card.customer_id, #顧客ID
-      currency:'jpy', #日本円
-    )
-    redirect_to done_transaction_index_path #完了画面に移動
+    if card
+      Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
+      Payjp::Charge.create(
+        amount: @item.price, #itemテーブルの価格情報を取得
+        customer: card.customer_id, #顧客ID
+        currency:'jpy', #日本円
+      )
+      redirect_to done_transaction_index_path #完了画面に移動
+    else
+      redirect_to transaction_path(@item)
+    end
   end
 
   def done
