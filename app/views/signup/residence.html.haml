@@ -24,7 +24,7 @@
     .l-single-container
       .l-chapter-container
         %h2.l-chapter-head 発送元・お届け先住所登録
-        = form_for @address, url: signup_index_path , method: :post, html: {class: 'l-single-inner registration-form'} do |f|
+        = form_for @address, url: signup_create_path , method: :post, html: {class: 'l-single-inner registration-form'} do |f|
           .l-single-content
             .form-group
               = f.label :郵便番号

@@ -27,6 +27,8 @@ Rails.application.routes.draw do
     end
   end
 
+  post "signup/create" => "signup#create"
+
   # ログインページ用のルーティング記述
   resources :logins
   
