@@ -1,10 +1,10 @@
 .default-container
-  %header.pc-header.visible-pc
+  %header.pc-header2.visible-pc
     .pc-header-inner
       .pc-header-top
         %h1
           = link_to root_path do
-            = image_tag "", alt: "mercari", height: "36", width: "134"
+            = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
         %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
           %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
           %i.icon-search
