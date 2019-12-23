@@ -52,6 +52,11 @@
         %li.sc-jtRlXQ.bftzQH
           %a.sc-bGbJRg.sc-bEjcJn.jyApwd おもちゃ・ホビー・グッズ
 .sc-gVyKpa.dxUUSo
-
+  - @item_all.each do |item|
+    = link_to item_path(item.id) do
+      = image_tag "#{item.images.first.image}", class:"item__image",width:"180", height:"180"
+      .item-box__price
+      = "値段：#{item.price}"
+      .item-box__name
+      = "名前：#{item.name}"
 = render "footer"
-

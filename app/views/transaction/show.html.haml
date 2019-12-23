@@ -1,0 +1,84 @@
+//購入する商品の確認画面
+.single-container
+  %header.single-header
+    %h1
+      = link_to "" do
+        = image_tag "", alt: "mercari" 
+  %main.single-main
+    %section.l-single-container.buy-item-container
+      %h2.l-single-head.buy-head 購入内容の確認
+      %section.buy-content.buy-item
+        .buy-content-inner
+          .buy-item-box
+            %h3.buy-item-image
+              .lazyloaded
+                = image_tag ""
+            .buy-item-detail
+              %p.buy-item-name= @item.name
+              %p.buy-price-ja.bold
+                %span= @item.price
+                %span.item-shipping-fee （税込）送料込み
+                
+      %section.buy-content.buy-item
+        .buy-content-inner
+          .buy-form
+            %ul.buy-price-table
+              %li.buy-price-row.buy-you-pay.bold
+                .buy-price-cell.buy-price-cell-label 支払い金額
+                .buy-price-cell
+            %ul.buy-accordion.buy-not-have-point
+              %li.accordion-parent
+                .checkbox-default.buy-use-point
+                  %i.icon-check
+                  %label ポイントを使用 (所持ポイント: P0)
+            %section.buy-content.buy-user-info
+              .buy-content-inner
+                .clearfix
+                  %h3.l-left 支払い方法
+                  .l-right.buy-user-info-fix
+                    %span 変更する
+                %p.buy-user-info-text
+                  - if @default_card_information.blank?
+                  - else
+                    -#以下カード情報を表示
+                    = "**** **** **** " + @default_card_information.last4
+                    - exp_month = @default_card_information.exp_month.to_s
+                    - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
+                    = exp_month + " / " + exp_year
+                    %figure.buy-card-logo
+                      = image_tag "visa.svg", height: "15", width: "49"
+                    %section.buy-content.buy-user-info
+                      .buy-content-inner
+                        .clearfix
+                          %h3.l-left 配送先
+                          %l-right.buy-user-info-fix
+                            %span 変更する
+                        %address.buy-user-info-text
+                          %p
+                            = current_user.address.zip_code
+                            %br/
+                            = current_user.address.prefecture
+                            = current_user.address.city
+                            = current_user.address.number
+                            %br/
+                            = current_user.nickname
+                    %section.buy-content.buy-user-info
+                      = form_tag(action: :pay, method: :post) do
+                        %button.btn-default.btn-red.bold 購入する
+  %footer.single-footer
+    %nav
+      %ul.clearfix
+        %li
+          = link_to "" do
+            プライバシーポリシー
+        %li
+          = link_to "" do
+            メルカリ利用規約
+        %li
+          = link_to "" do
+            特定商取引に関する表記
+    = link_to "" do
+      .single-footer-logo
+        = image_tag "", alt: "mercari", height: "65", width: "80"
+    %p
+      %small © Mercari, Inc.

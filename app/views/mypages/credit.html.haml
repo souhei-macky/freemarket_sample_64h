@@ -1,4 +1,6 @@
 = render "header"
+-# config/breadcrumbs.rbに定義したcreditを呼び出し
+- breadcrumb :credit
 = render "bread-crumbs"
 %main.l-container.clearfix
   .l-content
@@ -12,7 +14,7 @@
             %li
               %form.l-single-content{action: "https://www.mercari.com/jp/mypage/card/delete/", method: "POST"}
                 %figure
-                  = image_tag "", alt: "visa", height: "15", width: "49"
+                  = image_tag "visa.svg", alt: "visa", height: "15", width: "49"
                 %input{name: "__csrf_value", type: "hidden", value: ""}/
                 %input{name: "card_sequence_no", type: "hidden", value: "tcWVc5kinsmpqmF4E5QeSfcc"}/
                 .settings-payment-num ************0000
@@ -28,7 +30,7 @@
     %nav.mypage-nav
       %ul.mypage-nav-list
         %li
-          = link_to mypages_index_path, class:"mypage-nav-list-item" do
+          = link_to mypages_path, class:"mypage-nav-list-item" do
             マイページ
             %i.icon-arrow-right
         %li
@@ -62,7 +64,7 @@
       %h3.mypage-nav-head 設定
       %ul.mypage-nav-list
         %li
-          = link_to mypages_profile_path, class:"mypage-nav-list-item" do
+          = link_to profile_mypages_path, class:"mypage-nav-list-item" do
             プロフィール
             %i.icon-arrow-right
         %li
@@ -70,7 +72,7 @@
             発送元・お届け先住所変更
             %i.icon-arrow-right
         %li
-          = link_to mypages_credit_path, class:"mypage-nav-list-item" do
+          = link_to credit_mypages_path, class:"mypage-nav-list-item" do
             支払い方法
             %i.icon-arrow-right
         %li
@@ -78,7 +80,7 @@
             メール/パスワード
             %i.icon-arrow-right
         %li
-          = link_to mypages_identification_path, class:"mypage-nav-list-item" do
+          = link_to identification_mypages_path, class:"mypage-nav-list-item" do
             本人情報
             %i.icon-arrow-right
         %li
@@ -86,7 +88,7 @@
             電話番号の確認
             %i.icon-arrow-right
         %li
-          = link_to mypages_logout_path, class:"mypage-nav-list-item" do
+          = link_to logout_mypages_path, class:"mypage-nav-list-item" do
             ログアウト
             %i.icon-arrow-right
 = render "footer"

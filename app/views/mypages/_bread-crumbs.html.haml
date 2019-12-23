@@ -1,8 +1,7 @@
 %nav.bread-crumbs
   %ul
-    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
-      -# = link_to root_path, itemprop: "url" do
-        %span{itemprop: "title"} メルカリ
-      %i.icon-arrow-right
-    %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
-      %span{itemprop: "title"} マイページ
+    %li
+    -# 下記を記述した箇所にパンくずリストが表示される。
+    -# pretext ← パンくずリストの先頭に挿入する文章を記述。いらない場合は設定しなくて大丈夫です。
+    -# separator ← パンくずの区切り文字を指定。
+    = breadcrumbs pretext: "",separator: " &nbsp;&nbsp;&#12297;&nbsp; ", class: "breadcrumbs-list"

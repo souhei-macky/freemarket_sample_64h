@@ -337,6 +337,15 @@ nav ul {
 
 }
 
+.pc-header2 {
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    font-weight: 500;
+    position: relative;
+    z-index: 1001;
+    background: #fff;
+
+}
+
 .bread-crumbs {
     position: relative;
     border-top: 1px solid #eee;
@@ -381,12 +390,6 @@ nav ul {
 }
 
 
-
-* {
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
 
 .pc-header-nav>li:first-child {
     padding-left: 0;
@@ -1516,14 +1519,8 @@ button, input, select, textarea {
     padding: 24px 16px 55px 16px;
 }
 
-.l-single-container {
-    width: 620px;
-    margin: 0 auto;
-}
 
-.l-single-container {
-    background: #fff;
-}
+
 
 .item-main-content {
     margin: 16px 0 0;
@@ -3179,11 +3176,7 @@ i[class^='icon-'], i[class*='icon-'] {
     margin: 8px 0 0;
 }
 
-* {
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
+
 
 nav ol, nav ul {
     list-style: none;
@@ -3195,10 +3188,7 @@ nav ol, nav ul {
     margin: 0 0 0 16px;
 }
 
-.l-single-container {
-    width: 700px;
-    margin: 0 auto;
-}
+
 
 
 .single-footer li{
@@ -3225,21 +3215,12 @@ nav ol, nav ul {
     text-align: center;
 }
 
-* {
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
+
 
 .progress-bar ol {
     margin: 0;
 }
 
-* {
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
 
 .form-group:first-child {
     margin: 0;
@@ -3493,11 +3474,7 @@ button {
     -webkit-appearance: button;
     overflow: visible;
 }
-* {
-    background-repeat: no-repeat;
-    margin: 0;
-    padding: 0;
-}
+
 *, ::before, ::after {
     border-style: solid;
     border-width: 0;
@@ -3564,22 +3541,9 @@ user agent stylesheet
 html {
     color: -internal-root-color;
 }
-*, ::before, ::after {
-    border-style: solid;
-    border-width: 0;
-}
-::before, ::after {
-    text-decoration: inherit;
-    vertical-align: inherit;
-}
-*, ::before, ::after {
-    -webkit-box-sizing: inherit;
-    box-sizing: inherit;
-}
-*, ::before, ::after {
-    border-style: solid;
-    border-width: 0;
-}
+
+
+
 ::before, ::after {
     text-decoration: inherit;
     vertical-align: inherit;
@@ -3622,5 +3586,21 @@ html {
     text-align: center;
 }
 
+.jwHbWf {
+    -webkit-box-align: center;
+    align-items: center;
+    display: flex;
+    font-size: 14px;
+    height: 32px;
+    transform: scale(1);
+    transition: all 0.3s ease-out 0s;
+    float: right;
+}
 
 
+.gKKfZH {
+    margin-right: 10px;
+    width: 32px;
+    border-radius: 50%;
+    overflow: hidden;
+}
