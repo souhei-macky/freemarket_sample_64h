@@ -5,7 +5,7 @@
         %h1
           = link_to root_path do
             = image_tag "", alt: "mercari", height: "36", width: "134"
-        %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
+        %form.pc-header-form{action: "items/search"}
           %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
           %i.icon-search
       .pc-header-nav-box.clearfix
@@ -179,6 +179,7 @@
       = image_tag "", alt: "mercari", height: "31", width: "124"
     %span.footer-copyright
       %small © Mercari, Inc.
-= link_to "#" ,class: "footer-sell-btn" do
-  %div 出品
-  %i.icon-camera
+- if user_signed_in?
+  = link_to new_item_path ,class: "footer-sell-btn" do
+    %div 出品
+    %i.icon-camera
