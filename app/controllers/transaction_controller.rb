@@ -1,9 +1,9 @@
 class TransactionController < ApplicationController
 
   before_action :set_item, only: [:show, :pay]
+  before_action :set_card, only: [:show, :pay]
 
   def show
-    card = CreditCard.where(user_id: current_user.id).first
     #テーブルからpayjpの顧客IDを検索
     if card.blank?
       #登録された情報がない場合にカード登録画面に移動
@@ -18,7 +18,6 @@ class TransactionController < ApplicationController
   end
 
   def pay
-    card = CreditCard.where(user_id: current_user.id).first
     if card
       Payjp.api_key = ENV['PAYJP_PRIVATE_KEY']
       Payjp::Charge.create(
@@ -39,5 +38,9 @@ class TransactionController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def set_card
+    card = CreditCard.where(user_id: current_user.id).first
   end
 end
