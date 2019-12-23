@@ -71,11 +71,10 @@
               %td
                 = link_to "" do
                   = @item.brands_category.name
-            %tr
-              %th 商品のサイズ
-              %td 
-                // サイズテーブルを一度削除したためコメントアウト
-                // = @item.size.name
+            -#%tr
+              -#%th 商品のサイズ
+              -#%td 
+                -# = @item.size.name
             %tr
               %th 商品の状態
               %td 
