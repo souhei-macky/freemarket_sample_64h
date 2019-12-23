@@ -9,7 +9,7 @@
         %p アカウントをお持ちでない方はこちら
         = link_to "新規会員登録", signup_index_path
       .login-form-inner
-        = link_to user_facebook_omniauth_authorize_path, method: :post, id:"facebook-login", class:"btn-default btn-sns btn-sns-facebook" do
+        %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
           %i.icon-facebook
           Facebookでログインする
         = link_to user_google_oauth2_omniauth_authorize_path, method: :post, id:"google-login",class:"btn-default btn-sns btn-sns-google" do
