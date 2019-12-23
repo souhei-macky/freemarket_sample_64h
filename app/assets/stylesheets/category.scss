@@ -1,0 +1,120 @@
+h2{
+  color: #fff;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+p{
+  color: #fff;
+  line-height: 1.6;
+  margin:0 auto 2rem;
+  width: 800px;
+}
+
+.gnav {
+  display: flex;
+  height: 4rem;
+  margin: 20px 0 auto;
+  width: 1000px;
+}
+
+.gnav > li {/*親階層のみ幅を25%にする*/
+  width: 25%;
+}
+
+/*全てのリスト・リンク共通*/
+.gnav li {
+  list-style: none;
+  position: relative;
+}
+
+.gnav li a {
+  background:#fff;
+  border-right: 1px solid #eee;
+  color: #001b34;
+  display: block;
+  height: 2rem;
+  line-height: 2rem;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+
+/*子階層以降共通*/
+.gnav li li {
+  height: 0;
+  overflow: hidden;
+  /* transition: .1s; */
+}
+
+.gnav li li a {
+  border-top: 1px solid #eee;
+  position: relative;
+  background:#fff;
+}
+
+.gnav li:hover > ul > li {
+  height: 2rem;
+  overflow: visible;
+}
+
+.gnav li ul li ul {
+  left: 100%;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.gnav li:hover a {/*親階層*/
+  background: #fff;
+}
+
+.gnav li li:hover a {
+  background: #fff;
+}
+
+.gnav li ul li ul li a {/*孫階層*/
+  background: #fff;
+}
+
+.gnav li ul li ul li .GC {/*孫階層*/
+  position: relative;
+  bottom: 299px; 
+}
+
+.gnav li ul li ul li:hover a {
+  background: #fff;
+}
+
+.gnav li ul li ul li ul li a {/*ひ孫階層*/
+  background: #fff;
+}
+
+.gnav li ul li ul li ul li:hover a {
+  background:#fff; 
+ } 
+
+.gnav li ul li ul li ul li .GGC{/*ひ孫階層*/
+  position: relative;
+  bottom: 299px;
+}
+
+.gnav li ul li ul li ul li .GGCC{/*ひ孫階層*/
+  position: relative;
+  bottom: 598px;
+}
+
+.sc-cJSrbW.kSIIvy{
+  margin-left: 300px;
+}
+
+.aa{
+z-index:1;
+}
+
+.bb{
+  z-index:0;
+}
