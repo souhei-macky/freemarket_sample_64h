@@ -35,7 +35,7 @@ class ItemsController < ApplicationController
       end
       redirect_to root_path
     else
-      render "sells/sell"
+      render 'items#new'
     end
   end
 
