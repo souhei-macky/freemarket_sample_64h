@@ -2,7 +2,7 @@
   %header.single-header
     %h1
       = link_to root_path do
-        = image_tag "", alt: "mercari"
+        = image_tag "logo-1.svg", alt: "mercari"
   %main.single-main
     .login-panel
       .login-no-account
@@ -31,16 +31,4 @@
     %input#google_client_id{type: "hidden", value: ""}/
     %input#facebook_app_id{type: "hidden", value: "466308336793848"}/
 
-  %footer.single-footer
-    %nav
-      %ul.clearfix
-        %li
-          = link_to "プライバシーポリシー", root_path
-        %li
-          = link_to "メルカリ利用規約", root_path
-        %li
-          = link_to "特定商取引に関する表記", root_path
-    = link_to root_path ,class:"single-footer-logo" do
-      = image_tag "", alt: "mercari", height: "65", width: "80"
-    %p
-      %small © Mercari, Inc.
+= render "footer"
