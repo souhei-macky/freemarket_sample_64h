@@ -1,6 +1,6 @@
 class MypagesController < ApplicationController
 
-  def index
+  def show
   end
 
   def edit

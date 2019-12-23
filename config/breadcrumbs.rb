@@ -8,7 +8,7 @@ end
 # ・ mypage_path ← 呼び出し元のパスを指定します。（rails routesでパスを確認しましょう）
 # マイページ
 crumb :mypages do
-  link "マイページ", mypages_path
+  link "マイページ", mypage_path(current_user)
 end
 
 # config/breadcrumb.rbのcrumbとendの間に

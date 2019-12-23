@@ -105,35 +105,35 @@
     %nav.mypage-nav
       %ul.mypage-nav-list
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             マイページ
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             お知らせ
             %i.icon-arrow-right
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             出品した商品 - 出品中
             %i.icon-arrow-right
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             出品した商品 - 取引中
             %i.icon-arrow-right
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             出品した商品 - 売却済み
             %i.icon-arrow-right
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             購入した商品 - 取引中
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             購入した商品 - 過去の取引
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             評価一覧
             %i.icon-arrow-right
       %h3.mypage-nav-head 設定
@@ -143,7 +143,7 @@
             プロフィール
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             発送元・お届け先住所変更
             %i.icon-arrow-right
         %li
@@ -151,7 +151,7 @@
             支払い方法
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             メール/パスワード
             %i.icon-arrow-right
         %li
@@ -159,7 +159,7 @@
             本人情報
             %i.icon-arrow-right
         %li
-          = link_to mypages_path,  class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user),  class:"mypage-nav-list-item" do
             電話番号の確認
             %i.icon-arrow-right
         %li

@@ -20,7 +20,7 @@
     %nav.mypage-nav
       %ul.mypage-nav-list
         %li
-          = link_to mypages_path, class:"mypage-nav-list-item" do
+          = link_to mypage_path(current_user), class:"mypage-nav-list-item" do
             マイページ
             %i.icon-arrow-right
         %li
