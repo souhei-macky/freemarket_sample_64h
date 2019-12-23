@@ -1,20 +1,20 @@
-.side.app-banner
+%aside.app-banner
   .app-banner-pc
     .app-banner-pc-inner
       %h2 スマホでかんたんフリマアプリ
       %p 今すぐ無料ダウンロード！
       .app-banner-icon.clearfix
         %figure
-          = image_tag "", width: "68"
+          = image_tag "mercari_icon copy.png", alt: "", width: "68"
         %ul.clearfix
           %li
-            = link_to "https://itunes.apple.com/jp/app/id667861049?l=ja&mt=8", target: "_blank" do
-              = image_tag "", alt: "", height: "40" ,width: "133"
+            = link_to "https://apps.apple.com/jp/app/id667861049?l=ja", target: "_blank" do
+              = image_tag "app-store.svg", alt: "mercari", height: "40", width: "133"
           %li
             = link_to "https://play.google.com/store/apps/details?id=com.kouzoh.mercari&hl=ja", target: "_blank" do
-              = image_tag "", alt: "", height: "40", width: "133"
+              = image_tag "google-play.svg", alt: "mercari", height: "40", width: "133"
     %figure
-      = image_tag "",alt: ""
+      = image_tag "download_content_pc.png", alt: ""
 %footer.global-footer
   %nav.clearfix
     .footer-cell
@@ -84,11 +84,14 @@
           = link_to "日本", root_path
         %li
           = link_to "United States", root_path
+          
   .footer-bottom
     = link_to root_path do
-      = image_tag "", alt: "mercari", height: "31", width: "124"
+      = image_tag "logo-white.svg", alt: "mercari", height: "31", width: "124"
     %span.footer-copyright
       %small © Mercari, Inc.
-= link_to new_item_path do
+
+//出品ボタン      
+= link_to "#" ,class: "footer-sell-btn" do
   %div 出品
   %i.icon-camera

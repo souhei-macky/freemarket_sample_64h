@@ -3,7 +3,7 @@
 %main.l-container.clearfix
   .l-content
     .l-chapter-container
-      %form.l-single-inner{action: "/users/sign_out", method: "POST", novalidate: "novalidate"}
+      %form.l-single-inner{action: "/users/sign_out", method: "get", novalidate: "novalidate"}
         .l-single-content
           %button.btn-default.btn-red{type: "submit"} ログアウト
           %input{name: "__csrf_value", type: "hidden", value: "9344d8c9ae026fc206874395e2c8a1c4d3410d9fe459b11361f64dc5d6f00e151ee1aeb691cda7372a6aaf013260276ada42f12babc8a9a45d162b54d545848b7"}/
@@ -11,7 +11,7 @@
     %nav.mypage-nav
       %ul.mypage-nav-list
         %li
-          = link_to mypages_index_path, class:"mypage-nav-list-item" do
+          = link_to mypages_path, class:"mypage-nav-list-item" do
             マイページ
             %i.icon-arrow-right
         %li
@@ -45,7 +45,7 @@
       %h3.mypage-nav-head 設定
       %ul.mypage-nav-list
         %li
-          = link_to mypages_profile_path, class:"mypage-nav-list-item" do
+          = link_to profile_mypages_path, class:"mypage-nav-list-item" do
             プロフィール
             %i.icon-arrow-right
         %li
@@ -53,7 +53,7 @@
             発送元・お届け先住所変更
             %i.icon-arrow-right
         %li
-          = link_to mypages_credit_path, class:"mypage-nav-list-item" do
+          = link_to credit_mypages_path, class:"mypage-nav-list-item" do
             支払い方法
             %i.icon-arrow-right
         %li
@@ -61,7 +61,7 @@
             メール/パスワード
             %i.icon-arrow-right
         %li
-          = link_to mypages_identification_path, class:"mypage-nav-list-item" do
+          = link_to identification_mypages_path, class:"mypage-nav-list-item" do
             本人情報
             %i.icon-arrow-right
         %li
@@ -69,7 +69,7 @@
             電話番号の確認
             %i.icon-arrow-right
         %li
-          = link_to mypages_logout_path, class:"mypage-nav-list-item" do
+          = link_to logout_mypages_path, class:"mypage-nav-list-item" do
             ログアウト
             %i.icon-arrow-right
 = render "footer"
