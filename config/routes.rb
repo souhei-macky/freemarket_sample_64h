@@ -46,7 +46,7 @@ Rails.application.routes.draw do
   end
 
   #マイページ
-  resources :mypages, only: [:index] do
+  resources :mypages, only: [:show] do
     collection do
       # get 'edit', to: 'mypages#edit'#プロフィール編集用      意味不明につき残すだけ残します
       # patch 'edit', to: 'mypages#update'#プロフィール更新用      

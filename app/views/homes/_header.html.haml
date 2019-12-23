@@ -29,18 +29,17 @@
                     %li.pc-header-nav-parent
                       %h3  
                     %li.pc-header-nav-parent
-        .sc-cJSrbW.kSIIvy
-          .sc-ksYbfQ.VWTjH
-            .sc-hmzhuo.RnltX
-              = link_to "新規会員登録", signup_index_path, class: ""
-          .sc-frDJqD.dcGsvC
-            .sc-kvZOFW.bQksMT
-              = link_to "ログイン", logins_path, class: ""
-  -# %nav.bread-crumbs
-  -#   %ul
-  -#     %li{itemscope: "", itemtype: "http://data-vocabulary.org/Breadcrumb"}
-  -#       =link_to root_path do
-  -#         %span{itemprop: "title"} メルカリ
-  -#       %i.icon-arrow-right
-  -#     =link_to root_path do
-  -#       %span{itemprop: "title"} マイページ
+        -if user_signed_in?
+          .sc-RefOD.jwHbWf
+            = link_to mypage_path(current_user) do
+              .sc-bsbRJL.gKKfZH
+                = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "100%"
+        - else
+          .sc-cJSrbW.kSIIvy
+            .sc-ksYbfQ.VWTjH
+              .sc-hmzhuo.RnltX
+                = link_to "新規会員登録", signup_index_path, class: ""
+            .sc-frDJqD.dcGsvC
+              .sc-kvZOFW.bQksMT
+                = link_to "ログイン", logins_path, class: ""
+    
