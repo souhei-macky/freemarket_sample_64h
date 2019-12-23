@@ -11,10 +11,11 @@
       .login-form-inner
         %button#facebook-login.btn-default.btn-sns.btn-sns-facebook
           %i.icon-facebook
-          Facebookでログイン
-        %button#google-login.btn-default.btn-sns.btn-sns-google
-          Googleでログイン
-      %form{action: "", method: "POST", novalidate: "novalidate"}
+          Facebookでログインする
+        = link_to user_google_oauth2_omniauth_authorize_path, method: :post, id:"google-login",class:"btn-default btn-sns btn-sns-google" do
+          Googleでログインする
+      %form{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+
         .login-form-inner
           .form-group
             %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/

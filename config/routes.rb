@@ -22,10 +22,10 @@ Rails.application.routes.draw do
       get 'personal'
       get 'sms'
       get 'residence'
-      post "create"
       get "done"
     end
   end
+  post "signup/create" => "signup#create" #URIを取得する為作成
 
   # ログインページ用のルーティング記述
   resources :logins
