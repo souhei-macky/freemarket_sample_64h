@@ -2,7 +2,7 @@
   %header.single-header
     %h1
       = link_to root_path do
-        = image_tag "", alt: "mercari"
+        = image_tag "logo-1.svg", alt: "mercari"
     %nav.progress-bar.signup-bar
       %ol.clearfix
         %li.through
@@ -21,7 +21,7 @@
           完了
           .progress-status
 
-  .l-content
+  .single-main
     .l-single-container
       .l-chapter-container
         %h2.l-chapter-head  クレジットカード情報の入力
@@ -93,16 +93,4 @@
               #card_token
               = submit_tag "追加する", id:"token_submit", class:"btn-default btn-red"
   
-  %footer.single-footer
-    %nav
-      %ul.clearfix
-        %li
-          = link_to "プライバシーポリシー", root_path
-        %li
-          = link_to "メルカリ利用規約", root_path
-        %li
-          = link_to "特定商取引に関する表記", root_path
-    = link_to root_path ,class:"single-footer-logo" do
-      = image_tag "", alt: "mercari", height: "65", width: "80"
-    %p
-      %small © Mercari, Inc.
+= render "footer"
