@@ -2,8 +2,8 @@
 .single-container
   %header.single-header
     %h1
-      %a{:href => ""}
-        %img{:alt => "mercari", :src => "image/logo.svg"}/
+      = link_to "" do
+        = image_tag "", alt: "mercari" 
   %main.single-main
     %section.l-single-container.buy-item-container
       %h2.l-single-head.buy-head 購入内容の確認
@@ -11,7 +11,8 @@
         .buy-content-inner
           .buy-item-box
             %h3.buy-item-image
-              %img.lazyloaded{:alt => ""}
+              .lazyloaded
+                = image_tag ""
             .buy-item-detail
               %p.buy-item-name= @item.name
               %p.buy-price-ja.bold
@@ -34,7 +35,7 @@
               .buy-content-inner
                 .clearfix
                   %h3.l-left 支払い方法
-                  %a.l-right.buy-user-info-fix
+                  .l-right.buy-user-info-fix
                     %span 変更する
                 %p.buy-user-info-text
                   - if @default_card_information.blank?
@@ -68,12 +69,16 @@
     %nav
       %ul.clearfix
         %li
-          %a{:href => "https://www.mercari.com/jp/privacy/"} プライバシーポリシー
+          = link_to "" do
+            プライバシーポリシー
         %li
-          %a{:href => "https://www.mercari.com/jp/tos/"} メルカリ利用規約
+          = link_to "" do
+            メルカリ利用規約
         %li
-          %a{:href => "https://www.mercari.com/jp/tokutei/"} 特定商取引に関する表記
-    %a.single-footer-logo{:href => "https://www.mercari.com/jp/"}
-      %img{:alt => "mercari", :height => "65", :src => "image/logo-gray.svg", :width => "80"}/
+          = link_to "" do
+            特定商取引に関する表記
+    = link_to "" do
+      .single-footer-logo
+        = image_tag "", alt: "mercari", height: "65", width: "80"
     %p
       %small © Mercari, Inc.
