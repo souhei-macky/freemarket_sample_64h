@@ -26,9 +26,6 @@ Rails.application.routes.draw do
     end
   end
   post "signup/create" => "signup#create" #URIを取得する為作成
-
-  # ログインページ用のルーティング記述
-  resources :logins
   
   #クレジット登録関連のルーティング記述
   resources :credit_card, only: [:new, :show, :destroy] do

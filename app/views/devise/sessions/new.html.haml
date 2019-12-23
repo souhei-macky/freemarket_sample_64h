@@ -14,15 +14,15 @@
           Facebookでログインする
         = link_to user_google_oauth2_omniauth_authorize_path, method: :post, id:"google-login",class:"btn-default btn-sns btn-sns-google" do
           Googleでログインする
-      %form{action: "https://www.mercari.com/jp/login/", method: "POST", novalidate: "novalidate"}
+      = form_for(resource, as: resource_name, url: session_path(resource_name)) do |f|
         .login-form-inner
           .form-group
-            %input.login-input-text.input-default{name: "email", placeholder: "メールアドレス", type: "email", value: ""}/
+            = f.email_field :email, class:"input login-input-text input-default", placeholder: "メールアドレス"
           .form-group
-            %input.login-input-text.input-default{name: "password", placeholder: "パスワード", type: "password"}/
+            = f.password_field :password, class:"login-input-text input-default", placeholder: "パスワード"
           .form-group
             .g-recaptcha.login-captcha{"data-sitekey": ""}
-          %button.login-submit.btn-default.btn-red{type: "submit"} ログイン
+          = f.submit "ログイン", class:"login-submit btn-default btn-red"
           %input{name: "login_callback", type: "hidden", value: "/jp/"}/
           %input{name: "__csrf_value", type: "hidden", value: ""}/
           = link_to "パスワードをお忘れの方", root_path
