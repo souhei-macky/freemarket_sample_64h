@@ -1,7 +1,5 @@
 Rails.application.routes.draw do
 
-  get 'transaction/index'
-  get 'transaction/done'
   #omniauth_callbacksコントローラーを定義することで、各SNSからの認証リクエストに対するコールバック関数を受け取れる(Rails routesで確認可)
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   devise_scope :user do
