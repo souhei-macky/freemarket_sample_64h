@@ -32,7 +32,6 @@ ActiveRecord::Schema.define(version: 2019_12_18_113503) do
 
   create_table "categories", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "name", null: false
-    t.string "ancestry", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -71,11 +70,10 @@ ActiveRecord::Schema.define(version: 2019_12_18_113503) do
     t.string "name", null: false
     t.text "description", null: false
     t.integer "price", null: false
-    t.integer "shopping_status", null: false
+    t.integer "shopping_status", default: 1, null: false
     t.integer "user_id", null: false
     t.integer "category_id", null: false
-    t.integer "brands_category_id", null: false
-    t.integer "size_id", null: false
+    t.integer "brands_category_id"
     t.integer "item_condition_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
@@ -88,6 +86,12 @@ ActiveRecord::Schema.define(version: 2019_12_18_113503) do
     t.datetime "updated_at", null: false
     t.index ["item_id"], name: "index_likes_on_item_id"
     t.index ["user_id"], name: "index_likes_on_user_id"
+  end
+
+  create_table "prefectures", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "prefecture", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "sizes", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
