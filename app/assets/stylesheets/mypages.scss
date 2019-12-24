@@ -2115,22 +2115,9 @@ i[class^='icon-'], i[class*='icon-'] {
   display: flex;
   position: relative;
   float: right;
+  padding-top: 5px;
 }
 
-.tab-content{
-    &__box{
-        border-bottom: 1px solid black;
-        display: flex;
-        justify-content: flex-start;
-
-        &__name{
-            display: flex;
-        }
-        &__image{
-           
-        }
-        &__text{
-            
-        }
-    }
+li.category01{
+  font-weight: 600;
 }
