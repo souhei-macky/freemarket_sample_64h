@@ -1,7 +1,28 @@
-# This file should contain all the record creation needed to seed the database with its default values.
-# The data can then be loaded with the rails db:seed command (or created alongside the database with db:setup).
-#
-# Examples:
-#
-#   movies = Movie.create([{ name: 'Star Wars' }, { name: 'Lord of the Rings' }])
-#   Character.create(name: 'Luke', movie: movies.first)
+[
+  [1,"レディース"],
+  [2,"メンズ"],
+  [3,"ベビー・キッズ"],
+  [4,"インテリア・住まい・小物"],
+  [5,"本・音楽・ゲーム"],
+  [6,"おもちゃ・ホビー・グッズ"],
+  [7,"コスメ・香水・美容"],
+  [8,"家電・スマホ・カメラ"],
+  [9,"スポーツ・レジャー"],
+  [10,"ハンドメイド"],
+  [11,"チケット"],
+  [12,"自動車・オートバイ"],
+  [13,"その他"]
+].each do |id,name|
+    Category.create!({id: id, name: name})
+  end
+
+[
+  [1,"新品、未使用"],
+  [2,"未使用に近い"],
+  [3,"目立った傷や汚れなし"],
+  [4,"やや傷や汚れあり"],
+  [5,"傷や汚れあり"],
+  [6,"全体的に状態が悪い"]
+].each do |id,name|
+    ItemCondition.create!({id: id, name: name})
+end
