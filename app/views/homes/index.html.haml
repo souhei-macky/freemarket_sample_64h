@@ -3,7 +3,7 @@
   .sc-clNaTc.iniLfl
     = link_to "#", target: "_blank" do
       .sc-hzNEM.iFJfgS
-    .slider.sc-fQejPQ.gjkspQ{style: "box-sizing: border-box; display: block; height: auto; position: relative; visibility: inherit; width: 100%;"}
+    .slider.sc-fQejPQ.gjkspQ
       .slider-frame{style: "box-sizing:border-box;display:block;height:100%;margin:0px;-moz-box-sizing:border-box;-ms-transform:translate(0, 0);overflow:hidden;padding:0;position:relative;touch-action:pinch-zoom pan-y;transform:translate3d(0, 0, 0);-webkit-transform:translate3d(0, 0, 0)"}
         %ul.slider-list{style: "transform: translate3d(0px, 0px, 0px); position: relative; display: block; margin: 0px; padding: 0px; height: 390px; width: 2688px; cursor: pointer; box-sizing: border-box; touch-action: pan-y pinch-zoom;"}
           %li.slider-slide.slide-visible{:style => "box-sizing: border-box; display: inline-block; height: auto; left: 0px; list-style-type: none; margin: auto 0px; position: absolute; top: 0px; transform: scale(1); transition: transform 0.4s linear 0s; vertical-align: top; width: 1344px;"}
@@ -39,24 +39,197 @@
       :scss
         .slider-slide > img { width: 100%; display: block; }
                   .slider-slide > img:focus { margin: auto; }
+                  
   .sc-gtfDJT.gJTxdm
     %h2.style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv1__3ygH4.sc-fOICqy.ybTBp 人気のカテゴリー
     .sc-hzDEsm.dpboAj
       %ul.sc-jeCdPy.hqbLjQ
         %li.sc-jtRlXQ.bftzQH
           %a.sc-bGbJRg.sc-bEjcJn.jyApwd レディース
+          
         %li.sc-jtRlXQ.bftzQH
           %a.sc-bGbJRg.sc-bEjcJn.jyApwd メンズ
         %li.sc-jtRlXQ.bftzQH
           %a.sc-bGbJRg.sc-bEjcJn.jyApwd 家電・スマホ・カメラ
         %li.sc-jtRlXQ.bftzQH
           %a.sc-bGbJRg.sc-bEjcJn.jyApwd おもちゃ・ホビー・グッズ
-.sc-gVyKpa.dxUUSo
-  - @item_all.each do |item|
-    = link_to item_path(item.id) do
-      = image_tag "#{item.images.first.image}", class:"item__image",width:"180", height:"180"
-      .item-box__price
-      = "値段：#{item.price}"
-      .item-box__name
-      = "名前：#{item.name}"
+
+  .sc-gVyKpa.dxUUSo
+    .sc-eXNvrr.fbfdVP
+      .sc-gpHHfC.drurDC.sc-kasBVs.hOoWUj
+        .article#topic
+        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+          レディース新着アイテム
+
+          .items-box-content.clearfix
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+
+        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+          メンズ新着アイテム
+
+          .items-box-content.clearfix
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+          家電・スマホ・カメラ新着アイテム
+
+          .items-box-content.clearfix
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+
+        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+          おもちゃ・ホビー・グッズ
+
+          .items-box-content.clearfix
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+            .items-box
+              = link_to "#", target: "_blank" do
+                %figure.items-box-photo
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+                .items-box-body
+                  %h3.items-box-name.font-2 商品表示
+                  .items-box-num
+                    .items-box-price.font-5 ¥000000
+
+          
+          -# - @item_all.each do |item|
+          -#   = link_to item_path(item.id) do
+          -#     = image_tag "#{item.images.first.image}", class:"item__image",width:"180", height:"180"
+          -#     .item-box__price
+          -#     = "値段：#{item.price}"
+          -#     .item-box__name
+          -#     = "名前：#{item.name}"
+
 = render "footer"
+
+
+

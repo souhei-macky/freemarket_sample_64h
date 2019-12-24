@@ -2478,3 +2478,67 @@ width: 100%;
     padding: 8px 10px;
     transition: all 0.3s ease-out 0s;
 }
+
+
+/*商品表示*/
+
+.drurDC {
+    margin-bottom: 16px;
+}
+
+
+.dxUUSo {
+    padding: 42px 0px 100px;
+}
+
+.hOoWUj {
+    align-items: flex-end;
+    display: flex;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    display: block;
+}
+
+.jEhJbC {
+    flex: 1 1 0%;
+}
+
+.common_fontFamily__3-3Si {
+    font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+}
+
+.style_responsiveLv2__3K0hn {
+    font-size: 24px;
+}
+
+.style_heading__3qSF6 {
+    font-weight: 600;
+    line-height: 1.4em;
+    margin: 0;
+    padding: 0;
+}
+
+.items-box {
+    position: relative;
+    float: left;
+    width: 20%;
+    margin: 0 0 4% 4%;
+    background: #fff;
+    margin-top: 15px;
+  }
+
+  .items-box-price {
+    z-index: 2;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    padding: 4px 12px 4px 8px;
+    border-radius: 0 16px 16px 0;
+    font-weight: 600;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC{
+    padding-bottom: 20px;
+}
