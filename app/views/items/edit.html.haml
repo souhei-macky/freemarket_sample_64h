@@ -99,8 +99,8 @@
             .modal{role: "dialog", tabindex: "-1"}
               .modal-inner
             .sell-content.sell-btn-box
-              %button.btn-default.btn-red{type: "submit"}
-                出品する
+              = form_with(model: @item , method: :patch, local: true) do |form|
+                = form.submit '変更する', class: 'btn-red'
               = link_to "もどる", root_path, class:"btn-default btn-gray"
           .overlay
 
