@@ -1,0 +1,44 @@
+.preview-box {
+  width: 118px;
+  margin-right:5px;
+  flex-wrap: wrap;
+  &__select {
+    background-color: #F5F5F5;
+  }
+}
+
+.preview-box p {
+  color: red;
+  font-weight:bold;
+  width:118px;
+  margin-bottom: 0px;
+  height:44px;
+  line-height: 44px;
+  text-align:center;
+  cursor:pointer;
+}
+
+.sell-upload-box,p {
+  color: black
+}
+
+.sell-dropbox-container {
+  display:flex;
+  flex-wrap: wrap;
+  height:auto;
+}
+
+.boxfileselect {
+  display: none;
+}
+
+.fileup,.fileup_last {
+  height: 100%;
+  width: 100%;
+  display:none;
+  opacity: 0;
+  &_last {
+    display:block;
+    cursor:pointer;
+  }
+}

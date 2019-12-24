@@ -8,21 +8,28 @@
       #sell-container
         .sell-container-inner
           %h2.l-single-head 商品の情報を入力
-          = form_with(model: @item , method: :post, local: true) do |f|
+          = form_with(model: @item , method: :patch, local: true) do |f|
             .sell-upload-box
               %h3.sell-upload-head
                 出品画像
                 %span.form-require 必須
               %p 最大10枚までアップロードできます
               .sell-dropbox-container.clearfix.state-image-number-10
+                - @item.images.each do |img|
+                  .preview-box
+                    .preview-box__img-box
+                      = image_tag "#{img.image}", height:"118", width:"118", class:"image"
+                    .preview-box__select
+                      = link_to "/items/image/#{img.id}", method: :delete do
+                        %p 削除
                 .sell-upload-items-container
                   .sell-upload-items.have-item-0
                 %label.sell-upload-drop-box.have-item-0
+                  = f.fields_for :images do |image|
+                    = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect fileup_last"
                   %pre.visible-pc
                     ドラッグアンドドロップ
                     またはクリックしてファイルをアップロード
-                  = f.fields_for :images do |image|
-                    = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect", id:"fileup"
             .sell-content
               .form-group
                 %label
@@ -99,8 +106,7 @@
             .modal{role: "dialog", tabindex: "-1"}
               .modal-inner
             .sell-content.sell-btn-box
-              %button.btn-default.btn-red{type: "submit"}
-                出品する
+              = f.submit '変更する', class: 'btn-red btn-default'
               = link_to "もどる", root_path, class:"btn-default btn-gray"
           .overlay
 

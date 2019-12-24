@@ -39,6 +39,7 @@ Rails.application.routes.draw do
   resources :items do
     collection do
       get 'search' => 'items#search' #検索
+      delete '/image/:id' => 'items#imgdestroy' #編集での画像削除用アクション
     end
   end
 
