@@ -30,10 +30,24 @@
                       %h3  
                     %li.pc-header-nav-parent
         -if user_signed_in?
-          .sc-RefOD.jwHbWf
-            = link_to mypage_path(current_user) do
+          .sc-eXEjpC.fzedbE
+            %a.sc-RefOD.jwHbWf{:href => ""}
               .sc-bsbRJL.gKKfZH
-                = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "100%"
+              やることリスト
+              
+            %a.sc-RefOD.jwHbWf{:href => ""}
+              .sc-bsbRJL.gKKfZH
+              お知らせ
+
+            %a.sc-RefOD.jwHbWf{:href => ""}
+              .sc-bsbRJL.gKKfZH
+              いいね！一覧 
+
+            .sc-RefOD.jwHbWf
+              = link_to mypage_path(current_user) do
+                .sc-bsbRJL.gKKfZH
+                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "100%"
+              マイページ
         - else
           .sc-cJSrbW.kSIIvy
             .sc-ksYbfQ.VWTjH
@@ -42,4 +56,10 @@
             .sc-frDJqD.dcGsvC
               .sc-kvZOFW.bQksMT
                 = link_to "ログイン", new_user_session_path, class: ""
+
+
+
+
+
+
     

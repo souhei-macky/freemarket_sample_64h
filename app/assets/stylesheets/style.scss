@@ -365,6 +365,7 @@ nav ul {
     margin: 0 auto;
     padding: 16px 0;
     white-space: normal;
+    padding-top: 0px;
 }
 
 .bread-crumbs li {
@@ -2174,7 +2175,7 @@ a {
 }
 
 .dxUUSo {
-    padding: 42px 0px 100px;
+    padding: 42px 0px 0px;
 }
 
 .drurDC {
@@ -2183,7 +2184,7 @@ a {
 
 .hOoWUj {
     align-items: flex-end;
-    display: flex;
+    // display: flex;
     -webkit-box-pack: justify;
     justify-content: space-between;
 }
@@ -2269,6 +2270,7 @@ a {
 
 .common_fontFamily__3-3Si {
     font-family: Arial,游ゴシック体,YuGothic,メイリオ,Meiryo,sans-serif;
+    color: black;
 }
 
 .style_fluid__19gwX {
@@ -2417,7 +2419,7 @@ figure {
 
 
 .dxJnjc {
-    max-width: 700px;
+    max-width: 1020px;
     padding: 0px;
 }
 
@@ -2699,17 +2701,17 @@ select {
     color: #333;
 }
 
-.items-box-price {
-    z-index: 2;
-    position: absolute;
-    top: -30px;
-    left: 0;
-    padding: 4px 12px 4px 8px;
-    border-radius: 0 16px 16px 0;
-    font-weight: 600;
-    color: #fff;
-    background-color: rgba(0,0,0,0.3);
-}
+// .items-box-price {
+//     z-index: 2;
+//     position: absolute;
+//     top: -30px;
+//     left: 0;
+//     padding: 4px 12px 4px 8px;
+//     border-radius: 0 16px 16px 0;
+//     font-weight: 600;
+//     color: #fff;
+//     background-color: rgba(0,0,0,0.3);
+// }
 
 .items-box-price {
     font-size: 17px;
@@ -2780,13 +2782,13 @@ i[class^='icon-'], i[class*='icon-'] {
     margin: 0 20px 20px 0;
 }
 
-.items-box {
-    position: relative;
-    float: left;
-    width: 48%;
-    margin: 0 0 4% 4%;
-    background: #fff;
-}
+// .items-box {
+//     position: relative;
+//     float: left;
+//     width: 48%;
+//     margin: 0 0 4% 4%;
+//     background: #fff;
+// }
 .items-box-photo {
     overflow: hidden;
     position: relative;
@@ -3603,4 +3605,5 @@ html {
     width: 32px;
     border-radius: 50%;
     overflow: hidden;
+    margin-left: 15px;
 }
