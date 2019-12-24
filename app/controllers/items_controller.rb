@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
     #category_idの値は実際のメルカリ準拠。投稿時間を降順で最大10個表示させる。
@@ -55,6 +55,11 @@ class ItemsController < ApplicationController
   end
 
   def update
+    if @item.update(update_params)
+        redirect_to item_path
+    else
+      render :edit 
+    end
   end
 
   def search
@@ -86,6 +91,20 @@ class ItemsController < ApplicationController
 
   def set_item
     @item = Item.find(params[:id])
+  end
+
+  def update_params
+    params.require(:item).permit(
+      :name,
+      :description,
+      :price,
+      :category_id,
+      :brands_category_id,
+      :shopping_status,
+      :size_id,
+      :item_condition_id,
+      image_attributes: [:image, :id]
+      )
   end
 
 end
