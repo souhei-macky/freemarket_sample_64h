@@ -46,7 +46,7 @@ class ItemsController < ApplicationController
 
   def destroy
     if @item.destroy
-      redirect_to mypage_index_path
+      redirect_to mypage_path(current_user)
     else
       redirect_to edit_item_path(params[:id])
     end
