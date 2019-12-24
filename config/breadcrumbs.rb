@@ -37,6 +37,11 @@ crumb :logout do
   parent :mypages
 end
 
+# 出品リスト
+crumb :list do
+  link "出品リスト", logout_mypages_path
+  parent :mypages
+end
 # crumb :projects do
 #   link "Projects", projects_path
 # end
