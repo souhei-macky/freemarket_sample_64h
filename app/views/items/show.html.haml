@@ -3,7 +3,7 @@
     .pc-header-inner
       .pc-header-top
         %h1
-          = link_to "" do
+          = link_to root_path do
             = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
         %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
           %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
@@ -35,7 +35,7 @@
         = @item.name
       .item-main-content.clearfix
         .item-photo
-          = image_tag "#{@item.images.first.image}", height: "300", width: "300"
+          = image_tag "#{@item.images.first.image}"
         %table.item-detail-table
           %tbody
             %tr
@@ -57,7 +57,6 @@
               %th カテゴリー
               %td
                 = link_to "" do
-                  // ブランドの入力フォームがないので一度コメントアウト
                   = @item.category.name
                   .item-detail-table-sub-category
                     %i.icon-arrow-right
@@ -69,11 +68,11 @@
             %tr
               %th ブランド
               %td
-                -# = link_to "" do
-                -#   = @item.brands_category.name
-            -#%tr
-              -#%th 商品のサイズ
-              -#%td 
+                = link_to "" do
+                  -# = @item.brands_category.name
+            %tr
+              %th 商品のサイズ
+              %td 
                 -# = @item.size.name
             %tr
               %th 商品の状態
@@ -94,7 +93,7 @@
               %th 発送日の目安
               %td 2~3日で発送
       .item-price-box.text-center
-        %span.item-price.bold= "¥#{@item.price}"
+        %span.item-price.bold ¥8,000
         %span.item-tax (税込)
         %span.item-shipping-fee 送料込み
 
@@ -103,13 +102,13 @@
         .listing-item-change-box
           = link_to edit_item_path(@item) do
             .btn-default.btn-red 商品の編集
-          %p.text-center or
+          .text-center or
           = link_to item_path(@item), method: :delete, data: {confirm: "削除してもよろしいですか？"} do
             .btn-default.btn-gray この商品を削除する
       -else 
         //商品購入者の画面
         //リンク先仮指定（後ほど変更）
-        = link_to transaction_path(@item) do
+        = link_to items_path(@item) do
           .item-buy-btn 購入画面に進む
 
         %a.item-action-text{"data-action": "item/openDetail", "data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key": "id=m82477556805", "data-play-id": "com.kouzoh.mercari", "data-toggle": "open-app", "data-url-scheme": "mercari://"}
@@ -136,7 +135,7 @@
         .message-content
           %form.message-form{action: "https://www.mercari.com/jp/comment/add/", method: "POST"}
             %input{name: "__csrf_value", type: "hidden", value: "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
-            %p 相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
+            相手のことを考え丁寧なコメントを心がけましょう。不快な言葉遣いなどは利用制限や退会処分となることがあります。
             %input{name: "item_id", type: "hidden", value: "m82477556805"}/
             %input{name: "redirect_url_key", type: "hidden", value: "item_detail"}/
             %textarea.textarea-default{name: "body", type: "text", value: ""}
@@ -158,122 +157,5 @@
               %input{name: "comment_id", type: "hidden", value: ""}/
               %input{name: "redirect_url_key", type: "hidden", value: "item_detail"}/
               %input{name: "__csrf_value", type: "hidden", value: "bd7d063ce94f634e6ac4abaf496a8f4fd079cdb874c2ce2f4fe92d4d899e524691e2ab04f8ffe7634c5cd619a2975b2c40f822f5077dd7f648b30cf8c58cd9f3e"}/
-  %aside.app-banner
-    .app-banner-pc
-      .app-banner-pc-inner
-        %h2 スマホでかんたんフリマアプリ
-        %p 今すぐ無料ダウンロード！
-        .app-banner-icon.clearfix
-          %figure
-            = image_tag "mercari_icon copy.png", alt: "", width: "68"
-            %ul.clearfix
-              %li
-                = link_to "", target: "_blank" do
-                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
-              %li
-                = link_to "", target: "_blank" do
-                  = image_tag "app-store.svg", alt: "", height: "40", width: "133"
-      %figure
-        = image_tag "download_content_pc.png", alt: ""
-  %footer.global-footer
-    %nav.clearfix
-      .footer-cell
-        %h2.footer-head メルカリについて
-        %ul
-          %li
-            = link_to "" do
-              会社概要（運営会社）
-          %li
-            = link_to "" do
-              採用情報
-          %li
-            = link_to "" do
-              プレスリリース
-          %li
-            = link_to "", target: "_blank" do
-              公式ブログ
-          %li
-            = link_to "", target: "_blank" do
-              メルカリロゴ利用ガイドライン
-          %li.footer-social-link
-            = link_to "", target: "_blank" do
-              %i.icon-twitter
-          %li.footer-social-link
-            = link_to "", target: "_blank" do
-              %i.icon-facebook
-      .footer-cell
-        %h2.footer-head ヘルプ＆ガイド
-        %ul
-          %li
-            = link_to "" do
-              メルカリガイド
-          %li
-            = link_to "" do
-              らくらくメルカリ便
-          %li
-            = link_to "" do
-              ゆうゆうメルカリ便
-          %li
-            = link_to "" do
-              大型メルカリ便
-          %li
-            = link_to "" do
-              車体取引ガイド
-          %li
-            = link_to "" do
-              メルカリあんしん・あんぜん宣言！
-          %li
-            = link_to "" do
-              偽ブランド品撲滅への取り組み
-          %li
-            = link_to "" do
-              メルカリボックス
-      .footer-cell.full-width
-        %h2.footer-head プライバシーと利用規約
-        .inner-footer-cell
-          %ul
-            %li
-              = link_to "" do
-                プライバシーポリシー
-            %li
-              = link_to "" do
-                メルカリ利用規約
-            %li
-              = link_to "" do
-                あんしんスマホサポート制度に関する利用特約
-            %li
-              = link_to "" do
-                コンプライアンスポリシー
-        .inner-footer-cell
-          %ul
-            %li
-              = link_to "" do
-                個人データの安全管理に係る基本方針
-            %li
-              = link_to "" do
-                特定商取引に関する表記
-            %li
-              = link_to "" do
-                資金決済法に基づく表示
-            %li
-              = link_to "" do
-                法令順守と犯罪抑止のために
-      .footer-cell.footer-nav-lang
-        %h2.footer-head 国
-        %ul
-          %li
-            = link_to "" do
-              日本
-          %li
-            = link_to "" do
-              United States
-    .footer-bottom
-      = link_to "" do
-        .footer-logo
-          = image_tag "logo-white.svg", height: "31", width: "124"
-        %span.footer-copyright
-          %small © Mercari, Inc.
-  = link_to "" do
-    .footer-sell-btn
-      %div 出品
-      %i.icon-camera
+
+= render "footer"

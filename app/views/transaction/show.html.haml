@@ -2,11 +2,11 @@
 .single-container
   %header.single-header
     %h1
-      = link_to "" do
-        = image_tag "", alt: "mercari" 
+      = link_to root_path do
+        = image_tag "logo-1.svg", alt: "mercari" 
   %main.single-main
     %section.l-single-container.buy-item-container
-      %h2.l-single-head.buy-head 購入内容の確認
+      %h2.l-chapter-head 購入内容の確認
       %section.buy-content.buy-item
         .buy-content-inner
           .buy-item-box
@@ -42,6 +42,7 @@
                   - else
                     -#以下カード情報を表示
                     = "**** **** **** " + @default_card_information.last4
+                    有効期限
                     - exp_month = @default_card_information.exp_month.to_s
                     - exp_year = @default_card_information.exp_year.to_s.slice(2,3)
                     = exp_month + " / " + exp_year
@@ -79,6 +80,6 @@
             特定商取引に関する表記
     = link_to "" do
       .single-footer-logo
-        = image_tag "", alt: "mercari", height: "65", width: "80"
+        = image_tag "logo-gray.svg", alt: "mercari", height: "65", width: "80"
     %p
-      %small © Mercari, Inc.
+      -# %small © Mercari, Inc.

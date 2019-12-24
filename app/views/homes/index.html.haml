@@ -39,7 +39,7 @@
       :scss
         .slider-slide > img { width: 100%; display: block; }
                   .slider-slide > img:focus { margin: auto; }
-                  
+
   .sc-gtfDJT.gJTxdm
     %h2.style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv1__3ygH4.sc-fOICqy.ybTBp 人気のカテゴリー
     .sc-hzDEsm.dpboAj
@@ -63,40 +63,28 @@
 
           .items-box-content.clearfix
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
 
         .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
@@ -104,80 +92,56 @@
 
           .items-box-content.clearfix
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
         .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
           家電・スマホ・カメラ新着アイテム
 
           .items-box-content.clearfix
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
 
         .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
@@ -185,49 +149,29 @@
 
           .items-box-content.clearfix
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
+
 
             .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
+              - @item_all.each do |item|
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
                 .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
+                .items-box-num
+                  .items-box-price.font-5
+                    ¥#{item.price}
+                  .items-box-name.font-2
+                    #{item.name}
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
 
-            .items-box
-              = link_to "#", target: "_blank" do
-                %figure.items-box-photo
-                  = image_tag "member_photo_noimage_thumb.png", alt: "", height: "", width: "134"
-                .items-box-body
-                  %h3.items-box-name.font-2 商品表示
-                  .items-box-num
-                    .items-box-price.font-5 ¥000000
-
-          
-          - @item_all.each do |item|
-            = link_to item_path(item.id) do
-              = image_tag "#{item.images.first.image}", class:"item__image",width:"180", height:"180"
-              .item-box__price
-              = "値段：#{item.price}"
-              .item-box__name
-              = "名前：#{item.name}"
 
 = render "footer"
 
