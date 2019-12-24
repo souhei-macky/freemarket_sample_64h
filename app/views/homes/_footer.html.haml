@@ -91,7 +91,12 @@
     %span.footer-copyright
       -# %small © Mercari, Inc.
 
-//出品ボタン      
-= link_to new_item_path ,class: "footer-sell-btn" do
-  %div 出品
-  %i.icon-camera
+//出品ボタン    
+- if user_signed_in?  
+  = link_to new_item_path ,class: "footer-sell-btn" do
+    %div 出品
+    %i.icon-camera
+- else
+  = link_to  new_user_session_path ,class: "footer-sell-btn" do
+    %div 出品
+    %i.icon-camera
