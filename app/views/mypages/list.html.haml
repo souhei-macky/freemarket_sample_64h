@@ -1,62 +1,59 @@
 = render "header"
 -# config/breadcrumbs.rbに定義したmypagesを呼び出し
-- breadcrumb :mypages
+- breadcrumb :list
 = render "bread-crumbs"
+
 %main.l-container.clearfix
   .l-content
-    %section.mypage-user-icon
-      = link_to root_path do
-        %figure
-          = image_tag "member_photo_noimage_thumb.png", alt: "", height: "60", width: "60"
-        %h2.bold メルカリ メルオ
-        .mypage-number
-          %div
-            評価
-            %span.bold 0
-          %div
-            出品数
-            %span.bold 0
-    %section.mypage-tab-container-notification-todo
-      %ul.mypage-tabs
-        %li
-          %h3
-            = link_to "お知らせ", root_path
-        %li.active
-          %h3
-            = link_to "やることリスト", root_path
-      .tab-content
-        %ul#mypage-tab-notification.mypage-item-list.tab-pane
-          %li
-            %figure
-              = image_tag "" ,class:"lazyloaded",alt: "", "data-src": "", src: ""
-            .mypage-item-body
-              .mypage-item-text テスト
-              %time
-                %i.icon-time
-                %span 0分前
-            %i.icon-arrow-right
-        %ul#mypage-tab-todo.mypage-item-list.tab-pane.active
-          %li.mypage-item-not-found.bold 現在、やることリストはありません
-    %section.mypage-tab-container
+
+    %section.mypage-tab-container2
       %h2.mypage-tab-head 購入した商品
       %ul.mypage-tabs
         %li.active
           %h3
-            = link_to root_path, "data-toggle": "tab" do
-              取引中
-            - @items.each do |item|
-              = item.name
-              = link_to item_path(item.id) do
-                = image_tag "#{item.images.first.image}", class:"item__image",width:"100", height:"100"
+            %a{"data-toggle" => "tab", :href => ""}
+              出品中
         %li
           %h3
-            = link_to root_path, "data-toggle": "tab" do
-              過去の取引
+            %a{"data-toggle" => "tab", :href => ""}
+              売却済み
       .tab-content
-        %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
-          %li.mypage-item-not-found.bold 取引中の商品がありません
-        %ul#mypage-tab-transaction-old.mypage-item-list.tab-pane
-          %li.mypage-item-not-found.bold 過去に取引した商品がありません
+        - @items.each do |item|
+          .tab-content__box
+            .tab-content__box__name
+              = link_to item_path(item.id) do
+                出品名：
+                = item.name
+              .tab-content__box__image
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"100", height:"100"
+              .tab-content__box__text
+                状態
+
+        -# %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+        -#   %li
+        -#     %a.mypage-item-link{:href => "https://www.mercari.com/jp/items/m14202584467/"}
+        -#       %figure
+        -#         %img.is-higher-width.lazyloaded{:alt => "", "data-src" => "//static.mercdn.net/thumb/photos/m14202584467_1.jpg?1575452936", :src => "//static.mercdn.net/thumb/photos/m14202584467_1.jpg?1575452936"}/
+        -#       .mypage-item-body.show-stock-item
+        -#         .mypage-item-text
+        -#           テスト
+        -#         %div
+        -#           .mypage-item-status.bold.action-required
+        -#             公開停止中
+        -#       %i.icon-arrow-right
+        -#   %li
+        -#     %a.mypage-item-link{:href => "https://www.mercari.com/jp/items/m99111913922/"}
+        -#       %figure
+        -#         %img.lazyloaded{:alt => "", "data-src" => "//static.mercdn.net/thumb/photos/m99111913922_1.jpg?1569936483", :src => "//static.mercdn.net/thumb/photos/m99111913922_1.jpg?1569936483"}/
+        -#       .mypage-item-body.show-stock-item
+        -#         .mypage-item-text
+        -#           BECK 関連書籍2冊セット
+        -#         %div
+        -#           .mypage-item-status.bold.awaiting
+        -#             出品中
+        -#       %i.icon-arrow-right
+
   .l-side
     %nav.mypage-nav
       %ul.mypage-nav-list
@@ -69,7 +66,7 @@
             お知らせ
             %i.icon-arrow-right
         %li
-          = link_to list_mypage_path,class:"mypage-nav-list-item" do
+          = link_to root_path,class:"mypage-nav-list-item" do
             出品した商品 - 出品中
             %i.icon-arrow-right
         %li
