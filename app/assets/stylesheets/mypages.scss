@@ -2116,3 +2116,21 @@ i[class^='icon-'], i[class*='icon-'] {
   position: relative;
   float: right;
 }
+
+.tab-content{
+    &__box{
+        border-bottom: 1px solid black;
+        display: flex;
+        justify-content: flex-start;
+
+        &__name{
+            display: flex;
+        }
+        &__image{
+           
+        }
+        &__text{
+            
+        }
+    }
+}
