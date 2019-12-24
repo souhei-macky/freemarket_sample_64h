@@ -12,7 +12,7 @@ $(document).on('turbolinks:load', function() {
                       <p>削除</p>
                   </div>
                 </div>`
-    // .dropzoneの配列の最初に追加
+    // .sell-dropbox-containerの配列の最初に追加
     $('.sell-dropbox-container').prepend(html);
   };
 
