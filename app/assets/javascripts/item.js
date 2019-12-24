@@ -67,6 +67,7 @@ $(document).on('turbolinks:load', function() {
       };
     };
     };
+    //画像が10枚未満の場合、アップロードボタンを表示状態にする
     if ($('.preview-box__select p').length < 10) {
       $('.sell-upload-drop-box').css('display', 'block');
     };
@@ -78,8 +79,9 @@ $(document).on('turbolinks:load', function() {
     var new_input = $(`<input multiple= "multiple" name="images[image][]" class="boxfileselect fileup" type="file" accept="image/*">`);
     input_area.prepend(new_input);
   });
-  
+ 
   if (window.location.href.match(/items\/\d+\/edit/)){
+    // 編集ページで画像が10枚の時、アップロードボタンを非表示(初期状態用の記述)
     CountPreview();
   };
 });
