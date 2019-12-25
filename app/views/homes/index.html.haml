@@ -66,54 +66,64 @@
             .items-box
               - @item_all.each do |item|
                 = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
                 .items-box-body
                 .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
+                -# .items-box-price
+                -#   ¥#{item.price}
+
                 -if item.shopping_status == 1
                   .items-box_photo__sold
                     .items-box_photo__sold__inner
                       SOLD
-
-
-
-
-
-        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-          メンズ新着アイテム
-
-          .items-box-content.clearfix
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
+                  .items-box-name
                     #{item.name}
+                      
 
 
 
 
-        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-          家電・スマホ・カメラ新着アイテム
 
-          .items-box-content.clearfix
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
+        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+        -#   メンズ新着アイテム
+
+        -#   .items-box-content.clearfix
+        -#     .items-box
+        -#       - @item_all.each do |item|
+        -#         = link_to item_path(item.id) do
+        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
+        -#         .items-box-body
+        -#         .items-box-num
+        -#         .items-box-price.font-5
+        -#           ¥#{item.price}
+        -#         .items-box-name.font-2
+        -#           #{item.name}
+        -#         -if item.shopping_status == 1
+        -#           .items-box_photo__sold
+        -#             .items-box_photo__sold__inner
+        -#               SOLD
+
+
+
+
+        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+        -#   家電・スマホ・カメラ新着アイテム
+
+        -#   .items-box-content.clearfix
+        -#     .items-box
+        -#       - @item_all.each do |item|
+        -#         = link_to item_path(item.id) do
+        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
+        -#         .items-box-body
+        -#         .items-box-num
+        -#         .items-box-price.font-5
+        -#           ¥#{item.price}
+        -#         .items-box-name.font-2
+        -#           #{item.name}
+        -#         -if item.shopping_status == 1
+        -#           .items-box_photo__sold
+        -#             .items-box_photo__sold__inner
+        -#               SOLD
                
                       
 
@@ -121,20 +131,24 @@
 
 
 
-        .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-          おもちゃ・ホビー・グッズ
+        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
+        -#   おもちゃ・ホビー・グッズ
 
-          .items-box-content.clearfix
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    = "¥#{item.price}"
-                  .items-box-name.font-2
-                    = "#{item.name}"
+        -#   .items-box-content.clearfix
+        -#     .items-box
+        -#       - @item_all.each do |item|
+        -#         = link_to item_path(item.id) do
+        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
+        -#         .items-box-body
+        -#         .items-box-num
+        -#         .items-box-price.font-5
+        -#           ¥#{item.price}
+        -#         .items-box-name.font-2
+        -#           #{item.name}
+        -#         -if item.shopping_status == 1
+        -#           .items-box_photo__sold
+        -#             .items-box_photo__sold__inner
+        -#               SOLD
 
 
 
