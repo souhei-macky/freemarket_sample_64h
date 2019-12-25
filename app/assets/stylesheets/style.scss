@@ -103,7 +103,7 @@ img {
 
 .l-left {
     float: left;
-    height: 50px;
+    height: 45px;
 }
 
 
@@ -159,11 +159,7 @@ img {
     vertical-align: middle;
 }
 
-.pc-header-inner {
-    width: 700px;
-    margin: 0 auto;
-    padding: 8px 0 0;
-}
+
 
 .pc-header-nav-parent-wrap {
     left: 0;
@@ -670,6 +666,7 @@ l-container {
 .app-banner-pc h2 {
     margin: 0;
     font-size: 16px;
+    text-align: left;
 }
 
 h2 {
@@ -2720,11 +2717,11 @@ select {
 
 .items-box-num .font-2 {
     position: absolute;
-    right: 12px;
+    left: 12px;
     bottom: 10px;
-    padding-left: 32px;
-    background: linear-gradient(to right, rgba(255,255,255,0), #fff 24px);
-}
+    /* padding-left: 32px; */
+    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff 24px);
+  }
 
 .font-2 {
     font-size: 16px;
@@ -3286,7 +3283,7 @@ label {
 
 .form-group .input-default {
     width: 100%;
-    margin: 8px 0 0;
+    margin: 8px 0;
 }
 
 .l-single-content p {
@@ -3554,6 +3551,7 @@ html {
 *, ::before, ::after {
     -webkit-box-sizing: inherit;
     box-sizing: inherit;
+    line-height: 1.5;
 }
 ::selection {
     color: currentColor;
@@ -3572,6 +3570,7 @@ html {
 
 .l-single-inner.registration-form .form-group:not(:first-of-type), .l-single-inner.registration-form .btn-red {
     margin-top: 32px;
+    margin-bottom: 8px;
 }
 
 .text-right {

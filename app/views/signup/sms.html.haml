@@ -28,12 +28,12 @@
           .form-group
             = f.label :携帯電話の番号
             = f.text_field :phone_number, placeholder: '携帯電話の番号を入力', value: session[:phone_number], class:"input-default"
-            %p 本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
+            本人確認のため、携帯電話のSMS(ショートメッセージサービス)を利用して認証を行います。
             = f.submit 'SMSを送信する', class: 'btn-default btn-red'
-            %p ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
+            ※電話番号は本人確認や不正利用防止のために利用します。他のユーザーに公開されることはありません。
             .form-group.text-right
               = link_to  root_path, target: "_blank" do
-                %p 電話番号の確認が必要な理由
+                電話番号の確認が必要な理由
                 %i.icon-arrow-right
           %input{name: "__csrf_value", type: "hidden", value: "acd1491261d2b41a938d75b104dc7631bce87a3fbf722b9b76aa754a0b1c74a2ad0557f31729d4c434dbc68a743e24f48ed8be56d96bd6d1ef89c4150439db755"}/
           %input{name: "id", type: "hidden", value: "740424567"}/

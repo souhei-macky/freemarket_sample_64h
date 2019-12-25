@@ -29,7 +29,7 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save
+    if @item.save!
       params[:images][:image].each do |image|
         @item.images.create(image: image)
       end

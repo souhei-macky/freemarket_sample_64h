@@ -1,0 +1,351 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/*購入内容の確認*/
+
+.buy-content:first-of-type {
+    margin: 0;
+}
+
+.buy-item {
+    text-align: center;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-content-inner {
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.buy-item-box {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+}
+
+.buy-item-image {
+    height: 80px;
+    width: 80px;
+    min-width: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+}
+
+h3 {
+    font-size: 22px;
+}
+
+.buy-item .buy-item-image img {
+    width: 80px;
+}
+
+.lazyloaded {
+    opacity: 1;
+    -webkit-transition: opacity .3s;
+    transition: opacity .3s;
+}
+
+.buy-item-detail {
+    margin-left: 16px;
+}
+
+.buy-item-name {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 8px;
+    line-height: 1.5;
+    text-align: left;
+    color: black;
+}
+
+.buy-price-ja {
+    margin: 0;
+    text-align: left;
+    font-size: 15px;
+    color: black;
+}
+
+.bold {
+    font-weight: 600;
+}
+
+.buy-price-ja .item-shipping-fee {
+    font-size: 12px;
+}
+
+.buy-price-ja .item-shipping-fee {
+    font-size: 12px;
+}
+
+.item-shipping-fee {
+    display: inline-block;
+    font-size: 16px;
+}
+
+// .buy-item:last-of-type {
+//     padding-bottom: 48px;
+// }
+
+// .buy-content:last-of-type {
+//     padding-bottom: 48px;
+// }
+
+.buy-item {
+    text-align: center;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-price-table:first-child {
+    margin: 0;
+}
+
+.buy-price-table {
+    display: table;
+    border-collapse: collapse;
+    width: 100%;
+}
+
+ul, ol {
+    list-style: none;
+}
+
+.buy-price-row:first-child {
+    border: 0;
+}
+
+.buy-you-pay {
+    font-size: 30px;
+}
+
+.buy-you-pay {
+    font-size: 24px;
+}
+
+.buy-price-row {
+    display: table-row;
+    border-top: 1px solid #ccc;
+}
+
+.bold {
+    font-weight: 600;
+
+}
+
+.buy-price-cell:first-child {
+    text-align: left;
+}
+
+.buy-price-table .buy-price-cell-label {
+    font-size: 18px;
+}
+
+.buy-price-cell {
+    display: table-cell;
+    padding: 0;
+    text-align: right;
+}
+
+.buy-price-cell {
+    display: table-cell;
+    padding: 0;
+    text-align: right;
+}
+
+.buy-not-have-point {
+    color: #888;
+}
+
+.buy-accordion {
+    margin: 24px 0 32px;
+}
+
+.buy-accordion {
+    margin: 24px 0;
+}
+
+.buy-use-point {
+    text-align: left;
+}
+
+.checkbox-default {
+    position: relative;
+    font-size: 0;
+}
+
+.buy-not-have-point .icon-check {
+    color: #ccc;
+    background: #ccc;
+}
+
+.checkbox-default .icon-check {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    z-index: 1;
+    width: 20px;
+    height: 20px;
+    border-radius: 2px;
+    background: #fff;
+    border: 1px solid #ccc;
+    font-size: 10px;
+    line-height: 17px;
+    text-align: center;
+    color: #fff;
+    vertical-align: middle;
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    -webkit-transform: translate(0, -50%);
+	transform: translate(0, -50%);
+}
+
+.buy-not-have-point label {
+    cursor: default;
+}
+
+.checkbox-default label {
+    position: relative;
+    z-index: 2;
+    padding: 0 0 0 28px;
+    font-size: 14px;
+    font-weight: 400;
+    vertical-align: middle;
+    cursor: pointer;
+}
+
+label {
+    display: inline-block;
+}
+
+.buy-content:first-of-type {
+    margin: 0;
+    padding-bottom: 0px;
+}
+
+.buy-user-info {
+    padding: 32px 0;
+}
+
+.buy-user-info {
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    text-align: left;
+    padding: 24px 0;
+    margin: 0;
+}
+
+.buy-content {
+    padding: 32px 16px;
+}
+
+.buy-content {
+    padding: 24px 16px;
+    border-top: 1px solid #f5f5f5;
+}
+
+.buy-content-inner {
+    max-width: 343px;
+    margin: 0 auto;
+}
+
+.buy-user-info h3 {
+    margin: 0;
+    font-size: 14px;
+}
+
+.l-left {
+    float: left;
+}
+
+.buy-user-info-fix {
+    display: block;
+    text-align: right;
+}
+
+.l-right {
+    float: right;
+}
+
+.buy-user-info-fix span {
+    vertical-align: middle;
+}
+
+.buy-form p {
+    line-height: 1.5;
+}
+
+.buy-user-info-text {
+    text-align: left;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.buy-form p {
+    line-height: 1.5;
+}
+
+.buy-user-info-text {
+    text-align: left;
+    margin: 8px 0 0;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+.buy-card-logo {
+    margin-top: 8px;
+    margin-bottom: 25px;
+}
+
+.buy-form p {
+    line-height: 1.5;
+    color: black;
+}
+
+.buy-user-info {
+    padding: 32px 0;
+}
+
+.buy-user-info {
+    -webkit-transition: all ease-out .3s;
+    transition: all ease-out .3s;
+    text-align: left;
+    padding: 24px 0;
+    margin: 0;
+}
+
+.buy-content {
+  /* padding: 32px 16px; */
+}
+
+
+.buy-content {
+  /* padding: 24px 16px; */
+  border-top: 1px solid #f5f5f5;
+}
+
+address {
+    font-style: normal;
+}
