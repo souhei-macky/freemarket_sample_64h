@@ -64,6 +64,7 @@ Rails.application.routes.draw do
     end
     member do
       post 'pay', to: 'transaction#pay'#購入、支払い
+      patch 'pay', to: 'transaction#pay' #更新
     end
   end
 end

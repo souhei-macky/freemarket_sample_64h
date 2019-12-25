@@ -25,9 +25,10 @@ class TransactionController < ApplicationController
         customer: @card.customer_id, #顧客ID
         currency:'jpy', #日本円
       )
+      @item.update(item_params)
       redirect_to done_transaction_index_path #完了画面に移動
     else
-      redirect_to transaction_path(@item)
+      redirect_to root_path
     end
   end
 
@@ -42,5 +43,9 @@ class TransactionController < ApplicationController
 
   def set_card
     @card = CreditCard.where(user_id: current_user.id).first
+  end
+
+  def item_params
+    params.require(:item).permit!
   end
 end
