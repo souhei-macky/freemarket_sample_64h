@@ -90,3 +90,4 @@ gem 'devise'
 gem 'dotenv-rails'
 gem 'ancestry'
 gem "gretel"
+gem "font_awesome5_rails"
