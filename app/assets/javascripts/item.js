@@ -79,5 +79,4 @@ $(function() {
     // 選択したインプットは消す。
     $(this).css({'display':'none'});    
   });
-
 });
