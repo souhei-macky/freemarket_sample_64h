@@ -2577,3 +2577,27 @@ width: 100%;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
   }
+
+
+
+  .fa-list:before {
+    content: "\f03a";
+    color: red;
+}
+
+.fa-external-link-alt:before {
+    content: "\f35d";
+    color: red;
+}
+
+.fa, .fas {
+    font-weight: 900;
+    // margin-left: 20px;
+}
+
+.fa-camera:before {
+    content: "\f030";
+    font-size: 60px;
+}
+
+
