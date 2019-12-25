@@ -18,11 +18,11 @@
                 .sell-upload-items-container
                   .sell-upload-items.have-item-0
                 %label.sell-upload-drop-box.have-item-0
+                  = f.fields_for :images do |image|
+                    = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect fileup_last"
                   %pre.visible-pc
                     ドラッグアンドドロップ
                     またはクリックしてファイルをアップロード
-                  = f.fields_for :images do |image|
-                    = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect", id:"fileup"
             .sell-content
               .form-group
                 %label

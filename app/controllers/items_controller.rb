@@ -1,6 +1,6 @@
 class ItemsController < ApplicationController
 
-  before_action :set_item, only: [:show, :destroy]
+  before_action :set_item, only: [:show, :destroy, :edit, :update]
 
   def index
     #category_idの値は実際のメルカリ準拠。投稿時間を降順で最大10個表示させる。
@@ -26,14 +26,14 @@ class ItemsController < ApplicationController
 
   def create
     @item = Item.new(item_params)
-    if @item.save!
-      params[:images][:image].each do |image|
+    if @item.save
+      # 配列の10個目までの画像を保存
+      params[:images][:image].first(10).each do |image|
         @item.images.create(image: image)
       end
       redirect_to root_path
     else
-      # render 'items#new'
-      redirect_to new_item_path
+      render :new
     end
   end
 
@@ -49,10 +49,31 @@ class ItemsController < ApplicationController
     end
   end
 
+  def imgdestroy
+    # 編集画面の画像削除専用アクション
+    image = Image.find(params[:id])
+    image.destroy
+  end
+
   def edit
   end
 
   def update
+    if @item.update(update_params)
+      # paramsにimagesのキーが有るかで分岐(新規の画像があればtrue、なければfalse)
+      if params.has_key?(:images) 
+        params[:images][:image].each do |image|
+        @item.images.create(image: image)
+        # 商品の画像が合計10枚に達したらeach do処理を止める
+        if @item.images.length == 10 then
+          break
+        end
+        end
+      end
+      redirect_to item_path	
+    else	
+      render :edit 	
+    end
   end
 
   def search
@@ -86,5 +107,18 @@ class ItemsController < ApplicationController
     @item = Item.find(params[:id])
   end
 
+  def update_params	
+    params.require(:item).permit(	
+      :name,	
+      :description,	
+      :price,	
+      :category_id,	
+      :brands_category_id,	
+      :shopping_status,	
+      :size_id,	
+      :item_condition_id,	
+      image_attributes: [:image, :id]	
+      )	
+  end
 end
 
