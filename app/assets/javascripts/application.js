@@ -9,7 +9,7 @@
 //
 // Read Sprockets README (https://github.com/rails/sprockets#sprockets-directives) for details
 // about supported directives.
-//
+//@import 'font_awesome5';
 //= require jquery
 //= require jquery_ujs
 //= require activestorage
