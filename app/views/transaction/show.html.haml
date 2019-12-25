@@ -63,7 +63,9 @@
                             %br/
                             = current_user.nickname
                     %section.buy-content.buy-user-info
-                      = form_tag(action: :pay, method: :post) do
+                      = form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
+                        = form.hidden_field :shopping_status, value: 1
+                        = form.submit value:'購入する'
                         %button.btn-default.btn-red.bold 購入する
   %footer.single-footer
     %nav
