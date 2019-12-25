@@ -1,31 +1,59 @@
 = render "header"
--# config/breadcrumbs.rbに定義したcreditを呼び出し
-- breadcrumb :credit
+-# config/breadcrumbs.rbに定義したmypagesを呼び出し
+- breadcrumb :list
 = render "bread-crumbs"
+
 %main.l-container.clearfix
   .l-content
-    %section.l-chapter-container
-      %h2.l-chapter-head 支払い方法
-      .l-single-inner
-        %section
-          .l-single-content
-            %h3.l-chapter-sub-head クレジットカード一覧
-          %ul.settings-payment-list
-            %li
-              %form.l-single-content{action: "https://www.mercari.com/jp/mypage/card/delete/", method: "POST"}
-                %figure
-                  = image_tag "visa.svg", alt: "visa", height: "15", width: "49"
-                %input{name: "__csrf_value", type: "hidden", value: ""}/
-                %input{name: "card_sequence_no", type: "hidden", value: "tcWVc5kinsmpqmF4E5QeSfcc"}/
-                .settings-payment-num ************0000
-                .settings-payment-num 00 / 00
-                %input{name: "method", type: "hidden", value: "card"}/
-                %button.settings-payment-remove{type: "submit"}
-                  削除する
-        .settings-not-regist
-          = link_to root_path, target: "_blank" do
-            %span 支払い方法について
-            %i.icon-arrow-right
+
+    %section.mypage-tab-container2
+      %h2.mypage-tab-head 購入した商品
+      %ul.mypage-tabs
+        %li.active
+          %h3
+            %a{"data-toggle" => "tab", :href => ""}
+              出品中
+        %li
+          %h3
+            %a{"data-toggle" => "tab", :href => ""}
+              売却済み
+      .tab-content
+        - @items.each do |item|
+          .tab-content__box
+            .tab-content__box__name
+              = link_to item_path(item.id) do
+                出品名：
+                = item.name
+              .tab-content__box__image
+                = link_to item_path(item.id) do
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"100", height:"100"
+              .tab-content__box__text
+                状態
+
+        -# %ul#mypage-tab-transaction-now.mypage-item-list.tab-pane.active
+        -#   %li
+        -#     %a.mypage-item-link{:href => "https://www.mercari.com/jp/items/m14202584467/"}
+        -#       %figure
+        -#         %img.is-higher-width.lazyloaded{:alt => "", "data-src" => "//static.mercdn.net/thumb/photos/m14202584467_1.jpg?1575452936", :src => "//static.mercdn.net/thumb/photos/m14202584467_1.jpg?1575452936"}/
+        -#       .mypage-item-body.show-stock-item
+        -#         .mypage-item-text
+        -#           テスト
+        -#         %div
+        -#           .mypage-item-status.bold.action-required
+        -#             公開停止中
+        -#       %i.icon-arrow-right
+        -#   %li
+        -#     %a.mypage-item-link{:href => "https://www.mercari.com/jp/items/m99111913922/"}
+        -#       %figure
+        -#         %img.lazyloaded{:alt => "", "data-src" => "//static.mercdn.net/thumb/photos/m99111913922_1.jpg?1569936483", :src => "//static.mercdn.net/thumb/photos/m99111913922_1.jpg?1569936483"}/
+        -#       .mypage-item-body.show-stock-item
+        -#         .mypage-item-text
+        -#           BECK 関連書籍2冊セット
+        -#         %div
+        -#           .mypage-item-status.bold.awaiting
+        -#             出品中
+        -#       %i.icon-arrow-right
+
   .l-side
     %nav.mypage-nav
       %ul.mypage-nav-list
@@ -66,7 +94,7 @@
         %li
           = link_to profile_mypages_path, class:"mypage-nav-list-item" do
             プロフィール
-            %i.fas.fa-chevron-right
+            %%i.fas.fa-chevron-right
         %li
           = link_to root_path, class:"mypage-nav-list-item" do
             発送元・お届け先住所変更

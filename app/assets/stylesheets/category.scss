@@ -17,13 +17,15 @@ p{
 .gnav {
   display: flex;
   height: 4rem;
-  margin: 20px 0 auto;
-  width: 1000px;
+  margin: 10px 0 auto;
+  /* width: 1000px; */
 }
 
-.gnav > li {/*親階層のみ幅を25%にする*/
-  width: 25%;
+.gnav > li {
+  /*親階層のみ幅を25%にする*/
+  /* width: 25%; */
 }
+
 
 /*全てのリスト・リンク共通*/
 .gnav li {
@@ -32,13 +34,13 @@ p{
 }
 
 .gnav li a {
-  background:#fff;
+  background: #fff;
   border-right: 1px solid #eee;
   color: #001b34;
-  display: block;
+  /* display: block; */
   height: 2rem;
   line-height: 2rem;
-  text-align: center;
+  /* text-align: center; */
   text-decoration: none;
   width: 100%;
 }
@@ -48,12 +50,17 @@ p{
   height: 0;
   overflow: hidden;
   /* transition: .1s; */
+  font-weight: 100;
+  margin-bottom: 20px;
+
 }
 
 .gnav li li a {
   border-top: 1px solid #eee;
   position: relative;
   background:#fff;
+  margin-bottom: 20px;
+
 }
 
 .gnav li:hover > ul > li {
@@ -118,4 +125,27 @@ z-index:1;
 
 .bb{
   z-index:0;
+}
+
+li.category01{
+  font-weight: 600;
+  
+}
+
+li.category02{
+  font-weight: 600;
+  left: 50px;
+}
+
+
+.hpHbix {
+  background-color: rgb(255, 255, 255);
+  box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
+  width: 224px;
+}
+
+.li.aa{
+
+padding-top: 50px;
+  
 }

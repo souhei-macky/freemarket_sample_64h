@@ -2525,20 +2525,42 @@ width: 100%;
     margin: 0 0 4% 4%;
     background: #fff;
     margin-top: 15px;
+    display: flex;
   }
 
   .items-box-price {
     z-index: 2;
     position: absolute;
-    top: -50px;
+    top: 75px;
     left: 0;
     padding: 4px 12px 4px 8px;
     border-radius: 0 16px 16px 0;
     font-weight: 600;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
-}
+  }
 
 .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC{
     padding-bottom: 20px;
 }
+
+.items-box_photo__sold{
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #ea352d ;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #ea352d ;
+    z-index:100;
+    position: relative;
+    top:-320px;
+    &__inner{
+      transform: rotate(-45deg);
+      font-size: 28px;
+      margin:-35px 0px 0px -55px;
+      color: #fff;
+      letter-spacing: 2px;
+      font-weight: 600;
+    }
+  }

@@ -50,7 +50,7 @@
                   %span.form-password-revelation-revealed-password
             .form-group
               %h3.text-left.l-chapter-sub-head 本人確認
-              %p.l-single-text 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
+              .l-single-text 安心・安全にご利用いただくために、お客さまの本人情報の登録にご協力ください。他のお客さまに公開されることはありません。
             .form-group
               = f.label :お名前（全角）
               %span.form-require 必須
@@ -81,21 +81,20 @@
               %input{name: "birthday", type: "hidden", value: ""}/
               .clearfix
             .form-info-text
-              %p ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
+              ※ 本人情報は正しく入力してください。会員登録後、修正するにはお時間を頂く場合があります。
             -# .form-group
             -#   私はロボットではありません
             -#   （任意で挿入）
             .form-group
-              %p.l-single-text.text-center
+              .l-single-text.text-center
                 「次へ進む」のボタンを押すことにより、
                 = link_to "利用規約",root_path
                 に同意したものとみなします
             .form-group
               = f.submit '次へ進む', class: 'btn-default btn-red'
             .form-group.text-right
-              %p
-                = link_to root_path, target: "_blank" do
-                  本人情報の登録について
-                  %i.icon-arrow-right
+              = link_to root_path, target: "_blank" do
+                本人情報の登録について
+              %i.icon-arrow-right
 
   = render "footer"

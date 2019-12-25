@@ -13,21 +13,27 @@
         %nav.l-left
           %ul.gnav
             =render "category"
-         
             =render "bland"
                 
+
+
+
+
         -if user_signed_in?
           .sc-eXEjpC.fzedbE
             %a.sc-RefOD.jwHbWf{:href => ""}
               .sc-bsbRJL.gKKfZH
+              %i.fas.fa-check
               やることリスト
               
             %a.sc-RefOD.jwHbWf{:href => ""}
               .sc-bsbRJL.gKKfZH
+              %i.far.fa-bell
               お知らせ
 
             %a.sc-RefOD.jwHbWf{:href => ""}
               .sc-bsbRJL.gKKfZH
+              %i.far.fa-heart
               いいね！一覧 
 
             .sc-RefOD.jwHbWf

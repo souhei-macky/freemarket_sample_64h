@@ -53,6 +53,9 @@ Rails.application.routes.draw do
       get 'identification' #本人情報
       get 'profile' #プロフィール情報
     end
+    member do
+      get 'list'#出品リスト
+    end
   end  
 
   #購入
@@ -62,6 +65,7 @@ Rails.application.routes.draw do
     end
     member do
       post 'pay', to: 'transaction#pay'#購入、支払い
+      patch 'pay', to: 'transaction#pay' #更新
     end
   end
 end

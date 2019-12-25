@@ -1,4 +1,30 @@
-//商品購入完了ページ（仮）
-%h1 購入が完了しました！
-= link_to root_path do
-  %h2 トップページへ
+-# //商品購入完了ページ（仮）
+-# %h1 購入が完了しました！
+-# = link_to root_path do
+-#   %h2 トップページへ
+
+.single-container
+  ​
+  %header.single-header
+    %h1
+      = link_to root_path do
+        = image_tag "logo-1.svg" , alt: "mercari"
+  ​
+  %main.single-main
+    %section.l-single-container
+      %h2.l-single-head.registration 購入完了
+      ​
+      .l-single-inner.registration-form
+        %center
+          ありがとうございます。
+          %br/
+          購入が完了しました！
+        %br/
+        %br/
+        .l-single-content
+          ​
+          = link_to root_path, class:"btn-default btn-mail" do
+            %i.icon-mail
+            トップページへ
+          ​
+  = render "footer"
