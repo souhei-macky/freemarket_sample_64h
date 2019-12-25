@@ -73,17 +73,11 @@
                     ¥#{item.price}
                   .items-box-name.font-2
                     #{item.name}
+                -if item.shopping_status == 1
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
 
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
 
 
 
@@ -103,16 +97,6 @@
                   .items-box-name.font-2
                     #{item.name}
 
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
 
 
 
@@ -130,17 +114,9 @@
                     ¥#{item.price}
                   .items-box-name.font-2
                     #{item.name}
+               
+                      
 
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
 
 
 
@@ -156,21 +132,10 @@
                 .items-box-body
                 .items-box-num
                   .items-box-price.font-5
-                    ¥#{item.price}
+                    = "¥#{item.price}"
                   .items-box-name.font-2
-                    #{item.name}
+                    = "#{item.name}"
 
-
-            .items-box
-              - @item_all.each do |item|
-                = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"204", height:""
-                .items-box-body
-                .items-box-num
-                  .items-box-price.font-5
-                    ¥#{item.price}
-                  .items-box-name.font-2
-                    #{item.name}
 
 
 
