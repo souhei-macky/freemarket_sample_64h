@@ -36,6 +36,12 @@
       .item-main-content.clearfix
         .item-photo
           = image_tag "#{@item.images.first.image}"
+          - @item.images.each do |image|
+            = image_tag "#{image.image}", width: "60", height: "60"
+          - if @item.shopping_status == 1
+            .items-box_photo__sold
+              .items-box_photo__sold__inner
+                SOLD
         %table.item-detail-table
           %tbody
             %tr
@@ -108,8 +114,12 @@
       -else 
         //商品購入者の画面
         //リンク先仮指定（後ほど変更）
-        = link_to transaction_path(@item) do
-          .item-buy-btn 購入画面に進む
+        - if @item.shopping_status == 1
+          = link_to root_path do
+            .item-buy-btn この商品は売り切れました
+        -else
+          = link_to transaction_path(@item) do
+            .item-buy-btn 購入画面に進む
 
         %a.item-action-text{"data-action": "item/openDetail", "data-adjust-url": "http://app.adjust.io/xio2ii?campaign=iOS&adgroup=items.buy_button1", "data-key": "id=m82477556805", "data-play-id": "com.kouzoh.mercari", "data-toggle": "open-app", "data-url-scheme": "mercari://"}
           アプリで購入
