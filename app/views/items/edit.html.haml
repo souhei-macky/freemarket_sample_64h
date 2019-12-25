@@ -20,7 +20,7 @@
                     .preview-box__img-box
                       = image_tag "#{img.image}", height:"118", width:"118", class:"image"
                     .preview-box__select-2
-                      = link_to "/items/image/#{img.id}", method: :delete do
+                      = link_to imgdestroy_items_path, method: :delete do
                         %p 削除
                 .sell-upload-items-container
                   .sell-upload-items.have-item-0
