@@ -2344,4 +2344,18 @@ ul, ol {
     cursor: pointer;
     text-align: center;
 }
+.select-wrap{
+    position:relative;
+}
 
+.fas.fa-chevron-right.a{
+    position:absolute;
+    right:93px;
+    bottom:13px;
+}
+
+.fas.fa-chevron-right.b{
+    position:absolute;
+    right:60px;
+    bottom:13px;
+}
