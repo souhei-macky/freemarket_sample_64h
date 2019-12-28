@@ -67,15 +67,15 @@
               %br/
               .birthday-select-wrap
                 .select-wrap
-                  %i.icon-arrow-bottom
+                  %i.fas.fa-chevron-down
                   = f.text_field :year, value: session[:year], class:"input-default half"
                 %span 年
                 .select-wrap.select-wrap__month
-                  %i.icon-arrow-bottom
+                  %i.fas.fa-chevron-down
                   = f.text_field :month, value: session[:month], class:"input-default half"
                 %span 月
                 .select-wrap.select-wrap__day
-                  %i.icon-arrow-bottom
+                  %i.fas.fa-chevron-down
                   = f.text_field :day, value: session[:day], class:"input-default half"
                 %span 日
               %input{name: "birthday", type: "hidden", value: ""}/
