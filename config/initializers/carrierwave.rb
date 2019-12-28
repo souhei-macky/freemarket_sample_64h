@@ -16,7 +16,7 @@ CarrierWave.configure do |config|
       region: 'ap-northeast-1'
     }
     config.fog_directory  = '64h-merucari' #S3のバケット名
-    config.asset_host = 'https://s3-your_region.amazonaws.com/64h-merucari'
+    config.asset_host = 'https://s3-ap-northeast-1.amazonaws.com/64h-merucari'
   else
   # 開発環境のpublic/uploades下に保存
     config.storage :file 
