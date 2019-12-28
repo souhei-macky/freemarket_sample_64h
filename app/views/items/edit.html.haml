@@ -49,14 +49,14 @@
                     カテゴリー
                     %span.form-require 必須
                     .select-wrap
-                      %i.icon-arrow-bottom
+                      %i.fas.fa-chevron-right
                       = f.select :category_id,[["レディース","1"],["メンズ","2"],["ベビー・キッズ","3"],["インテリア・住まい・小物","4"],["本・音楽・ゲーム","5"],["おもちゃ・ホビー・グッズ","1328"],["コスメ・香水・美容","6"],["家電・スマホ・カメラ","7"],["スポーツ・レジャー","8"],["ハンドメイド","9"],["チケット","1027"],["自動車・オートバイ","1318"],["その他","10"]], {}, {class: 'select-default'}
                 .form-group
                   %label
                     商品の状態
                     %span.form-require 必須
                     .select-wrap
-                      %i.icon-arrow-bottom
+                      %i.fas.fa-chevron-right
                       = f.select :item_condition_id, [["新品、未使用","1"],["未使用に近い","2"],["目立った傷や汚れなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]],{}, {class:"select-default"}
             -# 現時点では未実装である為コメントアウト化しています
             -# .sell-content.clearfix
