@@ -69,8 +69,8 @@
                   = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
                 .items-box-body
                 .items-box-num
-                -# .items-box-price
-                -#   ¥#{item.price}
+                .items-box-price
+                  ¥#{item.price}
 
                 -if item.shopping_status == 1
                   .items-box_photo__sold
