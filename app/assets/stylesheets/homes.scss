@@ -2532,12 +2532,14 @@ width: 100%;
     z-index: 2;
     position: absolute;
     top: 75px;
-    left: 0;
+    // left: 0;
+    right: 0;
     padding: 4px 12px 4px 8px;
     border-radius: 0 16px 16px 0;
     font-weight: 600;
     color: #fff;
     background-color: rgba(0, 0, 0, 0.3);
+    margin-right: 187px;
   }
 
 .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC{
@@ -2613,4 +2615,5 @@ width: 100%;
 .fa-external-link-alt{
     margin-right: 20px;
     }
+    
     
