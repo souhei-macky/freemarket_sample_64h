@@ -96,14 +96,14 @@
                         価格
                         %span.form-require 必須
                       .l-right.sell-price-input
-                        = f.text_field :price, placeholder: "例) 300",class:"input-default"
+                        = f.text_field :price, placeholder: "例) 300",class:"input-default", id:"price_calc"
                   %li.clearfix
                     .l-left
                       販売手数料 (10%)
-                    .l-right -
+                    .l-right1 -
                   %li.clearfix.bold
                     .l-left 販売利益
-                    .l-right -
+                    .l-right2 -
             .modal{role: "dialog", tabindex: "-1"}
               .modal-inner
             .sell-content.sell-btn-box
