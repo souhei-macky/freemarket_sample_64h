@@ -28,8 +28,7 @@
                   = f.fields_for :images do |image|
                     = image.file_field :image, multiple: true, name: "images[image][]", class:"boxfileselect fileup_last"
                   %pre.visible-pc
-                    ドラッグアンドドロップ
-                    またはクリックしてファイルをアップロード
+                    クリックしてファイルをアップロード
             .sell-content
               .form-group
                 %label
@@ -59,37 +58,33 @@
                       = f.select :brands_category_id,[["---","1"],["シャネル","2"],["ナイキ","3"],["ルイ・ヴィトン","4"], ["シュプリーム","5"],["アディダス","6"]],{}, {class:"select-default"}                      
                 .form-group
                   %label
+                    サイズ
+                    .select-wrap
+                      = f.select :size_id,[["---","1"],["S","2"],["M","3"],["L","4"], ["XL","5"],["20.0","6"],["20.5","7"],["21.0","8"],["21.5","9"],["22.0","10"],["22.5","11"],["23.0","12"],["23.5","13"],["24.0","14"],["24.5","15"],["25.0","16"],["25.5","17"],["26.0","18"],["26.5","19"],["27,0","20"],["27.5","21"],["28.0","22"],["28.5","23"],["29.0","24"],["29.5","25"],["30.0","26"]],{}, {class:"select-default"}                
+                .form-group
+                  %label
                     商品の状態
                     %span.form-require 必須
                     .select-wrap
                       %i.fas.fa-chevron-right.b
                       = f.select :item_condition_id, [["新品、未使用","1"],["未使用に近い","2"],["目立った傷や汚れなし","3"],["やや傷や汚れあり","4"],["傷や汚れあり","5"],["全体的に状態が悪い","6"]],{}, {class:"select-default"}
-            -# 現時点では未実装である為コメントアウト化しています
-            -# .sell-content.clearfix
-            -#   %h3.sell-sub-head 配送について
-            -#   .sell-form-box
-            -#     .form-group
-            -#       %label
-            -#         配送料の負担
-            -#         %span.form-require 必須
-            -#       .select-wrap
-            -#         %i.icon-arrow-bottom
-            -#         = f.select :
-            -#         %select.select-default
-            -#           %option{value: ""} ---
-            -#           %option{value: "2"} 送料込み(出品者負担)
-            -#           %option{value: "1"} 着払い(購入者負担)
-            -#     .form-group
-            -#       %label
-            -#         発送までの日数
-            -#         %span.form-require 必須
-            -#       .select-wrap
-            -#         %i.icon-arrow-bottom
-            -#         %select.select-default
-            -#           %option{value: ""} ---
-            -#           %option{value: "1"} 1~2日で発送
-            -#           %option{value: "2"} 2~3日で発送
-            -#           %option{value: "3"} 4~7日で発送
+            .sell-content.clearfix
+              %h3.sell-sub-head 配送について
+              .sell-form-box
+                .form-group
+                  %label
+                    配送料の負担
+                    %span.form-require 必須
+                  .select-wrap
+                    %i.fas.fa-chevron-right.a
+                    = f.select :delivery_charge,[["送料込み(出品者負担)"],["着払い(購入者負担)"]],{}, {class:"select-default"}
+                .form-group
+                  %label
+                    発送までの日数
+                    %span.form-require 必須
+                  .select-wrap
+                    %i.fas.fa-chevron-right.a
+                    = f.select :date,[["1~2日で発送"],["2~3日で発送"],["4~7日で発送"]],{}, {class:"select-default"}
             .sell-content.clearfix
               %h3.sell-sub-head 販売価格(300〜9,999,999)
 

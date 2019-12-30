@@ -99,6 +99,8 @@ class ItemsController < ApplicationController
       :shopping_status,
       :size_id,
       :item_condition_id,
+      :delivery_charge,
+      :date,
       image_attributes: [:image, :id]
       ).merge(user_id: current_user.id)
   end
@@ -117,6 +119,8 @@ class ItemsController < ApplicationController
       :shopping_status,	
       :size_id,	
       :item_condition_id,	
+      :delivery_charge,
+      :date,      
       image_attributes: [:image, :id]	
       )	
   end

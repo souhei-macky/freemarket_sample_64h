@@ -62,15 +62,7 @@
             %tr
               %th カテゴリー
               %td
-                = link_to "" do
-                  = @item.category.name
-                  .item-detail-table-sub-category
-                    %i.fas.fa-chevron-right
-                    トップス
-                = link_to "" do
-                  .item-detail-table-sub-sub-category
-                    %i.fas.fa-chevron-right
-                    ポロシャツ
+                = @item.category.name
             %tr
               %th ブランド
               %td
@@ -79,25 +71,26 @@
             %tr
               %th 商品のサイズ
               %td 
-                -# = @item.size.name
+                = @item.size.name
             %tr
               %th 商品の状態
               %td 
                 = @item.item_condition.name
             %tr
               %th 配送料の負担
-              %td 送料込み(出品者負担)
+              %td 
+                = @item.delivery_charge
             %tr
               %th 配送の方法
               %td らくらくメルカリ便
             %tr
               %th 配送元地域
               %td
-                = link_to "" do
-                  = @address.prefecture
+                = @address.prefecture
             %tr
               %th 発送日の目安
-              %td 2~3日で発送
+              %td
+                = @item.date
       .item-price-box.text-center
         %span.item-price.bold 
           ¥
