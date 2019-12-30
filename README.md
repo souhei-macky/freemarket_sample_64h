@@ -93,7 +93,7 @@
 |name|string|null: false|
 |ancestry|string|null: false|
 ### Association
-- has_ancestry
+- has_many :items
 ### memo
 - Gemのancestryを使用する。
 
@@ -102,7 +102,7 @@
 |------|----|-------|
 |name|string|null: false|
 ### Association
-- belongs_to :item
+- has_many :items
 
 ## sizeテーブル
 |Column|Type|Options|
