@@ -2611,9 +2611,12 @@ width: 100%;
     right:15px;
 }
 
-
-.fa-external-link-alt{
-    margin-right: 20px;
-    }
-    
-    
+.fas.fa-align-justify{
+    position:relative;
+    right: -10px;
+    color: red;  
+}
+.fas.fa-external-link-alt{
+    position:relative;
+    right: -10px;
+}
