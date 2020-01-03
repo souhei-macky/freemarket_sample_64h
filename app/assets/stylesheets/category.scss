@@ -1,4 +1,4 @@
-h2{
+nav.l-left{
   // color: #fff;
   margin-bottom: 2rem;
   /* text-align: center; */
@@ -7,18 +7,18 @@ h2{
   padding: 0;
 }
 
-p{
-  color: #fff;
-  line-height: 1.6;
-  margin:0 auto 2rem;
-  width: 800px;
-}
+// p{
+//   color: #fff;
+//   line-height: 1.6;
+//   margin:0 auto 2rem;
+//   width: 800px;
+// }
 
 .gnav {
   display: flex;
   height: 4rem;
   margin: 10px 0 auto;
-  /* width: 1000px; */
+  width: 400px; 
 }
 
 .gnav > li {
@@ -51,8 +51,10 @@ p{
   overflow: hidden;
   /* transition: .1s; */
   font-weight: 100;
-  margin-bottom: 20px;
-
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  background-color: white;
 }
 
 .gnav li li a {
@@ -87,10 +89,14 @@ p{
   background: #fff;
 }
 
-.gnav li ul li ul li .GC {/*孫階層*/
-  position: relative;
-  bottom: 299px; 
-}
+// .gnav li ul li ul li .GC {/*孫階層*/
+//   position: relative;
+//   bottom: 299px; 
+//   background-color: white;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .gnav li ul li ul li:hover a {
   background: #fff;
@@ -104,15 +110,23 @@ p{
   background:#fff; 
  } 
 
-.gnav li ul li ul li ul li .GGC{/*ひ孫階層*/
-  position: relative;
-  bottom: 299px;
-}
+// .gnav li ul li ul li ul li .GGC{/*ひ孫階層*/
+//   position: relative;
+//   bottom: 299px;
+//   background-color: white;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
-.gnav li ul li ul li ul li .GGCC{/*ひ孫階層*/
-  position: relative;
-  bottom: 598px;
-}
+// .gnav li ul li ul li ul li .GGCC{/*ひ孫階層*/
+//   position: relative;
+//   bottom: 598px;
+//   background-color: white;
+//   box-sizing: border-box;
+//   margin: 0;
+//   padding: 0;
+// }
 
 .sc-cJSrbW.kSIIvy{
   margin-left: 300px;
@@ -129,12 +143,15 @@ z-index:1;
 
 li.category01{
   font-weight: 600;
+  // position:relative;
+  // left:20px;
   
 }
 
 li.category02{
   font-weight: 600;
-  left: 50px;
+  position:relative;
+  left:-1px;
 }
 
 
@@ -142,6 +159,7 @@ li.category02{
   background-color: rgb(255, 255, 255);
   box-shadow: rgba(0, 0, 0, 0.18) 0px 2px 4px;
   width: 224px;
+  height: 40px;
 }
 
 .li.aa{
@@ -153,3 +171,4 @@ padding-top: 50px;
 .fa-list{
 margin-right: 20px;
 }
+

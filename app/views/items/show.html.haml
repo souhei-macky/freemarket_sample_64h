@@ -7,7 +7,7 @@
             = image_tag "logo-1.svg", alt: "mercari", height: "36", width: "134"
         %form.pc-header-form{action: "https://www.mercari.com/jp/search/"}
           %input.input-default{name: "keyword", placeholder: "何かお探しですか？", type: "search", value: ""}/
-          %i.icon-search
+          %i.fas.fa-search{action: "https://www.mercari.com/jp/search/"}
       .pc-header-nav-box.clearfix
         %nav.l-left
           %ul.pc-header-nav
@@ -15,7 +15,7 @@
               %h2
                 = link_to "" do
                   .pc-header-nav-root.list-parent
-                    %i.icon-list.pc-header-cat-brand-icon
+                    %i.fas.fa-align-justify
                     %span カテゴリーから探す
               %ul.pc-header-nav-parent-wrap{"data-mega": "1"}
                 %li.pc-header-nav-parent
@@ -23,7 +23,7 @@
               %h2
                 = link_to "" do
                   .pc-header-nav-root.list-parent
-                    %i.icon-tag.pc-header-cat-brand-icon
+                    %i.fas.fa-external-link-alt 
                     %span ブランドから探す
                 %ul.pc-header-nav-parent-wrap
                   %li.pc-header-nav-parent
