@@ -1,46 +1,18 @@
 = render "header"
-.sc-ebFjAB.dxJnjc
-  .sc-clNaTc.iniLfl
-    = link_to "#", target: "_blank" do
-      .sc-hzNEM.iFJfgS
-    .slider.sc-fQejPQ.gjkspQ
-      %div.slick
-        %div
-          %h3.one 
-        -# %div
-        -#   %h3.two 
-        -# %div
-        -#   %h3.three 
-            -# .sc-hzNEM.fSbCwc
-            -#   .sc-chbbiW.lpfITZ
-            -#     = image_tag "", alt: "mercari"
-            -#     .sc-kxynE.hkJJjj
-            -#       .sc-iSDuPN.hjMsAb
-            -#         スマホで
-            -#         かんたん
-            -#         %br>/
-            -#         フリマアプリ
-            -#       %p.sc-fZwumE.jmKeIu
-            -#         メルカリはスマホカメラからすぐに出品できる
-            -#         %br>/
-            -#         購入時も安心な独自システムのアプリです
-            -#       .sc-gmeYpB.bPWhgn
-            -#         = link_to "#", target: "_blank" do
-            -#           = image_tag "", alt: ""
-            -#         = link_to "#", target: "_blank" do
-            -#           = image_tag "", alt: ""
-      -# .slider-control-centerleft{style: "position:absolute;top:50%;left:0;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)"}
-      -#   .sc-kaNhvL.sc-etwtAo.gBRyTf.sc-LKuAh.fDeTnn
-      -# .slider-control-centerright{style: "position:absolute;top:50%;right:0;transform:translateY(-50%);-webkit-transform:translateY(-50%);-ms-transform:translateY(-50%)"}
-      -#   .sc-kaNhvL.sc-jXQZqI.jqouQU.sc-iBEsjs.eCkyqu
-      -# .slider-control-bottomcenter{style: "position:absolute;bottom:0;left:50%;transform:translateX(-50%);-webkit-transform:translateX(-50%);-ms-transform:translateX(-50%)"}
-      -#   .style_dotsIndicator__1fZnt.common_fontFamily__3-3Si.style_center__2IkR_.style_mono__3e12j.sc-iGPElx.zxiXZ
-      -#     %span.style_active__2ihlK
-      -#     %span
-      -# :scss
-      -#   .slider-slide > img { width: 100%; display: block; }
-      -#             .slider-slide > img:focus { margin: auto; }
 
+.sc-clNaTc.iniLfl
+  = link_to "#", target: "_blank" do
+    .sc-hzNEM.iFJfgS
+  .slider.sc-fQejPQ.gjkspQ
+    %div.slider-x
+      %div 
+        = image_tag "logo-white.svg", alt: "", height: "", width: ""
+      %div 
+        = image_tag "slide01.jpg", alt: "", height: "100%", width: "100%"
+      %div 
+        = image_tag "slide02.jpg", alt: "", height: "100%", width: "100%"
+
+.sc-ebFjAB.dxJnjc
   .sc-gtfDJT.gJTxdm
     %h2.style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv1__3ygH4.sc-fOICqy.ybTBp 人気のカテゴリー
     .sc-hzDEsm.dpboAj
@@ -68,90 +40,18 @@
                 = link_to item_path(item.id) do
                   = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
                 .items-box-body
-                  .items-box-num
+                  -# .items-box-num
                   .items-box-price
                     ¥#{item.price}
+                  .items-box-name
+                    #{item.name}
 
-                -# -if item.shopping_status == 1
-                -#   .items-box_photo__sold
-                -#     .items-box_photo__sold__inner
-                -#       SOLD
-                -#   .items-box-name
-                -#     #{item.name}
-                      
-
-
-
-
-
-        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-        -#   メンズ新着アイテム
-
-        -#   .items-box-content.clearfix
-        -#     .items-box
-        -#       - @item_all.each do |item|
-        -#         = link_to item_path(item.id) do
-        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
-        -#         .items-box-body
-        -#         .items-box-num
-        -#         .items-box-price.font-5
-        -#           ¥#{item.price}
-        -#         .items-box-name.font-2
-        -#           #{item.name}
-        -#         -if item.shopping_status == 1
-        -#           .items-box_photo__sold
-        -#             .items-box_photo__sold__inner
-        -#               SOLD
-
-
-
-
-        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-        -#   家電・スマホ・カメラ新着アイテム
-
-        -#   .items-box-content.clearfix
-        -#     .items-box
-        -#       - @item_all.each do |item|
-        -#         = link_to item_path(item.id) do
-        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
-        -#         .items-box-body
-        -#         .items-box-num
-        -#         .items-box-price.font-5
-        -#           ¥#{item.price}
-        -#         .items-box-name.font-2
-        -#           #{item.name}
-        -#         -if item.shopping_status == 1
-        -#           .items-box_photo__sold
-        -#             .items-box_photo__sold__inner
-        -#               SOLD
-               
-                      
-
-
-
-
-
-        -# .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
-        -#   おもちゃ・ホビー・グッズ
-
-        -#   .items-box-content.clearfix
-        -#     .items-box
-        -#       - @item_all.each do |item|
-        -#         = link_to item_path(item.id) do
-        -#           = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
-        -#         .items-box-body
-        -#         .items-box-num
-        -#         .items-box-price.font-5
-        -#           ¥#{item.price}
-        -#         .items-box-name.font-2
-        -#           #{item.name}
-        -#         -if item.shopping_status == 1
-        -#           .items-box_photo__sold
-        -#             .items-box_photo__sold__inner
-        -#               SOLD
-
-
-
+                -if item.shopping_status == 1
+                  .items-box_photo__sold
+                    .items-box_photo__sold__inner
+                      SOLD
+                  -# .items-box-name
+                  -#   #{item.name}
 
 = render "footer"
 

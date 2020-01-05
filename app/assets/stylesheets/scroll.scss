@@ -1,0 +1,32 @@
+.slider-x{
+  /* 親要素ベース */
+  scroll-snap-type: x mandatory;
+  width: 100%;
+  overflow-x: scroll;
+  display: flex;
+  -webkit-overflow-scrolling: touch; /* スマホ対応のため必須 */
+  overflow-scrolling: touch; /* スマホ対応のため必須 */
+  height: 400px;
+}
+.slider-x > div{
+  /* 子要素 */
+  scroll-snap-align: center;
+  height: 100%;
+  width: 100%;
+  flex: none;
+  
+
+  color: #FFF;
+  font-size: 150%;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* 調整確認用（あとで消す） */
+.slider-x > div:nth-child(1){background-color: #C7000B}
+.slider-x > div:nth-child(2){background-color: #D28300}
+.slider-x > div:nth-child(3){background-color: #DFD000}
+// .slider-x > div:nth-child(4){background-color: #00873C}
+// .slider-x > div:nth-child(5){background-color: #005AA0}
