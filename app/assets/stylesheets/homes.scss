@@ -2547,7 +2547,7 @@ width: 100%;
 }
 
 .items-box_photo__sold{
-    position: absolute;
+    // position: absolute;
     width: 0;
     height: 0;
     border-top: 60px solid #ea352d ;
@@ -2555,8 +2555,9 @@ width: 100%;
     border-bottom: 60px solid transparent;
     border-left: 60px solid #ea352d ;
     z-index:100;
-    // position: relative;
+    position: relative;
     // top:-320px;
+    right: 254px;
     &__inner{
       transform: rotate(-45deg);
       font-size: 28px;
@@ -2619,4 +2620,19 @@ width: 100%;
 .fas.fa-external-link-alt{
     position:relative;
     right: -10px;
+}
+
+
+.items-box_photo__sold2{
+    // position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 60px solid #ea352d ;
+    border-right: 60px solid transparent;
+    border-bottom: 60px solid transparent;
+    border-left: 60px solid #ea352d ;
+    z-index:100;
+    position: relative;
+    // top:-320px;
+    // right: 254px;
 }
