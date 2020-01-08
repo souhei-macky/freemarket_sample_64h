@@ -30,7 +30,7 @@
   .sc-gVyKpa.dxUUSo
     .sc-eXNvrr.fbfdVP
       .sc-gpHHfC.drurDC.sc-kasBVs.hOoWUj
-        .article#topic
+        -# .article#topic
         .style_heading__3qSF6.common_fontFamily__3-3Si.style_responsiveLv2__3K0hn.sc-hgHYgh.jEhJbC
           レディース新着アイテム
 
@@ -38,7 +38,7 @@
             .items-box
               - @item_all.each do |item|
                 = link_to item_path(item.id) do
-                  = image_tag "#{item.images.first.image}", class:"item__image",width:"230", height:""
+                  = image_tag "#{item.images.first.image}", class:"item__image",width:"182", height:"182"
                 .items-box-body
                   -# .items-box-num
                   .items-box-price
@@ -52,6 +52,25 @@
                       SOLD
                   -# .items-box-name
                   -#   #{item.name}
+
+                  
+
+
+
+      -# .l-content
+      -# %section
+      -#   %section.items-box-container.clearfix
+
+      -#     .items-box-content.clearfix
+      -#       .items-box
+      -#         %a{:href => "https://item.mercari.com/jp/m68166208616/"}
+      -#           %figure.items-box-photo
+      -#             %img.lazyloaded{:alt => "美品 Needles ニードルス デニム風 シャツ", "data-src" => "https://static.mercdn.net/thumb/photos/m68166208616_1.jpg?1569593338", :src => "https://static.mercdn.net/thumb/photos/m68166208616_1.jpg?1569593338"}/
+      -#           .items-box-body
+      -#             %h3.items-box-name 美品 Needles ニードルス デニム風 シャツ
+      -#             .items-box-num
+      -#               .items-box-price.font-5 ¥4,500
+
 
 = render "footer"
 
