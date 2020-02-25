@@ -53,10 +53,26 @@
     出品用アカウント
     <ul>
       <li>✉️メールアドレス: sell64h@gmail.com</li>
-      <li>🔑パスワード: sell64h</li>
+      <li>🔑パスワード: sell64h *本番環境ではメールアドレスでのログインをお願い致します。</li>
     </ul>
   </li>
 </ul>
+
+## 工夫した点
+
+<div align= "center">
+  <h3>-商品購入-</h3>
+</div>
+商品の売り切れ表示の実装を致しました。商品購入時に"itemテーブル"の'shoppoing_stauts'カラムに数字1が付与され、そのアイテムは売り切れで買うことができないように実装致しました。
+
+```ruby:app/views/transaction/show.html.haml
+  = form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
+    = form.hidden_field :shopping_status, value: 1
+```
+
+
+
+
 
 
 
@@ -72,7 +88,7 @@
 　
 
 
-# データベース設計
+# DB設計
 ## usersテーブル
 |Column|Type|Options|
 |------|----|-------|
