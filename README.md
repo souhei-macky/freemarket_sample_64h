@@ -90,14 +90,33 @@ end
   <h3>-商品削除-</h3>
 </div>
 
-簡単な記述ではありますが、削除時のポップアップはユーザーの視点からも必要だと思い導入しています。
+簡単な記述ではありますが、削除時のポップアップはユーザーの押し間違いを防ぐため必須であると思い導入しています。
+data{confirm:}でポプアップを出しています。
+
+```ruby
+= link_to item_path(@item), method: :delete, data: {confirm: "削除してもよろしいですか？"} do
+  .btn-default.btn-gray この商品を削除する
+  
+```
 
 ![6e94bd410972ac5afb980e3f0e94735b](https://user-images.githubusercontent.com/57378304/75237661-12b1a680-5803-11ea-81a2-fe8de5397829.gif)
 
 
 <div align= "center">
-  <h3>-ログイン機能-</h3>
+  <h3>-ユーザーの新規登録-</h3>
 </div>
+
+クローンサイトの登録画面のように、ウィザード形式を利用し、ページが遷移してもデータを保持できる記述をしました。
+下記のようにsessionに値を保持する仕組みです。
+
+```ruby
+def sms
+  #user.newのformデータをsessionに格納
+  session[:nickname] = user_params[:nickname]
+  #session(カラム名)  = user_params(カラム名)
+  〜省略〜
+end
+```
 
 
 
