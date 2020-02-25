@@ -19,8 +19,8 @@
   <li>
     Basic認証
     <ul>  
-      <li>ID: admin</li>
-      <li>Pass: 2222</li>
+      <li>🆔ID: admin</li>
+      <li>🔑Pass: 2222</li>
     </ul>
   </li>
 </ul>
@@ -28,22 +28,34 @@
 ## テストユーザー
 
 <ul>
-  購入者用アカウント
-  <li>メールアドレス: buyer64h@gmail.com</li>
-  <li>パスワード: buyer64h</li>
+  <li>
+    購入者用アカウント
+    <ul>
+      <li>✉️メールアドレス: buyer64h@gmail.com</li>
+      <li>🔑パスワード: buyer64h</li>
+    </ul>
+  </li>
 </ul>
 
 <ul>
-  💳 購入用カード情報
-  <li>番号：4242424242424242</li>
-  <li>期限：12/20</li>
-  <li>セキュリティコード：123</li>
+  <li>
+    💳 購入用カード情報
+    <ul>
+      <li>番号：4242424242424242</li>
+      <li>期限：12/20</li>
+      <li>🔑セキュリティコード：123</li>
+    </ul>
+  </li>
 </ul>
 
 <ul>
-  出品用アカウント
-  <li>メールアドレス: sell64h@gmail.com</li>
-  <li>パスワード: sell64h</li>
+  <li>
+    出品用アカウント
+    <ul>
+      <li>✉️メールアドレス: sell64h@gmail.com</li>
+      <li>🔑パスワード: sell64h</li>
+    </ul>
+  </li>
 </ul>
 
 
