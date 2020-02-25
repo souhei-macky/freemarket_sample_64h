@@ -66,13 +66,13 @@
 
 商品の売り切れ表示の実装を致しました。商品購入時に"itemテーブル"の'shoppoing_status'カラムに数字1が付与され、そのアイテムは売り切れで買うことができないように実装致しました。＊（参考）下記、動画とコード  
 
-```ruby:
+```ruby
 = form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
   = form.hidden_field :shopping_status, value: 1 #itemテーブルに1を付与
 ```
 form入力と同時に下記payアクションが呼び出されitemテープルが更新されます。  
 
-```ruby:
+```ruby
 def pay
   if @card
     〜省略〜
@@ -107,7 +107,7 @@ data{confirm:}でポプアップを出しています。
 </div>
 
 クローンサイトの登録画面のように、ウィザード形式を利用し、ページが遷移してもデータを保持できる記述をしました。
-下記のようにsessionに値を保持する仕組みです。
+下記の記述をし、sessionに入力された値を保持する仕組みです。
 
 ```ruby
 def sms
@@ -117,28 +117,18 @@ def sms
   〜省略〜
 end
 ```
+<div align= "center">
+  <h3>-クレジットカード登録-</h3>
+</div>
+
+payjpを利用し、クレジットカードを利用できるようにしました。また、jsを利用し入力データを暗号化しました。クレジットカード番号などはセキュリティの観点からDBに直接保存するのはリスクが高いからです。
+下記、登録画面です。
+
+![0d311cf6b5c497d88145e9fdd0d4fab3](https://user-images.githubusercontent.com/57378304/75247557-8a88cc80-5815-11ea-8f59-fd4503f4858a.gif)
 
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-　
 
 
 # DB設計
