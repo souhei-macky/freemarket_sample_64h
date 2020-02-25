@@ -90,7 +90,15 @@ end
   <h3>-商品削除-</h3>
 </div>
 
+簡単な記述ではありますが、削除時のポップアップはユーザーの視点からも必要だと思い導入しています。
+
 ![6e94bd410972ac5afb980e3f0e94735b](https://user-images.githubusercontent.com/57378304/75237661-12b1a680-5803-11ea-81a2-fe8de5397829.gif)
+
+
+<div align= "center">
+  <h3>-ログイン機能-</h3>
+</div>
+
 
 
 
