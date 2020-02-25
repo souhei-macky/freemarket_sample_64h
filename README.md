@@ -18,8 +18,7 @@
 
 <dl>
   <dt>・Basic認証</dt>
-  <dd>・ID: admin</dd>
-  <dd>・Pass: 2222</dd>
+  <dd>・ID: admin  Pass: 2222</dd>
 </dl>  
 
 
