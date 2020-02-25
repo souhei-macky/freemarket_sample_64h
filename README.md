@@ -16,9 +16,11 @@
 
 ### Basic認証をかけています。ご覧の際は以下のIDとPassを入力してください。  
 
-・Basic認証  
-  ID: admin  
-  Pass: 2222  
+<dl>
+  <dt>・Basic認証</dt>
+  <dd>・ID: admin</dd>
+  <dd>・Pass: 2222</dd>
+</dl>  
 
 
 
