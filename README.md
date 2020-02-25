@@ -67,9 +67,21 @@
 
 ```ruby:app/views/transaction/show.html.haml
   = form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
-    = form.hidden_field :shopping_status, value: 1
+    = form.hidden_field :shopping_status, value: 1 #itemテーブルに1を付与
 ```
+form入力と同時に下記payアクションが呼び出されます。  
 
+```ruby:
+def pay
+    if @card
+     〜省略〜
+      @item.update(item_params) #itemデーブルの更新
+      redirect_to done_transaction_index_path 
+    else
+      redirect_to root_path
+    end
+  end
+```
 
 
 
