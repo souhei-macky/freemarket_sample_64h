@@ -58,31 +58,40 @@
   </li>
 </ul>
 
-## 工夫した点
+## 工夫した点(担当箇所より)
 
 <div align= "center">
   <h3>-商品購入-</h3>
 </div>
+
 商品の売り切れ表示の実装を致しました。商品購入時に"itemテーブル"の'shoppoing_status'カラムに数字1が付与され、そのアイテムは売り切れで買うことができないように実装致しました。＊（参考）下記、動画とコード  
 
-```ruby:app/views/transaction/show.html.haml
-  = form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
-    = form.hidden_field :shopping_status, value: 1 #itemテーブルに1を付与
+```ruby:
+= form_with model: @item, local: true, url: pay_transaction_path(@item), method: :patch do |form|
+  = form.hidden_field :shopping_status, value: 1 #itemテーブルに1を付与
 ```
 form入力と同時に下記payアクションが呼び出されitemテープルが更新されます。  
 
 ```ruby:
 def pay
-    if @card
-     〜省略〜
-      @item.update(item_params) #itemデーブルの更新
-      redirect_to done_transaction_index_path 
-    else
-      redirect_to root_path
-    end
+  if @card
+    〜省略〜
+    @item.update(item_params) #itemデーブルの更新
+    redirect_to done_transaction_index_path 
+  else
+    redirect_to root_path
   end
+end
 ```
 ![ebdc64e51f4a14355510e4766485f45d](https://user-images.githubusercontent.com/57378304/75235991-7b4b5400-5800-11ea-9c17-a28b56c49492.gif)
+
+
+<div align= "center">
+  <h3>-商品削除-</h3>
+</div>
+
+![6e94bd410972ac5afb980e3f0e94735b](https://user-images.githubusercontent.com/57378304/75237661-12b1a680-5803-11ea-81a2-fe8de5397829.gif)
+
 
 
 
