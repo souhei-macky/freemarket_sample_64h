@@ -13,17 +13,21 @@
 ## URL
 
 ### http://52.197.131.3/  
-
 ### Basic認証をかけています。ご覧の際は以下のIDとPassを入力してください。  
 
 <ul>
-  <li>・Basic認証
+  <li>
+    Basic認証
     <ul>  
-      <li>・ID: admin</li>
-      <li>・Pass: 2222</li>
+      <li>ID: admin</li>
+      <li>Pass: 2222</li>
     </ul>
   </li>
 </ul>
+
+## テストユーザー
+
+
 
 
 
