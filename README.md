@@ -199,8 +199,9 @@ payjpを利用し、クレジットカードを利用できるようにしまし
 |brands_category_id|integer|null: false, foreign_key: true|
 |size_id|integer|null: false, foreign_key: true|
 |item_condition_id|integer|null: false, foreign_key: true|
-|delivery_charge|string||
-|date|string||
+|shopping_status|integer|
+|delivery_charge|string|
+|date|string|
 ### Association
 - has_many :images, dependent: :destroy
 - has_many :likes, dependent: :destroy
